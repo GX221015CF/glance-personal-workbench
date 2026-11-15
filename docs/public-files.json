@@ -19,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8114,
-      "sha256": "6a3f148d628e2f68be88061567c8dda4129582dddcb0f59236ea14f5d198e87b"
+      "bytes": 7883,
+      "sha256": "76c51c6853a5111cc77d887037c90d30130b71fe248d67eb4878ca07f6b1beff"
     },
     {
       "path": "THIRD_PARTY_LICENSES/Glance-AGPL-3.0.txt",
@@ -689,8 +689,8 @@
     },
     {
       "path": "docs/SOURCE.md",
-      "bytes": 2336,
-      "sha256": "b6db481444ae62cf7b6fa5f837398ed55d816bf391940e76165e333bfa0bf461"
+      "bytes": 2297,
+      "sha256": "0d98f37314934c742a8f9b994b09e827c7ab2910ccbb1ec0d3d02fbdb5742a8e"
     },
     {
       "path": "docs/VERIFICATION.md",
@@ -794,8 +794,8 @@
     },
     {
       "path": "watch/index.html",
-      "bytes": 4308,
-      "sha256": "e8d2525f2fd5f74e5a925bab893937baa8aad11700b9876e02915d8f151b310f"
+      "bytes": 4295,
+      "sha256": "306d787cde085798d35ee25ff2774144a41406094e6842949d0f1b43bc3e8841"
     }
   ]
 }
