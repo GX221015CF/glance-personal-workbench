@@ -1,0 +1,37 @@
+- type: custom-api
+  title: 重点行情
+  css-class: live-focus-markets
+  cache: 1s
+  url: http://127.0.0.1:8182/api/focus
+  template: |
+    {{ if not (.JSON.Bool "available") }}
+      <p>{{ .JSON.String "message" }}</p>
+    {{ else }}
+      <div class="focus-market-grid">
+        {{ range .JSON.Array "items" }}
+          <a class="focus-market-card quote-{{ .String "direction" }}" href="{{ .String "url" }}" target="_blank" rel="noopener noreferrer" title="{{ .String "name" }} · {{ .String "note" }} · 行情时间 {{ .String "sourceTime" }} 北京时间">
+            <h3 class="focus-market-name">{{ .String "name" }}</h3>
+            <span class="focus-market-code">{{ .String "code" }}{{ if eq (.String "venue") "US" }} · USD{{ end }}</span>
+            {{ if .Bool "available" }}
+              <strong class="focus-market-price quote-color">{{ .String "priceLabel" }}</strong>
+              <span class="focus-market-percent quote-color">{{ printf "%+.2f%%" (.Float "changePercent") }}</span>
+              {{ if .String "points" }}<svg viewBox="0 0 400 64" preserveAspectRatio="none" role="img" aria-label="{{ .String "name" }}最近交易日分时走势"><polyline points="{{ .String "points" }}" /></svg>{{ end }}
+              <span class="focus-market-note">{{ .String "note" }}</span>
+              <time class="focus-market-time">{{ .String "timeLabel" }}</time>
+              <span class="focus-market-status{{ if .Bool "warning" }} quote-warning{{ end }}" title="{{ .String "statusDetail" }}">{{ .String "status" }}</span>
+            {{ else }}
+              <span class="focus-market-unavailable">暂无行情</span>
+              <span class="focus-market-note">{{ .String "note" }}</span>
+            {{ end }}
+          </a>
+        {{ end }}
+      </div>
+      <p class="market-source-note">东方财富 / 腾讯财经备用 · 每分钟检查 · 北京时间</p>
+      <details class="market-reference-note">
+        <summary>基金替代关系与交易时间</summary>
+        <p>SOXX 为美国半导体 ETF，观察国富006373的相关行业；159770为机器人ETF，观察永赢018124的相关行业。两项均非原基金估值。</p>
+        <p>最近可取的20个共同净值日，日涨跌相关系数分别约0.95和0.94（样本截至2026-11-02和11-03）。样本较短，相关性会变化。</p>
+        <p>SOXX随美股交易时段更新，北京白天显示最近收盘行情；其他三项随各自市场时段更新。公开行情源可能延迟，非交易时段保留最近数据。</p>
+        <p><a href="https://fund.eastmoney.com/006373.html" target="_blank" rel="noopener noreferrer">国富基金详情 ↗</a> · <a href="https://fund.eastmoney.com/018124.html" target="_blank" rel="noopener noreferrer">永赢基金详情 ↗</a></p>
+      </details>
+    {{ end }}

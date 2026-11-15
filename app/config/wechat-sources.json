@@ -1,0 +1,57 @@
+{
+  "refreshIntervalSeconds": 1800,
+  "manualCooldownSeconds": 300,
+  "catalogUrl": "https://github.com/ginobefun/BestBlogs/blob/main/opml/bestblogs_wechat2rss_opml_all.opml",
+  "sources": [
+    {
+      "id": "tencent-cloud",
+      "name": "腾讯云开发者",
+      "url": "https://wechat2rss.bestblogs.dev/feed/6cec2c211479a5502896375860009782cf10c2ba.xml"
+    },
+    {
+      "id": "kazike",
+      "name": "数字生命卡兹克",
+      "url": "https://wechat2rss.bestblogs.dev/feed/ff621c3e98d6ae6fceb3397e57441ffc6ea3c17f.xml"
+    },
+    {
+      "id": "daishudi",
+      "name": "袋鼠帝",
+      "url": "https://wechat2rss.bestblogs.dev/feed/24d0930cc9f4f0c708182dc1c087d41e1f4cbd33.xml"
+    },
+    {
+      "id": "appso",
+      "name": "APPSO",
+      "url": "https://wechat2rss.bestblogs.dev/feed/4ae111e5b509609a5ee96c9894f1868fbafd793e.xml"
+    },
+    {
+      "id": "21jingji",
+      "name": "21世纪经济报道",
+      "url": "https://wechat2rss.bestblogs.dev/feed/c6a39cae0e7e0979ed9f2eece16695c5f664f147.xml"
+    },
+    {
+      "id": "cailianshe",
+      "name": "财联社",
+      "url": "https://wechat2rss.bestblogs.dev/feed/8e9c7dfaf07013f4da379dd0f87c3a298f2ed501.xml"
+    },
+    {
+      "id": "yicai",
+      "name": "第一财经",
+      "url": "https://wechat2rss.bestblogs.dev/feed/e2cc4ff2ae914ebfd4150420ece80dd93be7a6d9.xml"
+    },
+    {
+      "id": "svpro",
+      "name": "硅星人Pro",
+      "url": "https://wechat2rss.bestblogs.dev/feed/c62ceda9eed269d851802bdbc5f33c4fabbf7462.xml"
+    },
+    {
+      "id": "36kr",
+      "name": "36氪",
+      "url": "https://wechat2rss.bestblogs.dev/feed/c68b58fb17ac7ae4b23c2af276cdd61c9eca1a48.xml"
+    },
+    {
+      "id": "karl-ai-woz",
+      "name": "卡尔的AI沃茨",
+      "url": "https://wechat2rss.bestblogs.dev/feed/8a1fc997e5c742e91ad7c253836c28ca3a69ccb1.xml"
+    }
+  ]
+}

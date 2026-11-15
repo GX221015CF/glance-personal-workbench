@@ -1,0 +1,44 @@
+{
+  "static": {
+    "relativeLinks": 30,
+    "configIncludes": 5,
+    "pythonSyntax": true,
+    "javascriptSyntaxFiles": 40,
+    "relativeModuleReferences": "passed"
+  },
+  "python": {
+    "passed": true,
+    "tests": 217
+  },
+  "node": {
+    "passed": true,
+    "tests": 186
+  },
+  "http": {
+    "pageShells": 6,
+    "pageContents": 6,
+    "assetRequests": 30,
+    "emptyAccountAndLoginStates": true,
+    "unauthorizedMetadata": 403,
+    "successfulRequests": 50
+  },
+  "date": "2026-11-15",
+  "environment": "Fresh Windows x64 venv / Python 3.12 / Node 24",
+  "media": {
+    "durationSeconds": 68,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "codec": "h264",
+    "audioTracks": 0,
+    "fullDecode": "passed",
+    "reviewedRepresentativeImages": 5
+  },
+  "boundary": "Offline fixtures and isolated HTTP. Live external authorization requires separate configuration.",
+  "publicRead": {
+    "source": "Open-Meteo",
+    "available": true,
+    "dailyDates": 2,
+    "hasError": false
+  }
+}

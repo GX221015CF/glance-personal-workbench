@@ -1,0 +1,10 @@
+.canvas-filter { display: flex; gap: 12px; align-items: center; margin-top: 16px; }
+.canvas-filter select { color: var(--color-text-highlight); background: var(--color-widget-background); border: 1px solid var(--color-separator); border-radius: 4px; padding: 5px 8px; max-width: 75%; font: inherit; }
+.canvas-assignment, .canvas-material { padding: 12px 0; border-bottom: 1px solid var(--color-separator); }
+.canvas-assignment > a, .canvas-material > a { color: var(--color-text-highlight); text-decoration: underline; }
+.canvas-assignment p, .canvas-material p { margin-top: 4px; }
+.canvas-assignment details { margin-top: 6px; }
+.canvas-description { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 300px; overflow: auto; padding: 8px 0; }
+.canvas-overdue { color: #e3a291; }
+.canvas-course-materials { margin-top: 10px; }
+.canvas-course-materials > summary { padding: 6px 0; }

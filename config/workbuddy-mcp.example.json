@@ -1,0 +1,10 @@
+{
+  "server": "",
+  "node": "",
+  "timeoutSeconds": 300,
+  "model": "auto",
+  "effort": "medium",
+  "maxTurns": 6,
+  "summaryEffort": "low",
+  "summaryMaxTurns": 4
+}

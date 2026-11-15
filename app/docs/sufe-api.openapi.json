@@ -1,0 +1,1342 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Personal Workbench SUFE API",
+    "version": "1.0.0",
+    "description": "Local read-only school-data adapter. GET reads local snapshots. Refresh is asynchronous. Dates and times use Asia/Shanghai. Obtain the per-process X-Desktop-Token from GET /api/desktop with the same Origin. Auth is a localhost boundary, not a multi-user authentication scheme. No query parameters. Course numbers are semester-scoped. Semester and timestamps may be null before the first sync. meta.errorCode describes the last background failure. HTTP 200 describes a successful snapshot read, including stale or disconnected states. Raw source schedule text is retained in Meeting.raw."
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:8182"
+    }
+  ],
+  "security": [
+    {
+      "DesktopToken": []
+    }
+  ],
+  "paths": {
+    "/api/sufe/v1": {
+      "get": {
+        "operationId": "getSufeSnapshot",
+        "summary": "Read complete local snapshot",
+        "responses": {
+          "200": {
+            "description": "Local snapshot. Check meta.available, meta.stale and meta.needsLogin.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SnapshotResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Query parameters and request bodies are unsupported.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Local Origin and desktop token required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Unsupported GET/POST method for this route.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Origin",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "http://127.0.0.1:8180",
+                "http://localhost:8180"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/api/sufe/v1/status": {
+      "get": {
+        "operationId": "getSufeStatus",
+        "summary": "Read connection status and counts",
+        "responses": {
+          "200": {
+            "description": "Local snapshot. Check meta.available, meta.stale and meta.needsLogin.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Query parameters and request bodies are unsupported.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Local Origin and desktop token required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Unsupported GET/POST method for this route.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Origin",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "http://127.0.0.1:8180",
+                "http://localhost:8180"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/api/sufe/v1/courses": {
+      "get": {
+        "operationId": "getSufeCourses",
+        "summary": "Read current-semester courses",
+        "responses": {
+          "200": {
+            "description": "Local snapshot. Check meta.available, meta.stale and meta.needsLogin.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CoursesResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Query parameters and request bodies are unsupported.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Local Origin and desktop token required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Unsupported GET/POST method for this route.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Origin",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "http://127.0.0.1:8180",
+                "http://localhost:8180"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/api/sufe/v1/exams": {
+      "get": {
+        "operationId": "getSufeExams",
+        "summary": "Read final exams including unpublished entries",
+        "responses": {
+          "200": {
+            "description": "Local snapshot. Check meta.available, meta.stale and meta.needsLogin.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExamsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Query parameters and request bodies are unsupported.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Local Origin and desktop token required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Unsupported GET/POST method for this route.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Origin",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "http://127.0.0.1:8180",
+                "http://localhost:8180"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/api/sufe/v1/today": {
+      "get": {
+        "operationId": "getSufeToday",
+        "summary": "Read today's classes in school teaching weeks",
+        "responses": {
+          "200": {
+            "description": "Local snapshot. Check meta.available, meta.stale and meta.needsLogin.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TodayResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Query parameters and request bodies are unsupported.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Local Origin and desktop token required.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Unsupported GET/POST method for this route.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Origin",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "http://127.0.0.1:8180",
+                "http://localhost:8180"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/api/sufe/v1/refresh": {
+      "post": {
+        "operationId": "refreshSufe",
+        "summary": "Request asynchronous school sync without a request body",
+        "responses": {
+          "202": {
+            "description": "New sync started, or an existing sync is still running. Poll status until meta.refreshing is false.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RefreshResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Access denied.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Use POST.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Cooldown active. Wait data.retryAfterSeconds.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CooldownResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Origin",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "http://127.0.0.1:8180",
+                "http://localhost:8180"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/api/sufe/v1/connect": {
+      "post": {
+        "operationId": "connectSufe",
+        "summary": "Validate a Windows-user DPAPI encrypted EAMS session and sync",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              },
+              "description": "1..131072 bytes. Windows DPAPI ciphertext of UTF-8 JSON containing only cookies, for eams.sufe.edu.cn."
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "School query succeeded and encrypted storage was updated.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConnectionResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request or encrypted session.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Access denied.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Use POST.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Complete school login or verification and reconnect.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "415": {
+            "description": "Use application/octet-stream.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "School query or parsing failed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Local sync failed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Origin",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "http://127.0.0.1:8180",
+                "http://localhost:8180"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/api/sufe/v1/openapi.json": {
+      "get": {
+        "operationId": "getSufeOpenApi",
+        "summary": "Read this OpenAPI document",
+        "responses": {
+          "200": {
+            "description": "OpenAPI 3.1 document, without personal data.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Access denied.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Origin",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "http://127.0.0.1:8180",
+                "http://localhost:8180"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "DesktopToken": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-Desktop-Token"
+      }
+    },
+    "schemas": {
+      "Semester": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "year": {
+            "type": "string"
+          },
+          "term": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "year",
+          "term"
+        ],
+        "additionalProperties": false
+      },
+      "Meeting": {
+        "type": "object",
+        "properties": {
+          "teacher": {
+            "type": "string"
+          },
+          "weekday": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 7
+          },
+          "start": {
+            "type": "string",
+            "pattern": "^\\d{2}:\\d{2}$"
+          },
+          "end": {
+            "type": "string",
+            "pattern": "^\\d{2}:\\d{2}$"
+          },
+          "weeks": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "room": {
+            "type": "string"
+          },
+          "raw": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "teacher",
+          "weekday",
+          "start",
+          "end",
+          "weeks",
+          "room",
+          "raw"
+        ],
+        "additionalProperties": false
+      },
+      "TodayMeeting": {
+        "type": "object",
+        "properties": {
+          "teacher": {
+            "type": "string"
+          },
+          "weekday": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 7
+          },
+          "start": {
+            "type": "string",
+            "pattern": "^\\d{2}:\\d{2}$"
+          },
+          "end": {
+            "type": "string",
+            "pattern": "^\\d{2}:\\d{2}$"
+          },
+          "weeks": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "room": {
+            "type": "string"
+          },
+          "raw": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "number": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "teacher",
+          "weekday",
+          "start",
+          "end",
+          "weeks",
+          "room",
+          "raw",
+          "name",
+          "number"
+        ],
+        "additionalProperties": false
+      },
+      "Course": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "number": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "credits": {
+            "type": "string",
+            "description": "School-provided text, retained without rounding."
+          },
+          "teacher": {
+            "type": "string"
+          },
+          "campus": {
+            "type": "string"
+          },
+          "meetings": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Meeting"
+            }
+          }
+        },
+        "required": [
+          "code",
+          "name",
+          "number",
+          "category",
+          "credits",
+          "teacher",
+          "campus",
+          "meetings"
+        ],
+        "additionalProperties": false
+      },
+      "Exam": {
+        "type": "object",
+        "properties": {
+          "number": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "group": {
+            "type": "string"
+          },
+          "published": {
+            "type": "boolean"
+          },
+          "date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "start": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^\\d{2}:\\d{2}$"
+          },
+          "end": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^\\d{2}:\\d{2}$"
+          },
+          "room": {
+            "type": "string"
+          },
+          "arrangement": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "number",
+          "name",
+          "group",
+          "published",
+          "date",
+          "start",
+          "end",
+          "room",
+          "arrangement",
+          "status",
+          "note",
+          "message"
+        ],
+        "additionalProperties": false
+      },
+      "TeachingWeek": {
+        "type": "object",
+        "properties": {
+          "week": {
+            "type": "integer"
+          },
+          "start": {
+            "type": "string",
+            "format": "date"
+          },
+          "end": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "required": [
+          "week",
+          "start",
+          "end"
+        ],
+        "additionalProperties": false
+      },
+      "Meta": {
+        "type": "object",
+        "properties": {
+          "available": {
+            "type": "boolean"
+          },
+          "stale": {
+            "type": "boolean"
+          },
+          "needsLogin": {
+            "type": "boolean"
+          },
+          "refreshing": {
+            "type": "boolean"
+          },
+          "updatedAt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "checkedAt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "lastAttemptAt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "errorCode": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "semester": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Semester"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "generatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timezone": {
+            "const": "Asia/Shanghai"
+          },
+          "source": {
+            "const": "https://eams.sufe.edu.cn/eams/"
+          },
+          "refreshIntervalSeconds": {
+            "const": 1800
+          },
+          "refreshCooldownSeconds": {
+            "const": 60
+          }
+        },
+        "required": [
+          "available",
+          "stale",
+          "needsLogin",
+          "refreshing",
+          "updatedAt",
+          "checkedAt",
+          "lastAttemptAt",
+          "errorCode",
+          "message",
+          "semester",
+          "generatedAt",
+          "timezone",
+          "source",
+          "refreshIntervalSeconds",
+          "refreshCooldownSeconds"
+        ],
+        "additionalProperties": false
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "enum": [
+              "FORBIDDEN",
+              "NOT_FOUND",
+              "INVALID_REQUEST",
+              "METHOD_NOT_ALLOWED",
+              "UNSUPPORTED_MEDIA_TYPE",
+              "INVALID_SESSION",
+              "LOGIN_REQUIRED",
+              "UPSTREAM_ERROR",
+              "SYNC_FAILED",
+              "REFRESH_COOLDOWN"
+            ]
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ],
+        "additionalProperties": false
+      },
+      "Refresh": {
+        "type": "object",
+        "properties": {
+          "accepted": {
+            "type": "boolean"
+          },
+          "reason": {
+            "enum": [
+              "started",
+              "already_running",
+              "cooldown"
+            ]
+          },
+          "retryAfterSeconds": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "accepted",
+          "reason",
+          "retryAfterSeconds"
+        ],
+        "additionalProperties": false
+      },
+      "Connection": {
+        "type": "object",
+        "properties": {
+          "connected": {
+            "const": true
+          },
+          "courses": {
+            "type": "integer"
+          },
+          "exams": {
+            "type": "integer"
+          },
+          "publishedExams": {
+            "type": "integer"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "connected",
+          "courses",
+          "exams",
+          "publishedExams",
+          "updatedAt"
+        ],
+        "additionalProperties": false
+      },
+      "Snapshot": {
+        "type": "object",
+        "properties": {
+          "courses": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Course"
+            }
+          },
+          "exams": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Exam"
+            }
+          },
+          "teachingWeeks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TeachingWeek"
+            }
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "week": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "today": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TodayMeeting"
+            }
+          },
+          "loginUrl": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "courses",
+          "exams",
+          "teachingWeeks",
+          "date",
+          "week",
+          "today",
+          "loginUrl"
+        ],
+        "additionalProperties": false
+      },
+      "Status": {
+        "type": "object",
+        "properties": {
+          "courseCount": {
+            "type": "integer"
+          },
+          "examCount": {
+            "type": "integer"
+          },
+          "publishedExamCount": {
+            "type": "integer"
+          },
+          "loginUrl": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "courseCount",
+          "examCount",
+          "publishedExamCount",
+          "loginUrl"
+        ],
+        "additionalProperties": false
+      },
+      "Courses": {
+        "type": "object",
+        "properties": {
+          "courses": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Course"
+            }
+          }
+        },
+        "required": [
+          "courses"
+        ],
+        "additionalProperties": false
+      },
+      "Exams": {
+        "type": "object",
+        "properties": {
+          "exams": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Exam"
+            }
+          }
+        },
+        "required": [
+          "exams"
+        ],
+        "additionalProperties": false
+      },
+      "Today": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "week": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "today": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TodayMeeting"
+            }
+          }
+        },
+        "required": [
+          "date",
+          "week",
+          "today"
+        ],
+        "additionalProperties": false
+      },
+      "SnapshotResponse": {
+        "type": "object",
+        "properties": {
+          "apiVersion": {
+            "const": "1"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Snapshot"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          },
+          "error": {
+            "type": "null"
+          }
+        },
+        "required": [
+          "apiVersion",
+          "data",
+          "meta",
+          "error"
+        ],
+        "additionalProperties": false
+      },
+      "StatusResponse": {
+        "type": "object",
+        "properties": {
+          "apiVersion": {
+            "const": "1"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Status"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          },
+          "error": {
+            "type": "null"
+          }
+        },
+        "required": [
+          "apiVersion",
+          "data",
+          "meta",
+          "error"
+        ],
+        "additionalProperties": false
+      },
+      "CoursesResponse": {
+        "type": "object",
+        "properties": {
+          "apiVersion": {
+            "const": "1"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Courses"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          },
+          "error": {
+            "type": "null"
+          }
+        },
+        "required": [
+          "apiVersion",
+          "data",
+          "meta",
+          "error"
+        ],
+        "additionalProperties": false
+      },
+      "ExamsResponse": {
+        "type": "object",
+        "properties": {
+          "apiVersion": {
+            "const": "1"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Exams"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          },
+          "error": {
+            "type": "null"
+          }
+        },
+        "required": [
+          "apiVersion",
+          "data",
+          "meta",
+          "error"
+        ],
+        "additionalProperties": false
+      },
+      "TodayResponse": {
+        "type": "object",
+        "properties": {
+          "apiVersion": {
+            "const": "1"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Today"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          },
+          "error": {
+            "type": "null"
+          }
+        },
+        "required": [
+          "apiVersion",
+          "data",
+          "meta",
+          "error"
+        ],
+        "additionalProperties": false
+      },
+      "RefreshResponse": {
+        "type": "object",
+        "properties": {
+          "apiVersion": {
+            "const": "1"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Refresh"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          },
+          "error": {
+            "type": "null"
+          }
+        },
+        "required": [
+          "apiVersion",
+          "data",
+          "meta",
+          "error"
+        ],
+        "additionalProperties": false
+      },
+      "ConnectionResponse": {
+        "type": "object",
+        "properties": {
+          "apiVersion": {
+            "const": "1"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Connection"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          },
+          "error": {
+            "type": "null"
+          }
+        },
+        "required": [
+          "apiVersion",
+          "data",
+          "meta",
+          "error"
+        ],
+        "additionalProperties": false
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "apiVersion": {
+            "const": "1"
+          },
+          "data": {
+            "type": "null"
+          },
+          "meta": {
+            "type": "null"
+          },
+          "error": {
+            "$ref": "#/components/schemas/Error"
+          }
+        },
+        "required": [
+          "apiVersion",
+          "data",
+          "meta",
+          "error"
+        ],
+        "additionalProperties": false
+      },
+      "CooldownResponse": {
+        "type": "object",
+        "properties": {
+          "apiVersion": {
+            "const": "1"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Refresh"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          },
+          "error": {
+            "$ref": "#/components/schemas/Error"
+          }
+        },
+        "required": [
+          "apiVersion",
+          "data",
+          "meta",
+          "error"
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+}

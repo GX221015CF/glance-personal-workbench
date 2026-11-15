@@ -1,0 +1,351 @@
+body {
+  font-family: "Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif;
+}
+
+.widget-header, .bookmarks-group-title {
+  letter-spacing: 0.04em;
+}
+
+.finance-history-chart {
+  display: block;
+  width: 100%;
+  height: 100px;
+  margin-block: 15px 8px;
+  overflow: visible;
+}
+
+.finance-history-chart polyline {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+
+:root {
+  --finance-up: #ff737e;
+  --finance-down: #57cf9c;
+}
+
+.finance-live-row, .fund-value-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+}
+.finance-number { font-size: 2rem; font-variant-numeric: tabular-nums; }
+.finance-number small { font-size: 1.2rem; color: var(--color-text-base); }
+.finance-delta { font-variant-numeric: tabular-nums; font-size: 1.3rem; }
+.finance-trend-up .finance-number, .finance-trend-up .finance-delta { color: var(--finance-up); }
+.finance-trend-down .finance-number, .finance-trend-down .finance-delta { color: var(--finance-down); }
+.finance-trend-up .finance-history-chart polyline, .finance-history-chart.finance-trend-up polyline { stroke: var(--finance-up); }
+.finance-trend-down .finance-history-chart polyline, .finance-history-chart.finance-trend-down polyline { stroke: var(--finance-down); }
+.index-intraday { height: 78px; }
+.compact-fund .finance-history-chart { height: 55px; margin-block: 10px 5px; }
+.compact-fund .widget-content { padding: 11px; }
+.compact-fund .fund-name { font-size: 1.2rem; min-height: 3.6rem; line-height: 1.5; }
+.compact-fund .finance-number { font-size: 1.7rem; }
+.compact-fund .finance-delta { font-size: 1.2rem; }
+.compact-fund .fund-footnote { font-size: 1.1rem; color: var(--color-text-subdue); margin-top: 8px; }
+.fund-pair .masonry { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 10px; }
+.fund-pair .masonry-column { display: contents !important; }
+.fund-pair .compact-fund { min-width: 0; width: auto !important; }
+.fund-pair .masonry-column > .widget { margin-top: 0 !important; }
+.finance-time { font-size: 1.15rem; color: var(--color-text-base); margin-top: 8px; }
+.finance-status { font-size: 1.15rem; color: var(--color-text-base); margin-top: 6px; }
+.market-extras { --color-positive: var(--finance-up); --color-negative: var(--finance-down); }
+.market-extras .widget-error-header .color-negative { color: var(--finance-up); }
+
+.aihot-report-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; color: var(--color-text-subdue); font-size: 1.3rem; }
+.aihot-report-meta a, .aihot-title, .aihot-flash a { color: var(--color-text-highlight); }
+.aihot-lead { padding-block: 16px; border-bottom: 1px solid var(--color-separator); }
+.aihot-lead h3 { font-size: 2.1rem; line-height: 1.5; color: var(--color-primary); }
+.aihot-lead p { margin-top: 10px; line-height: 1.8; color: var(--color-text-base); }
+.aihot-section { margin-top: 20px; }
+.aihot-section-label { color: var(--color-primary); font-size: 1.35rem; letter-spacing: 0.06em; }
+.aihot-article { margin-top: 13px; padding-bottom: 13px; border-bottom: 1px solid var(--color-separator); }
+.aihot-title { font-size: 1.55rem; line-height: 1.6; }
+.aihot-summary { margin-top: 7px; line-height: 1.75; color: var(--color-text-base); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.aihot-source { font-size: 1.15rem; line-height: 1.6; color: var(--color-text-subdue); margin-top: 6px; }
+.aihot-publication { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 10px; }
+.aihot-publication .aihot-source { margin-top: 0; overflow-wrap: anywhere; }
+.aihot-time-badge { display: inline-flex; flex: 0 0 auto; padding: 4px 10px; border: 1px solid var(--color-separator); border-radius: 6px; color: var(--color-text-highlight); font-size: 1.2rem; font-weight: 600; line-height: 1.5; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.aihot-time-badge.is-recent { color: var(--color-primary); border-color: var(--color-primary); }
+.aihot-interest-label { font-size: 1.1rem; line-height: 1.6; color: var(--color-primary); margin-top: 5px; }
+.aihot-flash { margin-top: 9px; line-height: 1.6; }
+.aihot-footer { margin-top: 15px; }
+.aihot-reason { margin-top: 7px; font-size: 1.2rem; line-height: 1.6; }
+.aihot-reason summary { cursor: pointer; color: var(--color-text-subdue); }
+.aihot-reason p { padding-top: 6px; }
+.aihot-status { margin-top: 10px; font-size: 1.2rem; }
+#aihot-feed { scroll-margin-top: 24px; }
+.aihot-feed-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.aihot-feed-kicker { color: var(--color-text-highlight); font-size: 1.6rem; font-weight: 500; }
+.aihot-feed-count { white-space: nowrap; color: var(--color-primary); font-size: 1.1rem; border: 1px solid var(--color-separator); border-radius: 20px; padding: 5px 10px; }
+.aihot-feed-activity { display: flex; gap: 8px; align-items: center; margin: 16px 0 9px; color: var(--color-text-subdue); font-size: 1.15rem; min-height: 20px; }
+.aihot-feed-dot { flex: 0 0 6px; height: 6px; border-radius: 50%; background: var(--color-primary); }
+.aihot-feed-dot.is-updating { animation: aihot-pulse 1.5s ease-in-out infinite; }
+.aihot-feed-progress { height: 2px; background: var(--color-separator); border-radius: 4px; overflow: hidden; margin-bottom: 12px; }
+.aihot-feed-progress > span { display: block; height: 100%; background: var(--color-primary); width: 0; transition: width .6s ease; }
+.aihot-feed-list { overflow-anchor: auto; }
+#aihot-feed .aihot-article { padding: 15px 16px; margin-top: 12px; border: 1px solid var(--color-separator); border-radius: 9px; background: var(--color-widget-background); transition: border-color .2s ease; }
+#aihot-feed .aihot-article:hover { border-color: var(--color-primary); }
+.aihot-card-enter { animation: aihot-card-arrive .48s ease both; animation-delay: var(--news-delay,0ms); }
+.aihot-feed-update-slot { position: sticky; top: 12px; z-index: 2; height: 0; display: flex; justify-content: center; overflow: visible; }
+.aihot-feed-updates { align-self: flex-start; flex-shrink: 0; display: block; margin: 0; padding: 9px 18px; border: 1px solid var(--color-primary); border-radius: 24px; background: var(--color-widget-background); color: var(--color-primary); font: inherit; font-size: 1.2rem; cursor: pointer; box-shadow: 0 4px 16px #0003; }
+.aihot-feed-empty { padding: 24px 0; color: var(--color-text-subdue); font-size: 1.2rem; line-height: 1.8; }
+.aihot-feed-skeleton { display: block; height: 70px; margin: 12px 0; border: 1px solid var(--color-separator); border-radius: 9px; background: linear-gradient(100deg,transparent,var(--color-separator),transparent); background-size: 250% 100%; animation: aihot-skeleton 2s linear infinite; }
+.aihot-feed-links { display: flex; flex-wrap: wrap; gap: 14px; padding-top: 15px; font-size: 1.15rem; color: var(--color-primary); }
+.aihot-feed-updates[hidden], .aihot-feed-progress[hidden], .aihot-feed-links a[hidden] { display: none; }
+@keyframes aihot-card-arrive { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes aihot-pulse { 50% { opacity: .3; } }
+@keyframes aihot-skeleton { from { background-position: 180% 0; } to { background-position: -80% 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .aihot-card-enter, .aihot-feed-dot.is-updating, .aihot-feed-skeleton { animation: none; }
+  .aihot-feed-progress > span { transition: none; }
+}
+.reset-event { margin-top: 12px; }
+.home-links-and-resets { container: home-tools / inline-size; }
+.home-links-and-resets > .widget-content { padding: 16px; border: 1px solid var(--color-separator); border-radius: var(--border-radius); background: var(--color-widget-background); }
+.home-links-and-resets .masonry { display: grid !important; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+.home-links-and-resets .masonry-column { display: contents !important; }
+.home-links-and-resets .masonry .widget { min-width: 0; width: auto !important; margin-top: 0 !important; }
+.home-links-and-resets .masonry .widget-content { padding: 0; border: 0; background: transparent; }
+.home-links-and-resets .widget-type-bookmarks { grid-column: 1; grid-row: 1 / span 2; }
+.home-links-and-resets .bookmarks-group-title { margin-bottom: 6px; }
+.home-links-and-resets .widget-type-bookmarks .bookmarks-group + .bookmarks-group { margin-top: 10px; padding-top: 10px; }
+.home-links-and-resets .bookmarks-link {
+  display: block;
+  width: 100%;
+  padding: 7px 9px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  line-height: 1.35;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+}
+.home-links-and-resets .bookmarks-link::after { content: none; }
+.home-links-and-resets .bookmarks-link:hover,
+.home-links-and-resets .bookmarks-link:focus-visible {
+  background: rgba(215, 182, 110, .1);
+  border-color: rgba(215, 182, 110, .35);
+  color: var(--color-primary);
+  outline: none;
+}
+.home-links-and-resets .live-resets { grid-column: 2; grid-row: 1; }
+.home-links-and-resets .home-weather { grid-column: 2; grid-row: 2; padding: 16px 0 0 16px; border-left: 1px solid var(--color-separator); }
+.home-weather .widget-header { padding: 0; margin-bottom: 12px; }
+.home-weather .widget-header h2 { color: var(--color-text-highlight); font-size: 1.3rem; }
+.home-weather-days { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.home-weather-day { display: flex; flex-direction: column; align-items: center; gap: 6px; min-width: 0; }
+.home-weather-label { color: var(--color-text-base); font-size: 1.15rem; }
+.home-weather-icon { width: 38px; height: 38px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; color: #bac4ce; }
+.home-weather-icon.weather-sun { color: #d7b66e; }
+.home-weather-temperatures { display: flex; align-items: baseline; gap: 5px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.home-weather-temperatures strong { font-size: 1.8rem; font-weight: 500; color: var(--color-text-highlight); }
+.home-weather-temperatures span { font-size: 1.2rem; color: var(--color-text-base); }
+.home-weather-condition { font-size: 1.1rem; color: var(--color-text-base); }
+.home-weather-source { margin-top: 12px; font-size: 1rem; color: var(--color-text-subdue); text-align: center; }
+.home-weather-unavailable { font-size: 1.15rem; line-height: 1.7; color: var(--color-text-base); }
+.home-links-and-resets .live-resets { padding-left: 16px; border-left: 1px solid var(--color-separator); }
+.home-links-and-resets .live-resets .widget-header { padding: 0; margin-bottom: 8px; }
+.home-links-and-resets .live-resets h2 { color: var(--color-primary); font-size: 1.3rem; letter-spacing: .02em; }
+.home-links-and-resets .live-resets .widget-content { font-size: 1.2rem; overflow-wrap: anywhere; line-height: 1.7; }
+.home-links-and-resets .live-resets .aihot-source { font-size: 1.05rem; }
+.live-resets .reset-event { display: block; position: relative; padding: 9px 18px 9px 0; color: var(--color-text-base); line-height: 1.7; border-radius: 5px; }
+.live-resets .reset-event:hover { color: var(--color-text-highlight); }
+.live-resets .reset-event:focus-visible { outline: 2px solid #e6bf73; outline-offset: 3px; }
+.live-resets .reset-event .aihot-source { display: block; margin-top: 6px; }
+.live-resets .reset-unread-dot { position: absolute; right: 1px; top: 13px; width: 8px; height: 8px; border-radius: 50%; background: #e6bf73; box-shadow: 0 0 0 3px rgb(230 191 115 / 9%); pointer-events: none; }
+@container home-tools (max-width: 330px) {
+  .home-links-and-resets .masonry { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .home-links-and-resets .widget-type-bookmarks, .home-links-and-resets .live-resets, .home-links-and-resets .home-weather { grid-column: 1; grid-row: auto; }
+  .home-links-and-resets .live-resets { padding: 16px 0 0; border-left: 0; border-top: 1px solid var(--color-separator); }
+  .home-links-and-resets .home-weather { padding: 16px 0 0; border-left: 0; border-top: 1px solid var(--color-separator); }
+}
+
+.desktop-mode-buttons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; }
+.desktop-mode-buttons button {
+  border: 1px solid var(--color-separator);
+  border-radius: 6px;
+  background: var(--color-widget-background);
+  color: var(--color-text-highlight);
+  padding: 10px 3px;
+  font: inherit;
+  font-size: 1.2rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.desktop-mode-buttons button:hover, .desktop-mode-buttons button:focus-visible { border-color: var(--color-primary); color: var(--color-primary); }
+.desktop-mode-buttons button:disabled { opacity: 0.45; cursor: wait; }
+.desktop-action-status, .desktop-action-hint { font-size: 1.15rem; line-height: 1.6; margin-top: 10px; }
+.desktop-action-status { color: var(--color-text-base); cursor: pointer; }
+.desktop-action-hint { color: var(--color-text-subdue); }
+
+.weather-network-details { margin-top: 12px; font-size: 1.15rem; line-height: 1.6; color: var(--color-text-subdue); }
+.weather-network-details summary { cursor: pointer; }
+.weather-network-details p { margin-top: 8px; overflow-wrap: anywhere; }
+
+html[data-workbench-shell="desktop"] body { min-width: 1180px; }
+html[data-workbench-shell="desktop"] .page-columns { min-width: 1180px; }
+html[data-workbench-shell="desktop"] .page-column { display: block; }
+html[data-workbench-shell="desktop"] .page-column-small { width: 300px; flex: 0 0 300px; }
+html[data-workbench-shell="desktop"] .page-column-full { width: auto; flex: 1 1 0; min-width: 0; }
+html[data-workbench-shell="desktop"] .header-container { display: block; }
+html[data-workbench-shell="desktop"] .mobile-navigation,
+html[data-workbench-shell="desktop"] .mobile-navigation-offset { display: none; }
+
+/* Each focus market occupies its own horizontal row in the right column. */
+@media (min-width: 1200px) {
+  .page-column-small:has(.live-focus-markets) { width: 440px; }
+}
+.live-focus-markets > .widget-content, .world-market-snapshot > .widget-content { padding: 0; border: 0; background: transparent; }
+.focus-market-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 9px; }
+.focus-market-card, .world-market-card {
+  min-width: 0; border-radius: 12px; border: 1px solid transparent;
+  background: var(--color-widget-background); text-align: center;
+  transition: border-color 150ms;
+}
+.focus-market-card:hover, .world-market-card:hover { border-color: var(--color-primary); }
+.focus-market-card {
+  display: grid;
+  grid-template-columns: max-content max-content minmax(0, 1fr);
+  grid-template-areas: "name price chart" "code percent chart" "note time status";
+  align-items: center; gap: 4px 12px; padding: 12px; text-align: left;
+}
+.quote-up { --quote-color: var(--finance-up); background: color-mix(in srgb, var(--finance-up) 9%, var(--color-widget-background)); }
+.quote-down { --quote-color: var(--finance-down); background: color-mix(in srgb, var(--finance-down) 9%, var(--color-widget-background)); }
+.quote-flat { --quote-color: var(--color-text-highlight); }
+.quote-color { color: var(--quote-color); font-variant-numeric: tabular-nums; }
+.focus-market-name { grid-area: name; font-size: 1.4rem; color: var(--color-text-highlight); white-space: nowrap; }
+.focus-market-code { grid-area: code; color: var(--color-text-base); font-size: 1.05rem; white-space: nowrap; }
+.focus-market-price { grid-area: price; font-size: 2rem; font-weight: 600; line-height: 1.4; text-align: left; }
+.focus-market-percent { grid-area: percent; font-size: 1.3rem; text-align: left; }
+.focus-market-card svg { grid-area: chart; width: 100%; height: 44px; margin: 0; overflow: visible; }
+.focus-market-card polyline { fill: none; stroke: var(--quote-color); stroke-width: 1.8; vector-effect: non-scaling-stroke; }
+.focus-market-note, .focus-market-time, .focus-market-status { font-size: 1.05rem; line-height: 1.7; color: var(--color-text-base); white-space: nowrap; }
+.focus-market-note { grid-area: note; }
+.focus-market-time { grid-area: time; text-align: left; }
+.focus-market-status { grid-area: status; color: var(--color-text-subdue); text-align: right; }
+.focus-market-card .focus-market-unavailable { grid-area: price; padding: 0; text-align: right; }
+.market-source-note { font-size: 1.1rem; color: var(--color-text-subdue); margin-top: 9px; line-height: 1.6; }
+.market-reference-note { font-size: 1.15rem; color: var(--color-text-base); line-height: 1.7; margin-top: 7px; }
+.market-reference-note summary { cursor: pointer; color: var(--color-primary); }
+.market-reference-note p { margin-top: 8px; }
+.market-reference-note a { color: var(--color-primary); }
+.quote-warning { color: var(--color-primary); }
+.world-market-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; }
+.world-market-card { display: flex; flex-direction: column; align-items: center; padding: 10px 5px; }
+.world-market-region { font-size: 1.05rem; color: var(--color-text-subdue); }
+.world-market-card h3 { font-size: 1.4rem; color: var(--color-text-highlight); margin-top: 2px; white-space: nowrap; }
+.world-market-card strong { font-size: 2.1rem; line-height: 1.6; font-weight: 600; }
+.world-market-change { display: flex; justify-content: center; flex-wrap: wrap; gap: 2px 7px; font-size: 1.15rem; }
+.world-market-card time { color: var(--color-text-subdue); font-size: 1rem; margin-top: 6px; }
+.focus-market-unavailable, .world-market-unavailable { color: var(--color-text-subdue); padding-block: 20px; font-size: 1.2rem; }
+@media (min-width: 1101px) and (max-width: 1199px) {
+  .focus-market-price { font-size: 1.5rem; }
+  .focus-market-name { font-size: 1.05rem; }
+  .focus-market-note { font-size: 0.9rem; }
+  .world-market-card strong { font-size: 1.6rem; }
+}
+@media (max-width: 520px) {
+  .world-market-card strong { font-size: 1.8rem; }
+  .world-market-card h3 { font-size: 1.2rem; }
+}
+
+.gmail-workspace > .widget-content { border: 0; background: transparent; padding: 0; }
+.gmail-topbar { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 20px 0 24px; }
+.gmail-eyebrow { color: var(--color-primary); font-size: 1.15rem; letter-spacing: .1em; margin-bottom: 7px; }
+.gmail-topbar h2 { color: var(--color-text-highlight); font-size: 2.8rem; font-weight: 500; }
+.gmail-subtitle { color: var(--color-text-subdue); margin-top: 10px; line-height: 1.7; }
+.gmail-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.gmail-actions button { font: inherit; color: var(--color-text-highlight); background: var(--color-widget-background); padding: 10px 16px; border: 1px solid var(--color-separator); border-radius: 7px; cursor: pointer; }
+.gmail-actions button:first-child { color: var(--color-primary); border-color: var(--color-primary); }
+.gmail-actions button:hover { border-color: var(--color-primary); }
+.gmail-actions button:disabled { opacity: .45; cursor: not-allowed; }
+.gmail-notice { border-left: 2px solid var(--color-primary); color: var(--color-text-base); background: var(--color-widget-background); padding: 12px 16px; margin-bottom: 20px; line-height: 1.7; }
+.gmail-layout { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 24px; }
+.gmail-sidebar, .gmail-inbox { border: 1px solid var(--color-separator); border-radius: 9px; background: var(--color-widget-background); }
+.gmail-sidebar { padding: 20px; align-self: start; }
+.gmail-sidebar h3, .gmail-list-heading h3 { color: var(--color-text-highlight); font-size: 1.5rem; }
+#gmail-account-count { margin-left: 7px; font-size: 1.2rem; color: var(--color-text-subdue); }
+#gmail-accounts { margin-top: 16px; }
+.gmail-account { display: block; width: 100%; text-align: left; font: inherit; color: var(--color-text-base); background: transparent; border: 1px solid transparent; border-radius: 6px; padding: 12px 9px; cursor: pointer; overflow-wrap: anywhere; }
+.gmail-account strong { display: block; font-weight: 500; }
+.gmail-account span { display: block; font-size: 1.1rem; color: var(--color-text-subdue); margin-top: 5px; }
+.gmail-account.is-active { border-color: var(--color-primary); color: var(--color-primary); }
+#gmail-accounts .gmail-account-with-avatar { display: flex; align-items: center; gap: 11px; }
+#gmail-accounts .gmail-account-avatar { --avatar-hue: 40; display: flex; position: relative; align-items: center; justify-content: center; width: 38px; height: 38px; flex: 0 0 38px; margin: 0; border-radius: 50%; overflow: hidden; font-size: 1.2rem; font-weight: 600; color: hsl(var(--avatar-hue) 65% 80%); background: hsl(var(--avatar-hue) 28% 22%); }
+#gmail-accounts .gmail-account-avatar img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; opacity: 0; }
+#gmail-accounts .gmail-account-avatar.has-image img { opacity: 1; }
+.gmail-account-copy { min-width: 0; flex: 1; }
+.gmail-avatar-authorize { display: block; margin: -3px 0 6px 59px; padding: 2px 0; color: var(--color-primary); font: inherit; font-size: 1.05rem; cursor: pointer; background: transparent; border: 0; }
+.gmail-account-card { margin-top: 8px; border: 1px solid var(--color-separator); border-radius: 7px; overflow: hidden; }
+.gmail-account-card.is-active { border-color: var(--color-primary); }
+.gmail-account-card .gmail-account.is-active { border-color: transparent; }
+.gmail-account-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; padding: 0 10px 12px 59px; }
+.gmail-reconnect, .gmail-remove { min-width: 0; margin: 0; padding: 5px 7px; border: 1px solid var(--color-separator); border-radius: 5px; background: transparent; color: var(--color-text-highlight); font: inherit; font-size: 1.05rem; white-space: nowrap; cursor: pointer; }
+.gmail-reconnect:hover, .gmail-reconnect:focus-visible, .gmail-remove:hover, .gmail-remove:focus-visible { border-color: var(--color-primary); }
+.gmail-reconnect:disabled, .gmail-remove:disabled, .gmail-avatar-authorize:disabled { opacity: .5; cursor: not-allowed; }
+@media (max-width: 560px) { .gmail-account-actions { padding-left: 10px; } }
+.gmail-auth { padding: 12px 16px; margin-bottom: 20px; border: 1px solid var(--color-separator); border-radius: 7px; overflow-wrap: anywhere; line-height: 1.8; }
+.gmail-auth[hidden] { display: none; }
+.gmail-auth a { display: block; width: fit-content; margin-top: 6px; color: var(--color-primary); }
+.gmail-side-note { font-size: 1.15rem; color: var(--color-text-subdue); line-height: 1.8; padding-top: 20px; margin-top: 20px; border-top: 1px solid var(--color-separator); }
+.gmail-list-heading { display: flex; justify-content: space-between; gap: 12px; padding: 20px; border-bottom: 1px solid var(--color-separator); align-items: center; }
+.gmail-list-heading h3 { overflow-wrap: anywhere; }
+.gmail-list-heading label { white-space: nowrap; font-size: 1.2rem; color: var(--color-text-subdue); cursor: pointer; }
+.gmail-list-heading input { accent-color: var(--color-primary); }
+.gmail-empty { display: grid; place-items: center; text-align: center; color: var(--color-text-subdue); min-height: 240px; padding: 24px; line-height: 1.8; }
+.gmail-empty-small { padding: 18px 0; color: var(--color-text-subdue); font-size: 1.3rem; }
+.gmail-message { display: grid; grid-template-columns: 12px minmax(0, 1fr) auto; gap: 12px; padding: 18px 20px; border-bottom: 1px solid var(--color-separator); }
+.gmail-message:hover { background: var(--color-widget-background-highlight); }
+.gmail-message-main strong { display: block; font-weight: 400; color: var(--color-text-highlight); line-height: 1.7; overflow-wrap: anywhere; }
+.gmail-message.is-unread .gmail-message-main strong { font-weight: 600; }
+.gmail-sender { display: block; color: var(--color-text-subdue); margin-top: 4px; font-size: 1.15rem; overflow-wrap: anywhere; }
+.gmail-unread-dot { color: var(--color-primary); font-size: .9rem; line-height: 2.5; }
+.gmail-message-meta { text-align: right; font-size: 1.05rem; color: var(--color-text-subdue); }
+.gmail-message-meta time { display: block; margin-top: 7px; white-space: nowrap; }
+.gmail-account-tag { color: var(--color-primary); overflow-wrap: anywhere; }
+.gmail-setup { margin-top: 26px; padding: 18px 20px; border: 1px solid var(--color-separator); border-radius: 9px; color: var(--color-text-base); line-height: 1.8; }
+.gmail-setup summary { cursor: pointer; color: var(--color-primary); }
+.gmail-setup ol { list-style: decimal; margin: 14px 0 12px 24px; }
+.gmail-setup p { font-size: 1.2rem; margin-top: 8px; color: var(--color-text-subdue); }
+.gmail-setup a { color: var(--color-primary); }
+.youtube-filters { display: flex; align-items: end; flex-wrap: wrap; gap: 14px; padding: 20px; border-bottom: 1px solid var(--color-separator); }
+.youtube-filters label { display: flex; flex-direction: column; gap: 7px; font-size: 1.1rem; color: var(--color-text-subdue); min-width: 130px; }
+.youtube-filters select, .youtube-filters input { color: var(--color-text-highlight); background: var(--color-background); border: 1px solid var(--color-separator); border-radius: 6px; padding: 9px; font: inherit; min-width: 0; max-width: 260px; }
+.youtube-filters select:focus, .youtube-filters input:focus { outline: 1px solid var(--color-primary); }
+.youtube-search { flex: 1; }
+.youtube-filters input { max-width: none; }
+#youtube-count { font-size: 1.1rem; color: var(--color-text-subdue); padding-bottom: 9px; }
+#youtube-account-count { font-size: 1.2rem; color: var(--color-text-subdue); margin-left: 7px; }
+.youtube-workspace .gmail-side-note a { color: var(--color-primary); }
+.youtube-video { display: grid; grid-template-columns: 180px minmax(0,1fr) 16px; gap: 20px; align-items: center; padding: 18px 20px; border-bottom: 1px solid var(--color-separator); }
+.youtube-video:hover { background: var(--color-widget-background-highlight); }
+/* These dynamic images use native lazy loading outside Glance's initial image scan. */
+#youtube-dashboard .youtube-video img[loading="lazy"] { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 6px; background: var(--color-background); opacity: 1; }
+.youtube-video h3 { color: var(--color-text-highlight); font-size: 1.55rem; line-height: 1.6; overflow-wrap: anywhere; }
+.youtube-video p { color: var(--color-primary); font-size: 1.2rem; margin-top: 7px; }
+.youtube-publication { display: flex; flex-wrap: wrap; align-items: center; gap: 7px 12px; margin-top: 10px; }
+.youtube-video .youtube-time-badge { display: inline-flex; align-items: center; padding: 4px 10px; border: 1px solid var(--color-separator); border-radius: 6px; background: var(--color-background); color: var(--color-text-highlight); font-size: 1.25rem; font-weight: 600; line-height: 1.5; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.youtube-video .youtube-time-badge.is-recent { color: var(--color-primary); border-color: var(--color-primary); }
+.youtube-time-exact { color: var(--color-text-subdue); font-size: 1.1rem; line-height: 1.6; }
+.youtube-open { color: var(--color-text-subdue); }
+#youtube-more { display: block; margin: 20px auto; border: 1px solid var(--color-separator); padding: 10px 22px; color: var(--color-primary); background: transparent; border-radius: 6px; cursor: pointer; }
+#youtube-more[hidden] { display: none; }
+@media (max-width: 520px) {
+  .youtube-video { grid-template-columns: 110px minmax(0,1fr); gap: 12px; padding: 14px; }
+  .youtube-open { display: none; }
+  .youtube-video h3 { font-size: 1.3rem; }
+  .youtube-filters { padding: 14px; }
+  .youtube-filters label, .youtube-filters select { max-width: 100%; }
+}
+@media (max-width: 800px) {
+  .gmail-topbar { align-items: start; flex-direction: column; }
+  .gmail-layout { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .gmail-message { grid-template-columns: 10px minmax(0, 1fr); }
+  .gmail-message-meta { grid-column: 2; text-align: left; }
+  .gmail-topbar h2 { font-size: 2.4rem; }
+}

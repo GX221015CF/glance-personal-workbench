@@ -1,0 +1,17 @@
+- type: custom-api
+  title: Tibo 重置监控
+  title-url: https://aihot.news/codex-reset
+  css-class: live-resets
+  cache: 1m
+  url: http://127.0.0.1:8182/api/resets
+  template: |
+    <p><a class="color-primary" data-reset-open-all href="https://aihot.news/codex-reset" target="_blank" rel="noopener noreferrer">打开完整监控日历 ↗</a></p>
+    {{ if .JSON.Bool "available" }}
+      <div class="reset-events">
+      {{ range .JSON.Array "events" }}
+        <a class="reset-event" data-reset-revision="{{ .String "revision" }}" data-reset-timestamp="{{ .Float "timestamp" }}" href="{{ .String "url" }}" target="_blank" rel="noopener noreferrer"><span data-reset-title>{{ .String "label" }} · {{ .String "status" }}</span><span class="aihot-source" data-reset-time>{{ .String "timeLabel" }}</span></a>
+      {{ end }}
+      </div>
+      <p class="aihot-source margin-top-10">AIHOT 最近核验：{{ .JSON.String "checkedLabel" }}（北京时间）</p>
+      {{ if .JSON.Bool "stale" }}<p class="aihot-source">当前为缓存快照，等待下次核验。</p>{{ end }}
+    {{ else }}<p class="aihot-source margin-top-10">{{ .JSON.String "message" }}</p>{{ end }}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+  <symbol id="sun" viewBox="0 0 48 48"><circle cx="24" cy="24" r="9"/><path d="M24 3v5m0 32v5M3 24h5m32 0h5M9 9l4 4m22 22 4 4M9 39l4-4m22-22 4-4"/></symbol>
+  <symbol id="cloud" viewBox="0 0 48 48"><path d="M13 36h23a8 8 0 0 0 0-16h-1a12 12 0 0 0-23-1 9 9 0 0 0 1 17Z"/></symbol>
+  <symbol id="partly-cloudy" viewBox="0 0 48 48"><g stroke="#d7b66e"><circle cx="17" cy="17" r="7"/><path d="M17 3v3M3 17h3M7 7l2 2m18-2-2 2M7 27l2-2"/></g><path d="M18 39h19a7 7 0 0 0 0-14h-1a10 10 0 0 0-19-1 8 8 0 0 0 1 15Z"/></symbol>
+  <symbol id="rain" viewBox="0 0 48 48"><path d="M12 29h25a7 7 0 0 0-1-14 11 11 0 0 0-21-1 8 8 0 0 0-3 15Z"/><path stroke="#8bbbd0" d="m16 35-2 6m11-6-2 6m11-6-2 6"/></symbol>
+  <symbol id="snow" viewBox="0 0 48 48"><path d="M12 28h25a7 7 0 0 0-1-14 11 11 0 0 0-21-1 8 8 0 0 0-3 15Z"/><path stroke="#a9c9dd" d="M15 34v8m-4-4h8m12-4v8m-4-4h8"/></symbol>
+  <symbol id="fog" viewBox="0 0 48 48"><path d="M10 24a8 8 0 0 1 5-14 11 11 0 0 1 21 3 7 7 0 0 1 2 12M7 31h34M11 38h26"/></symbol>
+  <symbol id="storm" viewBox="0 0 48 48"><path d="M11 29a8 8 0 0 1 4-15 11 11 0 0 1 21 1 7 7 0 0 1 1 14h-6"/><path stroke="#d7b66e" d="m23 24-7 12h8l-3 9 12-15h-9l4-6"/></symbol>
+</svg>

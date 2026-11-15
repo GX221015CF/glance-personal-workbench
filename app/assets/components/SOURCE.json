@@ -1,0 +1,11 @@
+{
+  "source": "design-lab/public",
+  "license": "MIT, original project implementation",
+  "revision": 58,
+  "hashes": {
+    "button-player.mjs": "16026445451e35c280311b5fd89d020d24e29d9f48f53b7a49ce8042b2333bb2",
+    "button-catalog.mjs": "9c0d7f805545746a53ed75ae1d0f8cf20bef12f9bf7802189e8dc699f405ea5d",
+    "button-core.css": "6e0ac1cf64564249ef1d1ee62943e816893eddfaa720f94526560eeebc677c80",
+    "accordion-motion.mjs": "2fb7b435dd89cb213bb50872efe289e0558420ce0e59af5ed4f4f9b24fb56e54"
+  }
+}

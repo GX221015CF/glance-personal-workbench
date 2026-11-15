@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>上财连接器</title><link rel="stylesheet" href="panel.css"></head>
+<body><main>
+<header><p class="eyebrow">个人工作台</p><h1>上财连接器</h1><p>工作台的“更新学校数据”覆盖教务、Canvas和学业规划。</p></header>
+<nav aria-label="打开工作台"><a href="http://127.0.0.1:8180/study" target="_blank" rel="noopener noreferrer">课程与资料 ↗</a><a href="http://127.0.0.1:8180/academic" target="_blank" rel="noopener noreferrer">学业进度 ↗</a></nav>
+<div class="actions"><button id="unified-connect" class="primary">更新学校数据</button><button id="unified-continue" hidden>我已登录，继续更新</button><button id="cancel" hidden>取消本次更新</button></div>
+<p id="notice" role="status" aria-live="polite"></p>
+<details id="panel-manager"><summary>查看三路结果</summary><section id="systems"></section></details>
+<details id="panel-more"><summary>故障诊断</summary><button id="status">核对后台状态</button>
+<div id="unknown" hidden><p>已发送请求仍可能完成，核对后台状态后再决定。</p><label><input type="checkbox" id="ack">已核对成功时间，确认结束未确认任务</label><button id="dismiss">结束未确认任务</button></div>
+<p>学校密码、验证码和二次认证由你完成。页面刷新或切换不会另建更新任务。</p><code id="runtime-origin"></code></details>
+<footer><span id="identity"></span></footer>
+</main><script type="module" src="panel.js"></script></body></html>

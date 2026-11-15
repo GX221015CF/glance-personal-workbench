@@ -1,0 +1,30 @@
+- type: custom-api
+  title: 其他行情 · 全球主要指数
+  css-class: world-market-snapshot
+  cache: 1s
+  url: http://127.0.0.1:8182/api/world
+  template: |
+    {{ if not (.JSON.Bool "available") }}
+      <p>{{ .JSON.String "message" }}</p>
+    {{ else }}
+      <div class="world-market-grid">
+        {{ range .JSON.Array "groups" }}
+          {{ $region := .String "name" }}
+          {{ range .Array "items" }}
+            <a class="world-market-card quote-{{ .String "direction" }}" href="{{ .String "url" }}" target="_blank" rel="noopener noreferrer" title="{{ $region }} · {{ .String "name" }} · {{ .String "timeLabel" }} 北京时间">
+              <span class="world-market-region">{{ $region }}</span>
+              <h3>{{ .String "name" }}</h3>
+              {{ if .Bool "available" }}
+                <strong class="quote-color">{{ printf "%.2f" (.Float "price") }}</strong>
+                <span class="world-market-change quote-color"><span>{{ printf "%+.2f" (.Float "change") }}</span><span>{{ printf "%+.2f%%" (.Float "changePercent") }}</span></span>
+                <time>{{ .String "timeLabel" }}{{ if .Bool "stale" }} · 缓存{{ end }}</time>
+              {{ else }}
+                <span class="world-market-unavailable">暂无行情</span>
+              {{ end }}
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+      <p class="market-source-note">东方财富 · 每15分钟检查 · 行情时间为北京时间；休市市场保留最近行情。</p>
+      {{ if .JSON.Bool "stale" }}<p class="quote-warning market-source-note">数据源暂不可用，当前为上次成功获取的快照。</p>{{ end }}
+    {{ end }}

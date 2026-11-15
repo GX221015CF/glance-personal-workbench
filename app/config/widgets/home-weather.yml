@@ -1,0 +1,29 @@
+- type: custom-api
+  title: 上海天气
+  css-class: home-weather
+  cache: 1m
+  url: http://127.0.0.1:8182/api/weather
+  template: |
+    {{ if and (.JSON.Bool "available") (ge (len (.JSON.Array "daily.time")) 2) }}
+      <div class="home-weather-days" data-stale="{{ .JSON.Bool "stale" }}" data-baseline-kind="{{ .JSON.String "baseline.kind" }}" data-baseline-available="{{ .JSON.Bool "baseline.available" }}" data-baseline-count="{{ .JSON.Int "baseline.sampleCount" }}" data-baseline-start="{{ .JSON.String "baseline.start" }}" data-baseline-end="{{ .JSON.String "baseline.end" }}" data-baseline-high="{{ .JSON.Float "baseline.highMean" }}" data-baseline-low="{{ .JSON.Float "baseline.lowMean" }}" aria-label="上海今天和明天天气，气温为摄氏度">
+        {{ range $index, $day := .JSON.Array "daily.time" }}
+          {{ $code := $.JSON.Int (printf "daily.weather_code.%d" $index) }}
+          {{ $icon := "cloud" }}{{ $label := "阴" }}
+          {{ if eq $code 0 }}{{ $icon = "sun" }}{{ $label = "晴" }}
+          {{ else if le $code 2 }}{{ $icon = "partly-cloudy" }}{{ $label = "多云" }}
+          {{ else if or (eq $code 45) (eq $code 48) }}{{ $icon = "fog" }}{{ $label = "雾" }}
+          {{ else if ge $code 95 }}{{ $icon = "storm" }}{{ $label = "雷雨" }}
+          {{ else if or (and (ge $code 71) (le $code 77)) (eq $code 85) (eq $code 86) }}{{ $icon = "snow" }}{{ $label = "雪" }}
+          {{ else if ge $code 51 }}{{ $icon = "rain" }}{{ $label = "雨" }}{{ end }}
+          <div class="home-weather-day" data-date="{{ $.JSON.String (printf "daily.time.%d" $index) }}" data-high="{{ $.JSON.Float (printf "daily.temperature_2m_max.%d" $index) }}" data-low="{{ $.JSON.Float (printf "daily.temperature_2m_min.%d" $index) }}" data-code="{{ $code }}" title="{{ $.JSON.String (printf "daily.time.%d" $index) }} · {{ $label }}">
+            <p class="home-weather-label">{{ if eq $index 0 }}今天{{ else }}明天{{ end }}</p>
+            <svg class="home-weather-icon weather-{{ $icon }}" viewBox="0 0 48 48" role="img" aria-label="{{ $label }}"><use href="/assets/weather-icons.svg#{{ $icon }}"></use></svg>
+            <p class="home-weather-temperatures"><strong>{{ printf "%.0f" ($.JSON.Float (printf "daily.temperature_2m_max.%d" $index)) }}°</strong><span>{{ printf "%.0f" ($.JSON.Float (printf "daily.temperature_2m_min.%d" $index)) }}°</span></p>
+            <p class="home-weather-condition">{{ $label }}</p>
+          </div>
+        {{ end }}
+      </div>
+      <p class="home-weather-source" title="Open-Meteo · 更新于 {{ .JSON.String "checkedAt" }}">最高 / 最低 · °C{{ if .JSON.Bool "stale" }} · 上次预报{{ end }}</p>
+    {{ else }}
+      <p class="home-weather-unavailable">天气暂时不可用，稍后自动重试。</p>
+    {{ end }}

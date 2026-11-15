@@ -1,0 +1,1013 @@
+{
+  "date": "2026-11-15",
+  "sourceRoot": "../glance",
+  "glanceVersion": "0.8.7",
+  "pythonTests": [
+    "test_wechat_bridge",
+    "test_workbuddy_analysis",
+    "test_workbuddy_summary",
+    "test_workbuddy_preferences",
+    "test_analysis_report",
+    "test_ima_bridge",
+    "test_ima_course_sync",
+    "test_ima_workspace",
+    "test_news_interests",
+    "test_weather_data",
+    "test_market_data",
+    "test_calendar_bridge"
+  ],
+  "nodeTests": [
+    "test-analysis-report.cjs",
+    "test-calendar-dates.cjs",
+    "test-calendar-filters.cjs",
+    "test-gmail-reconnect.cjs",
+    "test-reset-monitor.cjs",
+    "test-study-file-types.cjs",
+    "test-study-ima.cjs",
+    "test-study-material-dates.cjs",
+    "test-study-offline.cjs",
+    "test-weather-alerts.cjs",
+    "test-wechat-markdown.cjs",
+    "test-wechat-sources.cjs"
+  ],
+  "files": [
+    {
+      "source": "glance/academic_bridge.py",
+      "path": "app/academic_bridge.py",
+      "sourceSha256": "1aa0f6670507d082eb077070c3b541da661c251ba1cbb4bf12164536512cf52b",
+      "changes": [
+        "审计写入独立数据根"
+      ],
+      "exportSha256": "ae0176516404011a875143b761c013722ab0505bc5e57981f6ae6e3ca85d4357"
+    },
+    {
+      "source": "glance/academic_program.py",
+      "path": "app/academic_program.py",
+      "sourceSha256": "59eadee42e2a54164c0c7e611a229c9ecfec26e64f041339d67eb55576017751",
+      "changes": [],
+      "exportSha256": "59eadee42e2a54164c0c7e611a229c9ecfec26e64f041339d67eb55576017751"
+    },
+    {
+      "source": "glance/analysis_report.py",
+      "path": "app/analysis_report.py",
+      "sourceSha256": "48a2e58336318bc8497d581815dd7684966e6625c37703b4ba33409a36501e46",
+      "changes": [],
+      "exportSha256": "48a2e58336318bc8497d581815dd7684966e6625c37703b4ba33409a36501e46"
+    },
+    {
+      "source": "glance/bridge.py",
+      "path": "app/bridge.py",
+      "sourceSha256": "3618a5e5482365c55bdf8a8ae405e795cf13dceffe1081aeaaca50d6c30cfc44",
+      "changes": [
+        "展示端口8180/8182",
+        "独立存储/启动适配",
+        "独立存储/启动适配",
+        "独立存储/启动适配",
+        "独立存储/启动适配",
+        "独立存储/启动适配"
+      ],
+      "exportSha256": "985c182df4a0f126dc0babd1e66f129fac5b733d84b00912f04da79656871eda"
+    },
+    {
+      "source": "glance/calendar_bridge.py",
+      "path": "app/calendar_bridge.py",
+      "sourceSha256": "87951a6f4cc3c5b6faeb23949dde4874a39d5b867eba7e72f646fc44036c324e",
+      "changes": [
+        "独立存储/启动适配"
+      ],
+      "exportSha256": "d5b2acd919e2cd38bcc25d0c588ede9e6c563d78060d58291e328f679d9c57ae"
+    },
+    {
+      "source": "glance/canvas_bridge.py",
+      "path": "app/canvas_bridge.py",
+      "sourceSha256": "5d0c7ecb02fa1773ba406e6bc86c5bf0427286dfd686cc923746b113bbe8a129",
+      "changes": [
+        "独立存储/启动适配"
+      ],
+      "exportSha256": "bcc8940043385fc7181b607387ff6fb30aa5a1c254fdd962fdb5c579048d76be"
+    },
+    {
+      "source": "glance/desktop_relay.py",
+      "path": "app/desktop_relay.py",
+      "sourceSha256": "09e918ace3e22fa2ac495b9ec5c07d40479de78600fa8bf2d14f38635ebc63a8",
+      "changes": [],
+      "exportSha256": "09e918ace3e22fa2ac495b9ec5c07d40479de78600fa8bf2d14f38635ebc63a8"
+    },
+    {
+      "source": "glance/gmail_bridge.py",
+      "path": "app/gmail_bridge.py",
+      "sourceSha256": "77f418d71e8f67e7f022b9eb0576ac72a60cda4388c625eb784f9c042e47bf1c",
+      "changes": [
+        "展示端口8180/8182",
+        "独立存储/启动适配"
+      ],
+      "exportSha256": "83c68c55661c2da8c961ccc49ff39a5f031a5126eebbe44d7640f5aaca159a25"
+    },
+    {
+      "source": "glance/ima_bridge.py",
+      "path": "app/ima_bridge.py",
+      "sourceSha256": "a3d72c3686cf8be511be3712caa7b46b3b8411e0028fac84b716ab97d17258e3",
+      "changes": [],
+      "exportSha256": "a3d72c3686cf8be511be3712caa7b46b3b8411e0028fac84b716ab97d17258e3"
+    },
+    {
+      "source": "glance/ima_course_sync.py",
+      "path": "app/ima_course_sync.py",
+      "sourceSha256": "ceac3b1f8d33a01002ea7c969c22000bdfdf449b849b7ca84700d360aab0c7a4",
+      "changes": [],
+      "exportSha256": "ceac3b1f8d33a01002ea7c969c22000bdfdf449b849b7ca84700d360aab0c7a4"
+    },
+    {
+      "source": "glance/ima_probe.py",
+      "path": "app/ima_probe.py",
+      "sourceSha256": "7f33045cd099fa475f157f77c1fa8f216a29f4b094cfc2e36557bceda275c8f3",
+      "changes": [],
+      "exportSha256": "8e5d99c14ae2b3231fa86076c1b14894110acb35b6826f5f65c3ab029b15ada1"
+    },
+    {
+      "source": "glance/ima_workspace.py",
+      "path": "app/ima_workspace.py",
+      "sourceSha256": "857757b562bc5c8f80a3b6d4da5e55982c048ed0fbf9c78f2de773d2ab8af3dc",
+      "changes": [],
+      "exportSha256": "1adfb39641347a83c262866583aafb45499a8405191421b4d8bc99b77d3c4b45"
+    },
+    {
+      "source": "glance/market_fallback.py",
+      "path": "app/market_fallback.py",
+      "sourceSha256": "5c11d5f9fcb7317c6d4d848481f88ebdccc6483e5c9e7fe78c3722c80eb83001",
+      "changes": [],
+      "exportSha256": "5c11d5f9fcb7317c6d4d848481f88ebdccc6483e5c9e7fe78c3722c80eb83001"
+    },
+    {
+      "source": "glance/news_interests.py",
+      "path": "app/news_interests.py",
+      "sourceSha256": "ca92ab5992ac142de28cffc2cd09eb7d744d98b1528b87e09bba74826dca395c",
+      "changes": [],
+      "exportSha256": "ca92ab5992ac142de28cffc2cd09eb7d744d98b1528b87e09bba74826dca395c"
+    },
+    {
+      "source": "glance/school_connection_audit.py",
+      "path": "app/school_connection_audit.py",
+      "sourceSha256": "14aabdbb96e8a5a122578fb069e689a8ef3bdf94a4a247012d814fcd959bb2cc",
+      "changes": [
+        "审计写入独立数据根"
+      ],
+      "exportSha256": "e6154fa5cf9daef88d7120527f25dbb2576d88c5a1348da83e620a37575cdc0c"
+    },
+    {
+      "source": "glance/school_saved_check.py",
+      "path": "app/school_saved_check.py",
+      "sourceSha256": "93831d477e6abe4024acb6619257712b3cb4298f6d1ab28c35127457d7672400",
+      "changes": [],
+      "exportSha256": "93831d477e6abe4024acb6619257712b3cb4298f6d1ab28c35127457d7672400"
+    },
+    {
+      "source": "glance/school_storage.py",
+      "path": "app/school_storage.py",
+      "sourceSha256": "af2a40572e61ea9af5a6ce201c276ac43a13c7dd500ce0cc49518f520dae9e5d",
+      "changes": [
+        "独立存储/启动适配"
+      ],
+      "exportSha256": "b08e934e4d7c30a09751e16133a4769ff4e12a32e0effdbe2b70d70216734952"
+    },
+    {
+      "source": "glance/study_marks.py",
+      "path": "app/study_marks.py",
+      "sourceSha256": "44acd7df1addf1f8767554e6b5766f08eb980fdfe017efcf52f4937f2993466c",
+      "changes": [],
+      "exportSha256": "44acd7df1addf1f8767554e6b5766f08eb980fdfe017efcf52f4937f2993466c"
+    },
+    {
+      "source": "glance/sufe_bridge.py",
+      "path": "app/sufe_bridge.py",
+      "sourceSha256": "986fba828998c804b42046cdf987c83e0cd21dcc95e30b676fb5a3082c443322",
+      "changes": [
+        "独立存储/启动适配"
+      ],
+      "exportSha256": "d706a2391acfe293148e826aa6c195b551b83bdf4ae1850bf4d80a5c87ada959"
+    },
+    {
+      "source": "glance/test_analysis_report.py",
+      "path": "app/test_analysis_report.py",
+      "sourceSha256": "2183fd866a47f02dd76fedc8cdcfb5226c16ef2d4de4679c200d0b6e1f82a488",
+      "changes": [],
+      "exportSha256": "2183fd866a47f02dd76fedc8cdcfb5226c16ef2d4de4679c200d0b6e1f82a488"
+    },
+    {
+      "source": "glance/test_calendar_bridge.py",
+      "path": "app/test_calendar_bridge.py",
+      "sourceSha256": "1330192fc36ef158ffb039b070542f1477cd46c8382ab639a0a924112d47a13b",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "2e4b3b89be6b3399649d5e13ed02eb9cc5b06b01ecebc803534cbed17f012379"
+    },
+    {
+      "source": "glance/test_ima_bridge.py",
+      "path": "app/test_ima_bridge.py",
+      "sourceSha256": "e75dfc12601aa88b2dd96a24492d02999f0511a6baa56520c4d463f86cd696c3",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "e08a81dc498c3056994a17c941e6c00b88e265d50409744dfee0c38b729ddad8"
+    },
+    {
+      "source": "glance/test_ima_course_sync.py",
+      "path": "app/test_ima_course_sync.py",
+      "sourceSha256": "0d34c2b2e0cc6b604e19856fe75b41b3f5326b8634a0e204841280071fd84d4e",
+      "changes": [],
+      "exportSha256": "0d34c2b2e0cc6b604e19856fe75b41b3f5326b8634a0e204841280071fd84d4e"
+    },
+    {
+      "source": "glance/test_ima_workspace.py",
+      "path": "app/test_ima_workspace.py",
+      "sourceSha256": "7003097f0617537d4d2e47b2818ed22020f36882e437f561c82042c5c5fa65c1",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "2de8673df5a8124436d136e258f6ebcd8e89dee9097c5c4a75b699b817425ff1"
+    },
+    {
+      "source": "glance/test_market_data.py",
+      "path": "app/test_market_data.py",
+      "sourceSha256": "2052df23538e12d9997b63560d7421b7899dc32d82048c6ece33c7b4b50316a6",
+      "changes": [],
+      "exportSha256": "2052df23538e12d9997b63560d7421b7899dc32d82048c6ece33c7b4b50316a6"
+    },
+    {
+      "source": "glance/test_news_interests.py",
+      "path": "app/test_news_interests.py",
+      "sourceSha256": "b652865bfe8ab7de6b881c40dffdbabe039da2dd63551f43cc3bdd6a4e874df7",
+      "changes": [],
+      "exportSha256": "b652865bfe8ab7de6b881c40dffdbabe039da2dd63551f43cc3bdd6a4e874df7"
+    },
+    {
+      "source": "glance/test_weather_data.py",
+      "path": "app/test_weather_data.py",
+      "sourceSha256": "caba32962dd428f057fcd24e73db5b76fc5cd71f6d7fafac9f7987a3f2250bc9",
+      "changes": [],
+      "exportSha256": "caba32962dd428f057fcd24e73db5b76fc5cd71f6d7fafac9f7987a3f2250bc9"
+    },
+    {
+      "source": "glance/test_wechat_bridge.py",
+      "path": "app/test_wechat_bridge.py",
+      "sourceSha256": "14ea6281a0e192e5160c469e699ebe7a87618eeb90ccdf493f43da7f66b3b93e",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "8a197061835a2127e0fa28246a34c423414ca3add0b51173e73741580d211452"
+    },
+    {
+      "source": "glance/test_workbuddy_analysis.py",
+      "path": "app/test_workbuddy_analysis.py",
+      "sourceSha256": "8f368c37ed57faaa446c224cc11f1cfff4aa9c9d97b8c6cc845feb92b6614ede",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "fa7935dde5bc8762d79c1121db833752cdaf62132d8e7981674afcac387d4e24"
+    },
+    {
+      "source": "glance/test_workbuddy_preferences.py",
+      "path": "app/test_workbuddy_preferences.py",
+      "sourceSha256": "238a573584ffd1b41c11b698c965e1c3f1ec1b704139e36825ffb9d0b4bfe668",
+      "changes": [],
+      "exportSha256": "238a573584ffd1b41c11b698c965e1c3f1ec1b704139e36825ffb9d0b4bfe668"
+    },
+    {
+      "source": "glance/test_workbuddy_summary.py",
+      "path": "app/test_workbuddy_summary.py",
+      "sourceSha256": "4d5c92964448885a593ba1c70f5d635bd5b38a018909dad011d0544e8c351c4f",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "ceb5772963e223c59c34922ea8dc000941504a4ffed3c4a8b2d4a0637574f4e5"
+    },
+    {
+      "source": "glance/weather_data.py",
+      "path": "app/weather_data.py",
+      "sourceSha256": "97ea6d22aa32136e1fcecaa4bf55ad928de2c0227c35310669fbdd716d948557",
+      "changes": [],
+      "exportSha256": "97ea6d22aa32136e1fcecaa4bf55ad928de2c0227c35310669fbdd716d948557"
+    },
+    {
+      "source": "glance/wechat_bridge.py",
+      "path": "app/wechat_bridge.py",
+      "sourceSha256": "d71c02cfd8af2ca453d9b8db43e53d8f8e39b48892c413131637641cfa5e9dcb",
+      "changes": [
+        "独立存储/启动适配"
+      ],
+      "exportSha256": "0c3152f77427f9ccb7578c0379169305d3224b4848d060c2774685f1a0b7f5c2"
+    },
+    {
+      "source": "glance/workbuddy_analysis.py",
+      "path": "app/workbuddy_analysis.py",
+      "sourceSha256": "b80889b4c79be1e2bfe02133aa2da0e268fc5891dcd3303f50f69fbc475f68da",
+      "changes": [
+        "独立存储/启动适配",
+        "独立存储/启动适配"
+      ],
+      "exportSha256": "06b207215500ade898a70d5e05db3f6f32ff8af467278aff235fc698a926d35b"
+    },
+    {
+      "source": "glance/workbuddy_preferences.py",
+      "path": "app/workbuddy_preferences.py",
+      "sourceSha256": "09cc23c71a39a817167f5ab769a158c14ed63bf69120daaa1853fed807dba2ca",
+      "changes": [
+        "独立存储/启动适配"
+      ],
+      "exportSha256": "32120b35ecaaaeb3ffa792c49817da3fbb6fe1cd6368c15d6924091bf07f5875"
+    },
+    {
+      "source": "glance/workbuddy_summary.py",
+      "path": "app/workbuddy_summary.py",
+      "sourceSha256": "7fd01d8dfb1c89685c05dc0de53aaf317d19a84325a679b6ff4bba0283670c13",
+      "changes": [],
+      "exportSha256": "7fd01d8dfb1c89685c05dc0de53aaf317d19a84325a679b6ff4bba0283670c13"
+    },
+    {
+      "source": "glance/youtube_bridge.py",
+      "path": "app/youtube_bridge.py",
+      "sourceSha256": "3a0bb591ccd0663c1ec0ac5dd078acffe3c1b2f185264d30f3b26c49f853eb67",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "25630a9c63ab1d70f56b39876909d37bc26ef918fa6aa71b587da54a3e2fcafc"
+    },
+    {
+      "source": "glance/assets/academic-model.mjs",
+      "path": "app/assets/academic-model.mjs",
+      "sourceSha256": "a08b519aec0d185d6f15db205ecc216c5f193e620ad3f575272a88aa37fc02b2",
+      "changes": [],
+      "exportSha256": "7cd6dff0ee1454110c90b8822ecfc8332d467da695a20d486b447ee2d84b691e"
+    },
+    {
+      "source": "glance/assets/academic.css",
+      "path": "app/assets/academic.css",
+      "sourceSha256": "5bdabd251da89e97b8dd8e70c54da7d82f2e29e66cebe7d21d3cbf0cd571e876",
+      "changes": [],
+      "exportSha256": "bb74c94e46539006d7d7b5bb0ba903039ba899b4ca08ba22befac3824e66425d"
+    },
+    {
+      "source": "glance/assets/academic.js",
+      "path": "app/assets/academic.js",
+      "sourceSha256": "d898a3029e8996cf62fc1409f2f09a996a8506d1a30288f9951aa7d9e74dd4cb",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "803abfa6eb635e86ed85ee51af8eecbb1de7087701bbcb432a614df45d6d92c2"
+    },
+    {
+      "source": "glance/assets/aihot-feed.js",
+      "path": "app/assets/aihot-feed.js",
+      "sourceSha256": "3e770ae1099f5134c5c19f4fbc006bb3fb5c4253cac7ea95f9002246e6dcc8a9",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "e9171cb4f178378af7b5648d2d4a6eb1c55db313eece46164f21a1a1ab7b47f9"
+    },
+    {
+      "source": "glance/assets/analysis-report.css",
+      "path": "app/assets/analysis-report.css",
+      "sourceSha256": "d371768f7b80de8d62889d64cade41602518857e295d86fc206f1a2e73e55fe8",
+      "changes": [],
+      "exportSha256": "19191bd0f56f08c41d59f243d0f692c1e5b5ae40c437a85a4ccc5b5c25a81690"
+    },
+    {
+      "source": "glance/assets/analysis-report.js",
+      "path": "app/assets/analysis-report.js",
+      "sourceSha256": "3cb268b981b30b23c86a6bad8b02a991a76722818bffec1095dfa193876a8b53",
+      "changes": [],
+      "exportSha256": "3cb268b981b30b23c86a6bad8b02a991a76722818bffec1095dfa193876a8b53"
+    },
+    {
+      "source": "glance/assets/calendar-dates.js",
+      "path": "app/assets/calendar-dates.js",
+      "sourceSha256": "2a9c6aa924ffd2d9a3af0ac52ad514092d49a22296eefe60dfa3d74a15bb9779",
+      "changes": [],
+      "exportSha256": "2a9c6aa924ffd2d9a3af0ac52ad514092d49a22296eefe60dfa3d74a15bb9779"
+    },
+    {
+      "source": "glance/assets/calendar-filters.js",
+      "path": "app/assets/calendar-filters.js",
+      "sourceSha256": "a1d72c27f2b215863de997ee645894fa24d7d39ddabf144833cd647833060a0e",
+      "changes": [],
+      "exportSha256": "a1d72c27f2b215863de997ee645894fa24d7d39ddabf144833cd647833060a0e"
+    },
+    {
+      "source": "glance/assets/canvas.css",
+      "path": "app/assets/canvas.css",
+      "sourceSha256": "d21c17de40c1687508dd0df949b20915415d1f3c3af80e4671cf4a43d65c58e5",
+      "changes": [],
+      "exportSha256": "d21c17de40c1687508dd0df949b20915415d1f3c3af80e4671cf4a43d65c58e5"
+    },
+    {
+      "source": "glance/assets/canvas.js",
+      "path": "app/assets/canvas.js",
+      "sourceSha256": "fb6188200eca0c6bb0e58552259d4ada6d878938751b6761a86bef3b18e3d47f",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "fede66474f553dc330c870c3a3672e1aaf12953bd6ef8968b6b8330628476932"
+    },
+    {
+      "source": "glance/assets/chinese-clock.js",
+      "path": "app/assets/chinese-clock.js",
+      "sourceSha256": "23aded93387499c1486d6d7e94a41f0957320a02277c70e6f6042f08b69570a9",
+      "changes": [],
+      "exportSha256": "23aded93387499c1486d6d7e94a41f0957320a02277c70e6f6042f08b69570a9"
+    },
+    {
+      "source": "glance/assets/custom.css",
+      "path": "app/assets/custom.css",
+      "sourceSha256": "f77fb43b94a7337f2750baa4722139ed1ef1d4b1394460d90f60b38a35934d29",
+      "changes": [],
+      "exportSha256": "f77fb43b94a7337f2750baa4722139ed1ef1d4b1394460d90f60b38a35934d29"
+    },
+    {
+      "source": "glance/assets/desktop-actions.js",
+      "path": "app/assets/desktop-actions.js",
+      "sourceSha256": "7fad2ebf2c305ba50f6ef0a57d725d581c50b23e51cb36bdc0ccb7f9934202e2",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "7c89fc590ce36ac12be8f6a2fb80a69321e5e209b43142401d6c3ff17f9d90bd"
+    },
+    {
+      "source": "glance/assets/gmail.js",
+      "path": "app/assets/gmail.js",
+      "sourceSha256": "c483ea8208fe506e6157119deb0b5753dc89c371b983bbafe59d84f3d6a7b00f",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "5b0ef03c458c9d1f97c8acd3cbd98558ec5c39569a87c2dcc41c0c6fdbed764f"
+    },
+    {
+      "source": "glance/assets/home-calendar.css",
+      "path": "app/assets/home-calendar.css",
+      "sourceSha256": "fbb4370aec465206ac762081cdcfe2206fddbc86de0b37e079cfff71930ba773",
+      "changes": [],
+      "exportSha256": "8892c0e9dd0afe50a65d39ca9d6fc5555aca9b61fd46c6363af168d00803cbb7"
+    },
+    {
+      "source": "glance/assets/home-calendar.js",
+      "path": "app/assets/home-calendar.js",
+      "sourceSha256": "06e4468495666da06247e63937c091327e8f8d01585bc7687a02ab866a6060c0",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "b7cd19bb11f57aa3998bd01cae0a376b03fb1ded3e5451e07e6af3b2412e0936"
+    },
+    {
+      "source": "glance/assets/live-finance.js",
+      "path": "app/assets/live-finance.js",
+      "sourceSha256": "60adfb26b035af5c274314ddd05102563083099e091b123f4876a6d7162830eb",
+      "changes": [],
+      "exportSha256": "60adfb26b035af5c274314ddd05102563083099e091b123f4876a6d7162830eb"
+    },
+    {
+      "source": "glance/assets/reset-monitor.js",
+      "path": "app/assets/reset-monitor.js",
+      "sourceSha256": "63994724942a425304e8d708acd3cdc3ea432acb9cf5561ea1330bb898562b80",
+      "changes": [],
+      "exportSha256": "63994724942a425304e8d708acd3cdc3ea432acb9cf5561ea1330bb898562b80"
+    },
+    {
+      "source": "glance/assets/school-connector-model.js",
+      "path": "app/assets/school-connector-model.js",
+      "sourceSha256": "c3cb231c2380d0b0ca42580479225263496aa3aee69bddd18d408990f992114a",
+      "changes": [],
+      "exportSha256": "82e742fcb492ce6d460d2d529bd63f397e673b4b7fcaed0939b10db0fd2ca871"
+    },
+    {
+      "source": "glance/assets/school-connector.css",
+      "path": "app/assets/school-connector.css",
+      "sourceSha256": "d92ddb7a180360e9ce28ef288bca4102b5d2194f74cf48d96f6bf498fb72cec7",
+      "changes": [],
+      "exportSha256": "7cfcfba7222453b4fed37175e10ba0c7848da0d4356a6c4f01b74e6d1ce21231"
+    },
+    {
+      "source": "glance/assets/school-connector.js",
+      "path": "app/assets/school-connector.js",
+      "sourceSha256": "8861fbae16e10db7edbd868fb241ef14a52c1e4105db1b6ab9f897aac2734513",
+      "changes": [],
+      "exportSha256": "28261038763bc1176ccc93f1617459297a0e5e98d76e389c41a3e0b96e38c09a"
+    },
+    {
+      "source": "glance/assets/study-file-types.js",
+      "path": "app/assets/study-file-types.js",
+      "sourceSha256": "075dbc33f8e9d14d036b09d166e3b8a3bcdfb6789f25aa830e6dd1be1044275d",
+      "changes": [],
+      "exportSha256": "075dbc33f8e9d14d036b09d166e3b8a3bcdfb6789f25aa830e6dd1be1044275d"
+    },
+    {
+      "source": "glance/assets/study-ima-model.js",
+      "path": "app/assets/study-ima-model.js",
+      "sourceSha256": "5c5f27ff5a24efa2dcafa9341b8d453d4f88e3cdf9cf5229b0a69d1d69673968",
+      "changes": [],
+      "exportSha256": "5c5f27ff5a24efa2dcafa9341b8d453d4f88e3cdf9cf5229b0a69d1d69673968"
+    },
+    {
+      "source": "glance/assets/study-ima.css",
+      "path": "app/assets/study-ima.css",
+      "sourceSha256": "cbc79958f6c683483ca6fb4498420759ebe0858d987de0079f0b1ab2237eaa9d",
+      "changes": [],
+      "exportSha256": "54a505dad1e09832b7cb511079198261c8960b3246efcde74eed6a9dfad87dd7"
+    },
+    {
+      "source": "glance/assets/study-ima.js",
+      "path": "app/assets/study-ima.js",
+      "sourceSha256": "e454e616fc5f5c0af6507f78657306838f69faf9caf6fa624f3fc0c04ad0e0b8",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "7b2ddfd0cd9e72fc89bb2c296d7a52f3b02a882bdf6c2a22c34ac15adfb2d35c"
+    },
+    {
+      "source": "glance/assets/study-material-dates.js",
+      "path": "app/assets/study-material-dates.js",
+      "sourceSha256": "f1cbe2b8570172ec3df5f64ffc1a77a959a0fe4f7b517ccce53cc68fe8f1717c",
+      "changes": [],
+      "exportSha256": "f1cbe2b8570172ec3df5f64ffc1a77a959a0fe4f7b517ccce53cc68fe8f1717c"
+    },
+    {
+      "source": "glance/assets/study-offline.js",
+      "path": "app/assets/study-offline.js",
+      "sourceSha256": "833481a2125bdfea32300969c3d107796dd41ed11ec71d6702b9b43c52364c88",
+      "changes": [],
+      "exportSha256": "833481a2125bdfea32300969c3d107796dd41ed11ec71d6702b9b43c52364c88"
+    },
+    {
+      "source": "glance/assets/study.css",
+      "path": "app/assets/study.css",
+      "sourceSha256": "d3b439999bc470a362f0569ca35566a23c492a44e746695f8c94b68ea7cdbaf3",
+      "changes": [],
+      "exportSha256": "990c8a68984765ac8a61fe4190487266ea26bda94cfd4c6988bd83ae4422de65"
+    },
+    {
+      "source": "glance/assets/study.js",
+      "path": "app/assets/study.js",
+      "sourceSha256": "6bab6e13305c23eb97b3c2261f5ab71221b70fdce2cf8c9d32ccd34b80a4b9a1",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "c881314fdff2ad810a11fc70370cabbdb9fef6ecabcc9c042903c40f8c662f53"
+    },
+    {
+      "source": "glance/assets/sufe.css",
+      "path": "app/assets/sufe.css",
+      "sourceSha256": "bf9d76b6d0d0ea106667c8dcd3007d7d8b9457d45483cf7e1e6f0ed3f8874245",
+      "changes": [],
+      "exportSha256": "bf9d76b6d0d0ea106667c8dcd3007d7d8b9457d45483cf7e1e6f0ed3f8874245"
+    },
+    {
+      "source": "glance/assets/sufe.js",
+      "path": "app/assets/sufe.js",
+      "sourceSha256": "e11287364763655222fa828386648d7c3c388dcb515dc8d41e7f03a0f43bb430",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "b6c1b575af040d1d17cecc483fd1b04fc22b31784eedd7641a93c918680fe5f6"
+    },
+    {
+      "source": "glance/assets/weather-alerts.css",
+      "path": "app/assets/weather-alerts.css",
+      "sourceSha256": "f03b270d0f1834e62d7b1a236926370b944c97ea020552d979cd6e554c916782",
+      "changes": [],
+      "exportSha256": "f03b270d0f1834e62d7b1a236926370b944c97ea020552d979cd6e554c916782"
+    },
+    {
+      "source": "glance/assets/weather-alerts.js",
+      "path": "app/assets/weather-alerts.js",
+      "sourceSha256": "66b6bb0cca682f286f3bd705cd637a899ae030fb8a7a4601c42e08416c1a23bf",
+      "changes": [],
+      "exportSha256": "66b6bb0cca682f286f3bd705cd637a899ae030fb8a7a4601c42e08416c1a23bf"
+    },
+    {
+      "source": "glance/assets/weather-icons.svg",
+      "path": "app/assets/weather-icons.svg",
+      "sourceSha256": "7d782369e47ede143b2574129e9e56b675c120e7d4a687ee053979d8313b9763",
+      "changes": [],
+      "exportSha256": "7d782369e47ede143b2574129e9e56b675c120e7d4a687ee053979d8313b9763"
+    },
+    {
+      "source": "glance/assets/wechat-effects.mjs",
+      "path": "app/assets/wechat-effects.mjs",
+      "sourceSha256": "a8616ea8733c17c24adfe41573317bd24be8c0113dbbce895245aef5df67b427",
+      "changes": [],
+      "exportSha256": "a8616ea8733c17c24adfe41573317bd24be8c0113dbbce895245aef5df67b427"
+    },
+    {
+      "source": "glance/assets/wechat-markdown.js",
+      "path": "app/assets/wechat-markdown.js",
+      "sourceSha256": "77467ecbcf75d28789bd6a62a069711775fa9f967b8987da83bbab577c3cec14",
+      "changes": [],
+      "exportSha256": "77467ecbcf75d28789bd6a62a069711775fa9f967b8987da83bbab577c3cec14"
+    },
+    {
+      "source": "glance/assets/wechat.css",
+      "path": "app/assets/wechat.css",
+      "sourceSha256": "a622ef8f7001175a1716b64e95efaac2aaeab6c472566a07b2c0b2bebfed166d",
+      "changes": [],
+      "exportSha256": "a622ef8f7001175a1716b64e95efaac2aaeab6c472566a07b2c0b2bebfed166d"
+    },
+    {
+      "source": "glance/assets/wechat.js",
+      "path": "app/assets/wechat.js",
+      "sourceSha256": "2d350a37de64155f3c2688b7294ce3c78524ee743d614615c8445ac89df68005",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "9348e5c50ab8625709ca14756e3ca7fcf0fd8bec781b10aa9d85e68683e67736"
+    },
+    {
+      "source": "glance/assets/youtube.js",
+      "path": "app/assets/youtube.js",
+      "sourceSha256": "4b3373f4c8c9b6717b1b3647b25d3a4523a88c12a2e4265f1b0cd4caf18dd5ae",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "03b12fbcf7d267b9e3d25120523891e72da06334a9bdf7a60288e46ee3e5793e"
+    },
+    {
+      "source": "glance/config/aihot-interests.json",
+      "path": "app/config/aihot-interests.json",
+      "sourceSha256": "e9952b108a122ba3cf543476b69df75480c505c6580b1561481bb8c6f8d7b402",
+      "changes": [],
+      "exportSha256": "e9952b108a122ba3cf543476b69df75480c505c6580b1561481bb8c6f8d7b402"
+    },
+    {
+      "source": "glance/config/glance.yml",
+      "path": "app/config/glance.yml",
+      "sourceSha256": "1d114abf8e6479eb9dd9ee1d08f0241f396879d16785632daefd2d026445cbdb",
+      "changes": [
+        "展示端口8180/8182",
+        "通用Google控制台链接及订阅说明"
+      ],
+      "exportSha256": "9d506220d2873b44505f3496cfe51d04f1565d59f730c63b6ac684428b50cb7d"
+    },
+    {
+      "source": "glance/config/network.json",
+      "path": "app/config/network.json",
+      "sourceSha256": "b20358906ac7dcc07c86f9cf7f7b850c9c65008008ce1758aa7286088a874997",
+      "changes": [],
+      "exportSha256": "31a9afb75d8f8f7cac85e642b267cb228a029eb35177fc25c5483bc0dc41de6a"
+    },
+    {
+      "source": "glance/config/school-calendar.json",
+      "path": "app/config/school-calendar.json",
+      "sourceSha256": "e77b4765ee96f5ae4fa216490ac97789aa2158ab7f995d5f72c2cc66c9bdaf9b",
+      "changes": [],
+      "exportSha256": "378e471b4a29ed89c6110afc4289e57f46ba56430ba898a6802052451d362c43"
+    },
+    {
+      "source": "glance/config/wechat-sources.json",
+      "path": "app/config/wechat-sources.json",
+      "sourceSha256": "f4dbd6b15426873099cecf690a4d1af7d1082dc6bbade62b5f911cf35296609f",
+      "changes": [],
+      "exportSha256": "0885bea05262a645f8a6b9e9e3a30083bf15b32119cd4878c3889e8a4ba7dfea"
+    },
+    {
+      "source": "glance/config/workbuddy-analysis-prompt.md",
+      "path": "app/config/workbuddy-analysis-prompt.md",
+      "sourceSha256": "0e42e0e6e8149305475725ce1eaf9f3e6c53df7fb670ef82f5fb5e49e35f043f",
+      "changes": [],
+      "exportSha256": "d2b48899dc2cf90ecf1c4f42e6b72e68f43e8f3724d79bc07e53b570dfbc4624"
+    },
+    {
+      "source": "glance/docs/sufe-api.openapi.json",
+      "path": "app/docs/sufe-api.openapi.json",
+      "sourceSha256": "9b5dadbd49a686b51907cbdf5fb39bf4d1fa0ae4d1f79bad206de3cc699cdecd",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "2755a78a3df64fedf70e4f3ddb7f96c28f1e8b08292ca73bded99a7c9cc49f7d"
+    },
+    {
+      "source": "glance/school_connector/bridge_auth.py",
+      "path": "app/school_connector/bridge_auth.py",
+      "sourceSha256": "020299012d14eba0ac3401092c2e71f02cbb890a29c7367f407fecbee026cf01",
+      "changes": [
+        "展示端口8180/8182",
+        "独立存储/启动适配"
+      ],
+      "exportSha256": "28e47c3c39c6be05ae8f6ba439a6a6ae88114e4fb0ab5447fddaa679de023af1"
+    },
+    {
+      "source": "glance/school_connector/client.py",
+      "path": "app/school_connector/client.py",
+      "sourceSha256": "9da754d274b232f82b750e6ed436c4fc672fcff4cc4e38d7e8a1b279fcd2372b",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "3184b9bdd85f35a12aaee100b569dba1f570598272462563c38a1fb15b2c282c"
+    },
+    {
+      "source": "glance/school_connector/crypto.py",
+      "path": "app/school_connector/crypto.py",
+      "sourceSha256": "053ba2a6f9e28e7ee351c698cd0cd8c64540d0b3ae9eeff37824fc21e7f4c169",
+      "changes": [],
+      "exportSha256": "053ba2a6f9e28e7ee351c698cd0cd8c64540d0b3ae9eeff37824fc21e7f4c169"
+    },
+    {
+      "source": "glance/school_connector/host.py",
+      "path": "app/school_connector/host.py",
+      "sourceSha256": "37a4b18dd37dcd42a33742fc04714c295f3a3805a8a3c230216625c3902ede41",
+      "changes": [],
+      "exportSha256": "37a4b18dd37dcd42a33742fc04714c295f3a3805a8a3c230216625c3902ede41"
+    },
+    {
+      "source": "glance/school_connector/protocol.py",
+      "path": "app/school_connector/protocol.py",
+      "sourceSha256": "c8cf1d70992c50ad33cb14ed7873bb0acaee4fd2736a872350f180551f83cbec",
+      "changes": [],
+      "exportSha256": "c8cf1d70992c50ad33cb14ed7873bb0acaee4fd2736a872350f180551f83cbec"
+    },
+    {
+      "source": "glance/school_connector/__init__.py",
+      "path": "app/school_connector/__init__.py",
+      "sourceSha256": "be47c6e5a052dc787903fc4e0498c7208944f729acd237da647c384b449d6b9f",
+      "changes": [],
+      "exportSha256": "be47c6e5a052dc787903fc4e0498c7208944f729acd237da647c384b449d6b9f"
+    },
+    {
+      "source": "glance/tools/test-analysis-report.cjs",
+      "path": "app/tools/test-analysis-report.cjs",
+      "sourceSha256": "d47bed92d38cd8a7a82e4f5a6e1713553e3b2dc481f23d58ff3cbb741a986e0f",
+      "changes": [],
+      "exportSha256": "d47bed92d38cd8a7a82e4f5a6e1713553e3b2dc481f23d58ff3cbb741a986e0f"
+    },
+    {
+      "source": "glance/tools/test-calendar-dates.cjs",
+      "path": "app/tools/test-calendar-dates.cjs",
+      "sourceSha256": "9131e14703ac73d01137e5c24cff09c75588e99e90b0b9609e912c9d15fddc8e",
+      "changes": [],
+      "exportSha256": "9131e14703ac73d01137e5c24cff09c75588e99e90b0b9609e912c9d15fddc8e"
+    },
+    {
+      "source": "glance/tools/test-calendar-filters.cjs",
+      "path": "app/tools/test-calendar-filters.cjs",
+      "sourceSha256": "9482830b16c48cce4fbe50a26532c550c9392882c466db7208c14a8fbcdf6860",
+      "changes": [],
+      "exportSha256": "9482830b16c48cce4fbe50a26532c550c9392882c466db7208c14a8fbcdf6860"
+    },
+    {
+      "source": "glance/tools/test-gmail-reconnect.cjs",
+      "path": "app/tools/test-gmail-reconnect.cjs",
+      "sourceSha256": "3f1b5d8fffc9d68454e02c4b835f8068eeac94948ba69671113e7761e95ee065",
+      "changes": [
+        "展示端口8180/8182",
+        "仓库本地JSDOM依赖"
+      ],
+      "exportSha256": "1f3cb688283e7b75e34c549d7e501f2f9db0aaa0ca42f3cab11a1b29afe74423"
+    },
+    {
+      "source": "glance/tools/test-reset-monitor.cjs",
+      "path": "app/tools/test-reset-monitor.cjs",
+      "sourceSha256": "b3c694aa95e23d7db7f25e271d68646b2e2828cd1a9801a6f4f87034dd15dc07",
+      "changes": [
+        "展示端口8180/8182",
+        "仓库本地JSDOM依赖"
+      ],
+      "exportSha256": "5317a46cbb2fe4b0399b36c3d2e2c2c187470a3bd589835e686c71f989fec28f"
+    },
+    {
+      "source": "glance/tools/test-study-file-types.cjs",
+      "path": "app/tools/test-study-file-types.cjs",
+      "sourceSha256": "cb1c960f8fec8d5fda7acdb4a5ee520d177ea8d40b388120f2b3d76b038fb9ef",
+      "changes": [],
+      "exportSha256": "cb1c960f8fec8d5fda7acdb4a5ee520d177ea8d40b388120f2b3d76b038fb9ef"
+    },
+    {
+      "source": "glance/tools/test-study-ima.cjs",
+      "path": "app/tools/test-study-ima.cjs",
+      "sourceSha256": "4be7463f22e69622d14daeb932d20b3910042ed1caedd01cd2abb3a9a5471cf0",
+      "changes": [],
+      "exportSha256": "84335e6cafef2c79641cea99343d125d3bc9a1656e2e2b1243018d321fae3cc0"
+    },
+    {
+      "source": "glance/tools/test-study-material-dates.cjs",
+      "path": "app/tools/test-study-material-dates.cjs",
+      "sourceSha256": "5c095d15697bae6523efa41cee932f52907aa5afe8674940e994857f099735ca",
+      "changes": [],
+      "exportSha256": "169c5ad3d6aceb8309e7538a2b2c538f21f86e29938f580e1e639c035d179d7f"
+    },
+    {
+      "source": "glance/tools/test-study-offline.cjs",
+      "path": "app/tools/test-study-offline.cjs",
+      "sourceSha256": "4198c525981769226aa5fb3db161b72a165aadac619d39fcfa3dccb10682a513",
+      "changes": [],
+      "exportSha256": "4198c525981769226aa5fb3db161b72a165aadac619d39fcfa3dccb10682a513"
+    },
+    {
+      "source": "glance/tools/test-weather-alerts.cjs",
+      "path": "app/tools/test-weather-alerts.cjs",
+      "sourceSha256": "ac3b66225ae4c4df1f214ea3ff5623c14e5bf1aab7e6406dfe40386260159538",
+      "changes": [],
+      "exportSha256": "ac3b66225ae4c4df1f214ea3ff5623c14e5bf1aab7e6406dfe40386260159538"
+    },
+    {
+      "source": "glance/tools/test-wechat-markdown.cjs",
+      "path": "app/tools/test-wechat-markdown.cjs",
+      "sourceSha256": "7505f387de30c4dc8553294c20c92e7b8111f0a220874dd1ebe405d5559be50b",
+      "changes": [],
+      "exportSha256": "7505f387de30c4dc8553294c20c92e7b8111f0a220874dd1ebe405d5559be50b"
+    },
+    {
+      "source": "glance/tools/test-wechat-sources.cjs",
+      "path": "app/tools/test-wechat-sources.cjs",
+      "sourceSha256": "72d57af9ae3fd66cf1f3b004d50ca41d722b96409efe9dbbc5889d3d91dbbbd0",
+      "changes": [],
+      "exportSha256": "72d57af9ae3fd66cf1f3b004d50ca41d722b96409efe9dbbc5889d3d91dbbbd0"
+    },
+    {
+      "source": "glance/assets/components/accordion-motion.mjs",
+      "path": "app/assets/components/accordion-motion.mjs",
+      "sourceSha256": "2fb7b435dd89cb213bb50872efe289e0558420ce0e59af5ed4f4f9b24fb56e54",
+      "changes": [],
+      "exportSha256": "2fb7b435dd89cb213bb50872efe289e0558420ce0e59af5ed4f4f9b24fb56e54"
+    },
+    {
+      "source": "glance/assets/components/button-catalog.mjs",
+      "path": "app/assets/components/button-catalog.mjs",
+      "sourceSha256": "9c0d7f805545746a53ed75ae1d0f8cf20bef12f9bf7802189e8dc699f405ea5d",
+      "changes": [],
+      "exportSha256": "9c0d7f805545746a53ed75ae1d0f8cf20bef12f9bf7802189e8dc699f405ea5d"
+    },
+    {
+      "source": "glance/assets/components/button-core.css",
+      "path": "app/assets/components/button-core.css",
+      "sourceSha256": "6e0ac1cf64564249ef1d1ee62943e816893eddfaa720f94526560eeebc677c80",
+      "changes": [],
+      "exportSha256": "6e0ac1cf64564249ef1d1ee62943e816893eddfaa720f94526560eeebc677c80"
+    },
+    {
+      "source": "glance/assets/components/button-player.mjs",
+      "path": "app/assets/components/button-player.mjs",
+      "sourceSha256": "16026445451e35c280311b5fd89d020d24e29d9f48f53b7a49ce8042b2333bb2",
+      "changes": [],
+      "exportSha256": "16026445451e35c280311b5fd89d020d24e29d9f48f53b7a49ce8042b2333bb2"
+    },
+    {
+      "source": "glance/assets/components/LICENSE",
+      "path": "app/assets/components/LICENSE",
+      "sourceSha256": "910b69f482d10c477c0ee2dc750546a2421e77fcef0db12bf9ad06def638b32b",
+      "changes": [],
+      "exportSha256": "910b69f482d10c477c0ee2dc750546a2421e77fcef0db12bf9ad06def638b32b"
+    },
+    {
+      "source": "glance/assets/components/SOURCE.json",
+      "path": "app/assets/components/SOURCE.json",
+      "sourceSha256": "8ad6534f9b93b360fa1197c7912460665bd79bc9d2f34c156c708a489d297089",
+      "changes": [],
+      "exportSha256": "8ad6534f9b93b360fa1197c7912460665bd79bc9d2f34c156c708a489d297089"
+    },
+    {
+      "source": "glance/assets/components/wechat-selection.mjs",
+      "path": "app/assets/components/wechat-selection.mjs",
+      "sourceSha256": "ce2f3e65e8232190fc9ee7a32ffd8fe907115f79a22c1d72dea4259f6f78f152",
+      "changes": [],
+      "exportSha256": "ce2f3e65e8232190fc9ee7a32ffd8fe907115f79a22c1d72dea4259f6f78f152"
+    },
+    {
+      "source": "glance/extensions/school-connector/content.js",
+      "path": "app/extensions/school-connector/content.js",
+      "sourceSha256": "14ac0b4567c25ee31a821abffd4fe6a7b38c40f08d474960f826d02fadd81c0c",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "fadd6d71c838c4c273c8e98e1db8f5dcbc2a0ce9a4bc0c7005e11355ea10eef3"
+    },
+    {
+      "source": "glance/extensions/school-connector/core.mjs",
+      "path": "app/extensions/school-connector/core.mjs",
+      "sourceSha256": "9ec80bc7f861c62e0f9549e2ae3e8ecee7348d4649cc0f350c2d6431049f4774",
+      "changes": [
+        "独立Native Messaging Host名称"
+      ],
+      "exportSha256": "f473a8b7721037ba0c9832b525e3e3b6e024f46ba190cff530afb85d085e9f93"
+    },
+    {
+      "source": "glance/extensions/school-connector/desktop-relay.js",
+      "path": "app/extensions/school-connector/desktop-relay.js",
+      "sourceSha256": "c0cde7186a7e32246d2a7f19fd351c4d65742a2dbd91061a6ee6cfb0d9fbe0d5",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "fcfa944fa0394f30b28ceea2401ec3572b60661f40613863361959f633fcb9e4"
+    },
+    {
+      "source": "glance/extensions/school-connector/limits.mjs",
+      "path": "app/extensions/school-connector/limits.mjs",
+      "sourceSha256": "643ff5c167c5ed7da42f4b317b368dd11880eb752d3b9d02677a1f7ae258db3c",
+      "changes": [],
+      "exportSha256": "643ff5c167c5ed7da42f4b317b368dd11880eb752d3b9d02677a1f7ae258db3c"
+    },
+    {
+      "source": "glance/extensions/school-connector/manifest.json",
+      "path": "app/extensions/school-connector/manifest.json",
+      "sourceSha256": "e34c10b8b1fc76bb5de4f26f15d0430e497572e570c10159b230a495dacb0e7d",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "1c6ef59a3026b9e0ea8cb33a466e20007302a51b0d112af83edf239dee989f3f"
+    },
+    {
+      "source": "glance/extensions/school-connector/native.mjs",
+      "path": "app/extensions/school-connector/native.mjs",
+      "sourceSha256": "a708daf4ed4ca6ecdbf8018d5578b8cde9af4ddff4b4aee00fb0721a4b053b84",
+      "changes": [],
+      "exportSha256": "d88303b158a4fefcde0d290d2674522fa14442d3b88b05eeecfa4be53d3ed0b1"
+    },
+    {
+      "source": "glance/extensions/school-connector/panel.css",
+      "path": "app/extensions/school-connector/panel.css",
+      "sourceSha256": "80856d7f3bdf2dbac52ea75dbd8cb0b4908a19fd0a4b9290cf69b87dd3444862",
+      "changes": [],
+      "exportSha256": "2b1b4741d3d0beaf191523fc1ae7a3ad70b3a80cf347bf830346037d5690a07d"
+    },
+    {
+      "source": "glance/extensions/school-connector/panel.html",
+      "path": "app/extensions/school-connector/panel.html",
+      "sourceSha256": "cae33971b1b1f1e849882e7dbba6452658a1ba79507250b48c6170dd817e1a26",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "ddb65a4f070e66d645c85b3dd4aa5cf787a30a307ea83c3101858434c0568f50"
+    },
+    {
+      "source": "glance/extensions/school-connector/panel.js",
+      "path": "app/extensions/school-connector/panel.js",
+      "sourceSha256": "55845faad34dcffb13aa9a4b0095a7e3ea7fb0fc1dfdf9e12eca953b284d6c42",
+      "changes": [],
+      "exportSha256": "341e3829b753888c3b5b6f4d2c9d93458c27177f2aa8b2c8645961effc652840"
+    },
+    {
+      "source": "glance/extensions/school-connector/unified.mjs",
+      "path": "app/extensions/school-connector/unified.mjs",
+      "sourceSha256": "28683c8c609aa1d4df48390b4e02b6eca35462359b4a4fb59f2ff06047714b38",
+      "changes": [],
+      "exportSha256": "28683c8c609aa1d4df48390b4e02b6eca35462359b4a4fb59f2ff06047714b38"
+    },
+    {
+      "source": "glance/extensions/school-connector/workbench.mjs",
+      "path": "app/extensions/school-connector/workbench.mjs",
+      "sourceSha256": "93fd076a440066b5bbefad768d6a4b16f2184b39334bbd703edebde1c35960da",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "b636a8bfc362ea90431a87fa12c872f81d29c835fc0b3320fa914b0a86d59807"
+    },
+    {
+      "source": "glance/extensions/school-connector/worker.mjs",
+      "path": "app/extensions/school-connector/worker.mjs",
+      "sourceSha256": "261e201bae153384ac441851612291a48c3438bb4897489a68aa3d6c86b83989",
+      "changes": [],
+      "exportSha256": "b66fa0a65e6fae83ee58ecad59bfed9865aa751e426cdf9871212d36016edfce"
+    },
+    {
+      "source": "glance/config/widgets/aihot-selected.yml",
+      "path": "app/config/widgets/aihot-selected.yml",
+      "sourceSha256": "2620b8872df7b5e0a30bc2512f19fc6a6f163256aae6c34649a9e223abf50b0a",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "bb4efed28e5d4fe36eabf291f40eaab3f380c14b17246c1906cf265cb5a4b3b4"
+    },
+    {
+      "source": "glance/config/widgets/aihot-resets.yml",
+      "path": "app/config/widgets/aihot-resets.yml",
+      "sourceSha256": "f307e657251c16a2040eee080cc98997e1494e50dae12489a04b4b88f4a313f0",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "3c9b9f8302bb253e517a1a7823c1e6766d1150892f826d90912bd57ad01ce2ca"
+    },
+    {
+      "source": "glance/config/widgets/home-weather.yml",
+      "path": "app/config/widgets/home-weather.yml",
+      "sourceSha256": "ece8e9c2676dde5b1fc56c14c4357099fe1965883911973688b67972a61a28ea",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "478c8d04acfde4867c6286dd2c8d903b03eea20f9afeed217fdc7279d5e4da54"
+    },
+    {
+      "source": "glance/config/widgets/focus-markets.yml",
+      "path": "app/config/widgets/focus-markets.yml",
+      "sourceSha256": "2ae37dabe6e62b41d0d8ed401a1caf78eab0c7a973a829206d41951fc53a6be2",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "28e44037ea736d01fbc6d84d80c3484c96ea954f62c6aade108529f876e590d3"
+    },
+    {
+      "source": "glance/config/widgets/world-markets.yml",
+      "path": "app/config/widgets/world-markets.yml",
+      "sourceSha256": "c740ecd321d17169bee72f2be07e04f342c0d01ff3d93c7a86bb53d0e395b60f",
+      "changes": [
+        "展示端口8180/8182"
+      ],
+      "exportSha256": "f5c380323721b64a1807367b9b44bf62941d60d186213d43afd6760b964bfcb2"
+    }
+  ]
+}

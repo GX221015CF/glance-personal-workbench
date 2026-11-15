@@ -1,0 +1,43 @@
+{
+  "source": "Motion/remotion-sum-demo/out/workbench/v2/workbench-intro-clarity-v2.mp4",
+  "date": "2026-11-15",
+  "frames": {
+    "home.png": 8,
+    "wechat.png": 33,
+    "summary-history.png": 37,
+    "report-history.png": 43,
+    "gmail-demo.png": 49
+  },
+  "files": [
+    {
+      "path": "media/gmail-demo.png",
+      "bytes": 385615,
+      "sha256": "618cbbfc376d254ef903889300e3d2fce019e8dfdf05c14beaa3f4e4da638a84"
+    },
+    {
+      "path": "media/home.png",
+      "bytes": 674827,
+      "sha256": "ee79da616ff214ea29775ba424ae574e64be7771a65963e94b953d34003ba741"
+    },
+    {
+      "path": "media/report-history.png",
+      "bytes": 501779,
+      "sha256": "9554330c6b7d7c68f6da6da95fbd2bf2cbc24decbaebe5208aa52024c667a515"
+    },
+    {
+      "path": "media/summary-history.png",
+      "bytes": 635938,
+      "sha256": "1f0a5cb1b852ddb4bb8812cbd6543f5623236d915ad01600905bf0458d20a670"
+    },
+    {
+      "path": "media/wechat.png",
+      "bytes": 408630,
+      "sha256": "d3214153219eff04956934b28fc802548ba7739f959d6caff43672a515ba1faf"
+    },
+    {
+      "path": "media/workbench-intro.mp4",
+      "bytes": 3403764,
+      "sha256": "76967856557f4794d92b0a97ba6ca46d573dcd7cbd7251ce5641e807fff5bfc6"
+    }
+  ]
+}

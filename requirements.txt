@@ -1,0 +1,5 @@
+# Direct runtime dependencies for the Windows portfolio snapshot.
+requests==2.32.5
+beautifulsoup4==4.15.0
+cryptography==48.0.1
+tzdata==2026.3

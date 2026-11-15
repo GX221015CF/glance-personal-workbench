@@ -1,0 +1,16 @@
+.sufe-dashboard { line-height: 1.65; }
+.sufe-toolbar { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 12px; }
+.sufe-toolbar button { color: var(--color-primary); background: transparent; border: 1px solid var(--color-primary); border-radius: 5px; padding: 5px 12px; cursor: pointer; font: inherit; }
+.sufe-toolbar button:disabled { opacity: .5; cursor: wait; }
+.sufe-toolbar a { text-decoration: underline; }
+.sufe-muted { color: var(--color-text-subdue); font-size: .9em; }
+.sufe-notice { margin-bottom: 6px; }
+.sufe-dashboard h3 { font-size: 1em; margin: 20px 0 8px; color: var(--color-text-highlight); }
+.sufe-row { display: grid; grid-template-columns: 110px minmax(90px,1fr) minmax(90px,1fr); gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--color-separator); }
+.sufe-time { color: var(--color-primary); font-variant-numeric: tabular-nums; }
+.sufe-exam { display: flex; flex-wrap: wrap; gap: 8px 20px; padding: 10px 0; border-bottom: 1px solid var(--color-separator); }
+.sufe-course { padding: 12px 0; border-bottom: 1px solid var(--color-separator); }
+.sufe-course > strong { margin-right: 16px; }
+.sufe-dashboard details { margin-top: 20px; }
+.sufe-dashboard summary { cursor: pointer; color: var(--color-primary); }
+@media(max-width:600px) { .sufe-row { grid-template-columns: 100px 1fr; } .sufe-row > :last-child { grid-column: 2; } }

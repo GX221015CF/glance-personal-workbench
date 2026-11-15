@@ -1,0 +1,9 @@
+.home-weather-label { display: flex; align-items: center; gap: 5px; }
+.home-weather-attention { display: inline-grid; place-items: center; width: 14px; height: 14px; border: 1px solid #b6c9d8; border-radius: 50%; color: #d3e0ea; font-size: 10px; font-weight: 700; line-height: 1; }
+.home-weather-alerts { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--color-separator); }
+.home-weather-alert-heading { color: var(--color-text-base); font-size: 1.05rem; margin-bottom: 6px; }
+.home-weather-alert-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.home-weather-alert { display: inline-block; max-width: 100%; padding: 4px 7px; border: 1px solid #59798d; border-radius: 5px; background: #477c9614; color: #b4d8ee; font-size: 1.05rem; line-height: 1.5; overflow-wrap: anywhere; }
+.home-weather-alert.weather-alert-warm { border-color: #98745a; background: #a6754214; color: #e9bf9d; }
+.home-weather-alert.weather-alert-storm, .home-weather-alert.weather-alert-ice { border-color: #8e778f; background: #88608d14; color: #d6bbdc; }
+.home-weather-alert.weather-alert-fog { border-color: #74808b; background: #697e8c14; color: #c6d0d9; }

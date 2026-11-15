@@ -1,0 +1,49 @@
+{
+  "window": "24h",
+  "excludedCategories": ["paper"],
+  "maxItems": 12,
+  "queryLimit": 4,
+  "requestDelaySeconds": 0.75,
+  "groups": [
+    {
+      "label": "OpenAI / GPT / Tibo",
+      "keywords": ["OpenAI", "Open AI", "GPT", "ChatGPT", "Astra", "Codex", "Tibo", "Thibault Sottiaux", "Sora", "Sam Altman", "奥特曼"],
+      "queries": ["OpenAI", "Open AI", "GPT", "Astra", "Codex", "Tibo", "Thibault", "Sora", "Altman", "奥特曼"]
+    },
+    {
+      "label": "Claude / Anthropic",
+      "keywords": ["Claude", "Anthropic", "Opus", "Fable", "Haiku", "Sonnet", "Claude Code", "克劳德"],
+      "queries": ["Claude", "Anthropic", "Opus", "Fable", "Haiku", "Sonnet", "克劳德"]
+    },
+    {
+      "label": "Google / Gemini",
+      "keywords": ["Gemini", "谷歌", "Google", "Antigravity", "DeepMind", "NotebookLM", "Gemma", "Google AI Studio"],
+      "queries": ["Gemini", "谷歌", "Google", "Antigravity", "DeepMind", "NotebookLM", "Gemma"]
+    },
+    {
+      "label": "DeepSeek / 大肥鱼",
+      "keywords": ["DeepSeek", "Deep Seek", "DeepSeek Harness", "DSH", "大肥鱼", "梁文峰", "梁文锋"],
+      "queries": ["DeepSeek", "Deep Seek", "DSH", "大肥鱼", "梁文峰", "梁文锋"]
+    },
+    {
+      "label": "OpenRouter",
+      "keywords": ["OpenRouter", "Open Router"],
+      "queries": ["OpenRouter", "Open Router"]
+    },
+    {
+      "label": "腾讯混元 / 通义千问",
+      "keywords": ["腾讯", "Tencent", "混元", "Hunyuan", "千问", "通义", "Qwen", "QwQ", "阿里云百炼"],
+      "queries": ["腾讯", "Tencent", "混元", "Hunyuan", "千问", "通义", "Qwen", "QwQ", "阿里云百炼"]
+    },
+    {
+      "label": "Grok / 马斯克",
+      "keywords": ["Grok", "马斯克", "Elon Musk", "xAI", "x.ai"],
+      "queries": ["Grok", "马斯克", "Elon Musk", "xAI", "x.ai"]
+    },
+    {
+      "label": "卡兹克",
+      "keywords": ["卡兹克", "卡茲克", "数字生命卡兹克", "Khazix"],
+      "queries": ["卡兹克", "卡茲克", "Khazix"]
+    }
+  ]
+}

@@ -1,0 +1,786 @@
+{
+  "date": "2026-11-15",
+  "scope": "local-showcase-v0.1.0",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 58,
+      "sha256": "c7993863590f5a64e997bae1da7a66bf5f4a30190f898afdf0417ff5bc62c7c3"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 228,
+      "sha256": "5f8a675acab8291d47a7101b01a2ca0bd6718ffba27f5885069cb5046607c642"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7753,
+      "sha256": "5109c426961ad2c79825eebb4fd603f7a3ff99e4e10e66317e4ebb11df9d22b7"
+    },
+    {
+      "path": "THIRD_PARTY_LICENSES/Glance-AGPL-3.0.txt",
+      "bytes": 34523,
+      "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 2285,
+      "sha256": "5031a321a3dc95b136cca06c44f0af5808ca2b26d7f338fcd7ed1df37d03ee61"
+    },
+    {
+      "path": "app/academic_bridge.py",
+      "bytes": 32016,
+      "sha256": "ae0176516404011a875143b761c013722ab0505bc5e57981f6ae6e3ca85d4357"
+    },
+    {
+      "path": "app/academic_program.py",
+      "bytes": 8613,
+      "sha256": "59eadee42e2a54164c0c7e611a229c9ecfec26e64f041339d67eb55576017751"
+    },
+    {
+      "path": "app/analysis_report.py",
+      "bytes": 14986,
+      "sha256": "48a2e58336318bc8497d581815dd7684966e6625c37703b4ba33409a36501e46"
+    },
+    {
+      "path": "app/assets/academic-model.mjs",
+      "bytes": 4443,
+      "sha256": "7cd6dff0ee1454110c90b8822ecfc8332d467da695a20d486b447ee2d84b691e"
+    },
+    {
+      "path": "app/assets/academic.css",
+      "bytes": 3989,
+      "sha256": "bb74c94e46539006d7d7b5bb0ba903039ba899b4ca08ba22befac3824e66425d"
+    },
+    {
+      "path": "app/assets/academic.js",
+      "bytes": 13710,
+      "sha256": "803abfa6eb635e86ed85ee51af8eecbb1de7087701bbcb432a614df45d6d92c2"
+    },
+    {
+      "path": "app/assets/aihot-feed.js",
+      "bytes": 10408,
+      "sha256": "e9171cb4f178378af7b5648d2d4a6eb1c55db313eece46164f21a1a1ab7b47f9"
+    },
+    {
+      "path": "app/assets/analysis-report.css",
+      "bytes": 13105,
+      "sha256": "19191bd0f56f08c41d59f243d0f692c1e5b5ae40c437a85a4ccc5b5c25a81690"
+    },
+    {
+      "path": "app/assets/analysis-report.js",
+      "bytes": 1060,
+      "sha256": "3cb268b981b30b23c86a6bad8b02a991a76722818bffec1095dfa193876a8b53"
+    },
+    {
+      "path": "app/assets/calendar-dates.js",
+      "bytes": 5055,
+      "sha256": "2a9c6aa924ffd2d9a3af0ac52ad514092d49a22296eefe60dfa3d74a15bb9779"
+    },
+    {
+      "path": "app/assets/calendar-filters.js",
+      "bytes": 7432,
+      "sha256": "a1d72c27f2b215863de997ee645894fa24d7d39ddabf144833cd647833060a0e"
+    },
+    {
+      "path": "app/assets/canvas.css",
+      "bytes": 892,
+      "sha256": "d21c17de40c1687508dd0df949b20915415d1f3c3af80e4671cf4a43d65c58e5"
+    },
+    {
+      "path": "app/assets/canvas.js",
+      "bytes": 7171,
+      "sha256": "fede66474f553dc330c870c3a3672e1aaf12953bd6ef8968b6b8330628476932"
+    },
+    {
+      "path": "app/assets/chinese-clock.js",
+      "bytes": 970,
+      "sha256": "23aded93387499c1486d6d7e94a41f0957320a02277c70e6f6042f08b69570a9"
+    },
+    {
+      "path": "app/assets/components/LICENSE",
+      "bytes": 1090,
+      "sha256": "910b69f482d10c477c0ee2dc750546a2421e77fcef0db12bf9ad06def638b32b"
+    },
+    {
+      "path": "app/assets/components/SOURCE.json",
+      "bytes": 498,
+      "sha256": "8ad6534f9b93b360fa1197c7912460665bd79bc9d2f34c156c708a489d297089"
+    },
+    {
+      "path": "app/assets/components/accordion-motion.mjs",
+      "bytes": 3276,
+      "sha256": "2fb7b435dd89cb213bb50872efe289e0558420ce0e59af5ed4f4f9b24fb56e54"
+    },
+    {
+      "path": "app/assets/components/button-catalog.mjs",
+      "bytes": 8639,
+      "sha256": "9c0d7f805545746a53ed75ae1d0f8cf20bef12f9bf7802189e8dc699f405ea5d"
+    },
+    {
+      "path": "app/assets/components/button-core.css",
+      "bytes": 9277,
+      "sha256": "6e0ac1cf64564249ef1d1ee62943e816893eddfaa720f94526560eeebc677c80"
+    },
+    {
+      "path": "app/assets/components/button-player.mjs",
+      "bytes": 15663,
+      "sha256": "16026445451e35c280311b5fd89d020d24e29d9f48f53b7a49ce8042b2333bb2"
+    },
+    {
+      "path": "app/assets/components/wechat-selection.mjs",
+      "bytes": 1038,
+      "sha256": "ce2f3e65e8232190fc9ee7a32ffd8fe907115f79a22c1d72dea4259f6f78f152"
+    },
+    {
+      "path": "app/assets/custom.css",
+      "bytes": 28145,
+      "sha256": "f77fb43b94a7337f2750baa4722139ed1ef1d4b1394460d90f60b38a35934d29"
+    },
+    {
+      "path": "app/assets/desktop-actions.js",
+      "bytes": 2661,
+      "sha256": "7c89fc590ce36ac12be8f6a2fb80a69321e5e209b43142401d6c3ff17f9d90bd"
+    },
+    {
+      "path": "app/assets/gmail.js",
+      "bytes": 13025,
+      "sha256": "5b0ef03c458c9d1f97c8acd3cbd98558ec5c39569a87c2dcc41c0c6fdbed764f"
+    },
+    {
+      "path": "app/assets/home-calendar.css",
+      "bytes": 14262,
+      "sha256": "8892c0e9dd0afe50a65d39ca9d6fc5555aca9b61fd46c6363af168d00803cbb7"
+    },
+    {
+      "path": "app/assets/home-calendar.js",
+      "bytes": 27599,
+      "sha256": "b7cd19bb11f57aa3998bd01cae0a376b03fb1ded3e5451e07e6af3b2412e0936"
+    },
+    {
+      "path": "app/assets/live-finance.js",
+      "bytes": 2860,
+      "sha256": "60adfb26b035af5c274314ddd05102563083099e091b123f4876a6d7162830eb"
+    },
+    {
+      "path": "app/assets/reset-monitor.js",
+      "bytes": 3341,
+      "sha256": "63994724942a425304e8d708acd3cdc3ea432acb9cf5561ea1330bb898562b80"
+    },
+    {
+      "path": "app/assets/school-connector-model.js",
+      "bytes": 13324,
+      "sha256": "82e742fcb492ce6d460d2d529bd63f397e673b4b7fcaed0939b10db0fd2ca871"
+    },
+    {
+      "path": "app/assets/school-connector.css",
+      "bytes": 5372,
+      "sha256": "7cfcfba7222453b4fed37175e10ba0c7848da0d4356a6c4f01b74e6d1ce21231"
+    },
+    {
+      "path": "app/assets/school-connector.js",
+      "bytes": 13809,
+      "sha256": "28261038763bc1176ccc93f1617459297a0e5e98d76e389c41a3e0b96e38c09a"
+    },
+    {
+      "path": "app/assets/study-file-types.js",
+      "bytes": 1347,
+      "sha256": "075dbc33f8e9d14d036b09d166e3b8a3bcdfb6789f25aa830e6dd1be1044275d"
+    },
+    {
+      "path": "app/assets/study-ima-model.js",
+      "bytes": 4351,
+      "sha256": "5c5f27ff5a24efa2dcafa9341b8d453d4f88e3cdf9cf5229b0a69d1d69673968"
+    },
+    {
+      "path": "app/assets/study-ima.css",
+      "bytes": 9604,
+      "sha256": "54a505dad1e09832b7cb511079198261c8960b3246efcde74eed6a9dfad87dd7"
+    },
+    {
+      "path": "app/assets/study-ima.js",
+      "bytes": 50504,
+      "sha256": "7b2ddfd0cd9e72fc89bb2c296d7a52f3b02a882bdf6c2a22c34ac15adfb2d35c"
+    },
+    {
+      "path": "app/assets/study-material-dates.js",
+      "bytes": 3809,
+      "sha256": "f1cbe2b8570172ec3df5f64ffc1a77a959a0fe4f7b517ccce53cc68fe8f1717c"
+    },
+    {
+      "path": "app/assets/study-offline.js",
+      "bytes": 4826,
+      "sha256": "833481a2125bdfea32300969c3d107796dd41ed11ec71d6702b9b43c52364c88"
+    },
+    {
+      "path": "app/assets/study.css",
+      "bytes": 25301,
+      "sha256": "990c8a68984765ac8a61fe4190487266ea26bda94cfd4c6988bd83ae4422de65"
+    },
+    {
+      "path": "app/assets/study.js",
+      "bytes": 44254,
+      "sha256": "c881314fdff2ad810a11fc70370cabbdb9fef6ecabcc9c042903c40f8c662f53"
+    },
+    {
+      "path": "app/assets/sufe.css",
+      "bytes": 1385,
+      "sha256": "bf9d76b6d0d0ea106667c8dcd3007d7d8b9457d45483cf7e1e6f0ed3f8874245"
+    },
+    {
+      "path": "app/assets/sufe.js",
+      "bytes": 4568,
+      "sha256": "b6c1b575af040d1d17cecc483fd1b04fc22b31784eedd7641a93c918680fe5f6"
+    },
+    {
+      "path": "app/assets/weather-alerts.css",
+      "bytes": 1150,
+      "sha256": "f03b270d0f1834e62d7b1a236926370b944c97ea020552d979cd6e554c916782"
+    },
+    {
+      "path": "app/assets/weather-alerts.js",
+      "bytes": 7820,
+      "sha256": "66b6bb0cca682f286f3bd705cd637a899ae030fb8a7a4601c42e08416c1a23bf"
+    },
+    {
+      "path": "app/assets/weather-icons.svg",
+      "bytes": 1329,
+      "sha256": "7d782369e47ede143b2574129e9e56b675c120e7d4a687ee053979d8313b9763"
+    },
+    {
+      "path": "app/assets/wechat-effects.mjs",
+      "bytes": 3818,
+      "sha256": "a8616ea8733c17c24adfe41573317bd24be8c0113dbbce895245aef5df67b427"
+    },
+    {
+      "path": "app/assets/wechat-markdown.js",
+      "bytes": 2624,
+      "sha256": "77467ecbcf75d28789bd6a62a069711775fa9f967b8987da83bbab577c3cec14"
+    },
+    {
+      "path": "app/assets/wechat.css",
+      "bytes": 14212,
+      "sha256": "a622ef8f7001175a1716b64e95efaac2aaeab6c472566a07b2c0b2bebfed166d"
+    },
+    {
+      "path": "app/assets/wechat.js",
+      "bytes": 30985,
+      "sha256": "9348e5c50ab8625709ca14756e3ca7fcf0fd8bec781b10aa9d85e68683e67736"
+    },
+    {
+      "path": "app/assets/youtube.js",
+      "bytes": 9697,
+      "sha256": "03b12fbcf7d267b9e3d25120523891e72da06334a9bdf7a60288e46ee3e5793e"
+    },
+    {
+      "path": "app/bridge.py",
+      "bytes": 48576,
+      "sha256": "985c182df4a0f126dc0babd1e66f129fac5b733d84b00912f04da79656871eda"
+    },
+    {
+      "path": "app/calendar_bridge.py",
+      "bytes": 17300,
+      "sha256": "d5b2acd919e2cd38bcc25d0c588ede9e6c563d78060d58291e328f679d9c57ae"
+    },
+    {
+      "path": "app/canvas_bridge.py",
+      "bytes": 29884,
+      "sha256": "bcc8940043385fc7181b607387ff6fb30aa5a1c254fdd962fdb5c579048d76be"
+    },
+    {
+      "path": "app/config/aihot-interests.json",
+      "bytes": 2001,
+      "sha256": "e9952b108a122ba3cf543476b69df75480c505c6580b1561481bb8c6f8d7b402"
+    },
+    {
+      "path": "app/config/glance.yml",
+      "bytes": 29850,
+      "sha256": "9d506220d2873b44505f3496cfe51d04f1565d59f730c63b6ac684428b50cb7d"
+    },
+    {
+      "path": "app/config/network.json",
+      "bytes": 36,
+      "sha256": "31a9afb75d8f8f7cac85e642b267cb228a029eb35177fc25c5483bc0dc41de6a"
+    },
+    {
+      "path": "app/config/school-calendar.json",
+      "bytes": 37508,
+      "sha256": "378e471b4a29ed89c6110afc4289e57f46ba56430ba898a6802052451d362c43"
+    },
+    {
+      "path": "app/config/wechat-sources.json",
+      "bytes": 1849,
+      "sha256": "0885bea05262a645f8a6b9e9e3a30083bf15b32119cd4878c3889e8a4ba7dfea"
+    },
+    {
+      "path": "app/config/widgets/aihot-resets.yml",
+      "bytes": 1170,
+      "sha256": "3c9b9f8302bb253e517a1a7823c1e6766d1150892f826d90912bd57ad01ce2ca"
+    },
+    {
+      "path": "app/config/widgets/aihot-selected.yml",
+      "bytes": 2934,
+      "sha256": "bb4efed28e5d4fe36eabf291f40eaab3f380c14b17246c1906cf265cb5a4b3b4"
+    },
+    {
+      "path": "app/config/widgets/focus-markets.yml",
+      "bytes": 2824,
+      "sha256": "28e44037ea736d01fbc6d84d80c3484c96ea954f62c6aade108529f876e590d3"
+    },
+    {
+      "path": "app/config/widgets/home-weather.yml",
+      "bytes": 2796,
+      "sha256": "478c8d04acfde4867c6286dd2c8d903b03eea20f9afeed217fdc7279d5e4da54"
+    },
+    {
+      "path": "app/config/widgets/world-markets.yml",
+      "bytes": 1673,
+      "sha256": "f5c380323721b64a1807367b9b44bf62941d60d186213d43afd6760b964bfcb2"
+    },
+    {
+      "path": "app/config/workbuddy-analysis-prompt.md",
+      "bytes": 7350,
+      "sha256": "d2b48899dc2cf90ecf1c4f42e6b72e68f43e8f3724d79bc07e53b570dfbc4624"
+    },
+    {
+      "path": "app/desktop_relay.py",
+      "bytes": 7472,
+      "sha256": "09e918ace3e22fa2ac495b9ec5c07d40479de78600fa8bf2d14f38635ebc63a8"
+    },
+    {
+      "path": "app/docs/sufe-api.openapi.json",
+      "bytes": 33552,
+      "sha256": "2755a78a3df64fedf70e4f3ddb7f96c28f1e8b08292ca73bded99a7c9cc49f7d"
+    },
+    {
+      "path": "app/extensions/school-connector/content.js",
+      "bytes": 3473,
+      "sha256": "fadd6d71c838c4c273c8e98e1db8f5dcbc2a0ce9a4bc0c7005e11355ea10eef3"
+    },
+    {
+      "path": "app/extensions/school-connector/core.mjs",
+      "bytes": 12337,
+      "sha256": "f473a8b7721037ba0c9832b525e3e3b6e024f46ba190cff530afb85d085e9f93"
+    },
+    {
+      "path": "app/extensions/school-connector/desktop-relay.js",
+      "bytes": 2027,
+      "sha256": "fcfa944fa0394f30b28ceea2401ec3572b60661f40613863361959f633fcb9e4"
+    },
+    {
+      "path": "app/extensions/school-connector/limits.mjs",
+      "bytes": 946,
+      "sha256": "643ff5c167c5ed7da42f4b317b368dd11880eb752d3b9d02677a1f7ae258db3c"
+    },
+    {
+      "path": "app/extensions/school-connector/manifest.json",
+      "bytes": 1406,
+      "sha256": "1c6ef59a3026b9e0ea8cb33a466e20007302a51b0d112af83edf239dee989f3f"
+    },
+    {
+      "path": "app/extensions/school-connector/native.mjs",
+      "bytes": 3005,
+      "sha256": "d88303b158a4fefcde0d290d2674522fa14442d3b88b05eeecfa4be53d3ed0b1"
+    },
+    {
+      "path": "app/extensions/school-connector/panel.css",
+      "bytes": 2261,
+      "sha256": "2b1b4741d3d0beaf191523fc1ae7a3ad70b3a80cf347bf830346037d5690a07d"
+    },
+    {
+      "path": "app/extensions/school-connector/panel.html",
+      "bytes": 1642,
+      "sha256": "ddb65a4f070e66d645c85b3dd4aa5cf787a30a307ea83c3101858434c0568f50"
+    },
+    {
+      "path": "app/extensions/school-connector/panel.js",
+      "bytes": 4389,
+      "sha256": "341e3829b753888c3b5b6f4d2c9d93458c27177f2aa8b2c8645961effc652840"
+    },
+    {
+      "path": "app/extensions/school-connector/unified.mjs",
+      "bytes": 16414,
+      "sha256": "28683c8c609aa1d4df48390b4e02b6eca35462359b4a4fb59f2ff06047714b38"
+    },
+    {
+      "path": "app/extensions/school-connector/workbench.mjs",
+      "bytes": 7557,
+      "sha256": "b636a8bfc362ea90431a87fa12c872f81d29c835fc0b3320fa914b0a86d59807"
+    },
+    {
+      "path": "app/extensions/school-connector/worker.mjs",
+      "bytes": 22224,
+      "sha256": "b66fa0a65e6fae83ee58ecad59bfed9865aa751e426cdf9871212d36016edfce"
+    },
+    {
+      "path": "app/gmail_bridge.py",
+      "bytes": 22345,
+      "sha256": "83c68c55661c2da8c961ccc49ff39a5f031a5126eebbe44d7640f5aaca159a25"
+    },
+    {
+      "path": "app/ima_bridge.py",
+      "bytes": 23417,
+      "sha256": "a3d72c3686cf8be511be3712caa7b46b3b8411e0028fac84b716ab97d17258e3"
+    },
+    {
+      "path": "app/ima_course_sync.py",
+      "bytes": 29065,
+      "sha256": "ceac3b1f8d33a01002ea7c969c22000bdfdf449b849b7ca84700d360aab0c7a4"
+    },
+    {
+      "path": "app/ima_probe.py",
+      "bytes": 28778,
+      "sha256": "8e5d99c14ae2b3231fa86076c1b14894110acb35b6826f5f65c3ab029b15ada1"
+    },
+    {
+      "path": "app/ima_workspace.py",
+      "bytes": 60690,
+      "sha256": "1adfb39641347a83c262866583aafb45499a8405191421b4d8bc99b77d3c4b45"
+    },
+    {
+      "path": "app/market_fallback.py",
+      "bytes": 3398,
+      "sha256": "5c11d5f9fcb7317c6d4d848481f88ebdccc6483e5c9e7fe78c3722c80eb83001"
+    },
+    {
+      "path": "app/news_interests.py",
+      "bytes": 6934,
+      "sha256": "ca92ab5992ac142de28cffc2cd09eb7d744d98b1528b87e09bba74826dca395c"
+    },
+    {
+      "path": "app/school_connection_audit.py",
+      "bytes": 1794,
+      "sha256": "e6154fa5cf9daef88d7120527f25dbb2576d88c5a1348da83e620a37575cdc0c"
+    },
+    {
+      "path": "app/school_connector/__init__.py",
+      "bytes": 85,
+      "sha256": "be47c6e5a052dc787903fc4e0498c7208944f729acd237da647c384b449d6b9f"
+    },
+    {
+      "path": "app/school_connector/bridge_auth.py",
+      "bytes": 2545,
+      "sha256": "28e47c3c39c6be05ae8f6ba439a6a6ae88114e4fb0ab5447fddaa679de023af1"
+    },
+    {
+      "path": "app/school_connector/client.py",
+      "bytes": 8072,
+      "sha256": "3184b9bdd85f35a12aaee100b569dba1f570598272462563c38a1fb15b2c282c"
+    },
+    {
+      "path": "app/school_connector/crypto.py",
+      "bytes": 1399,
+      "sha256": "053ba2a6f9e28e7ee351c698cd0cd8c64540d0b3ae9eeff37824fc21e7f4c169"
+    },
+    {
+      "path": "app/school_connector/host.py",
+      "bytes": 3214,
+      "sha256": "37a4b18dd37dcd42a33742fc04714c295f3a3805a8a3c230216625c3902ede41"
+    },
+    {
+      "path": "app/school_connector/protocol.py",
+      "bytes": 6620,
+      "sha256": "c8cf1d70992c50ad33cb14ed7873bb0acaee4fd2736a872350f180551f83cbec"
+    },
+    {
+      "path": "app/school_saved_check.py",
+      "bytes": 2223,
+      "sha256": "93831d477e6abe4024acb6619257712b3cb4298f6d1ab28c35127457d7672400"
+    },
+    {
+      "path": "app/school_storage.py",
+      "bytes": 1543,
+      "sha256": "b08e934e4d7c30a09751e16133a4769ff4e12a32e0effdbe2b70d70216734952"
+    },
+    {
+      "path": "app/study_marks.py",
+      "bytes": 4216,
+      "sha256": "44acd7df1addf1f8767554e6b5766f08eb980fdfe017efcf52f4937f2993466c"
+    },
+    {
+      "path": "app/sufe_bridge.py",
+      "bytes": 25103,
+      "sha256": "d706a2391acfe293148e826aa6c195b551b83bdf4ae1850bf4d80a5c87ada959"
+    },
+    {
+      "path": "app/test_analysis_report.py",
+      "bytes": 12932,
+      "sha256": "2183fd866a47f02dd76fedc8cdcfb5226c16ef2d4de4679c200d0b6e1f82a488"
+    },
+    {
+      "path": "app/test_calendar_bridge.py",
+      "bytes": 8404,
+      "sha256": "2e4b3b89be6b3399649d5e13ed02eb9cc5b06b01ecebc803534cbed17f012379"
+    },
+    {
+      "path": "app/test_ima_bridge.py",
+      "bytes": 39781,
+      "sha256": "e08a81dc498c3056994a17c941e6c00b88e265d50409744dfee0c38b729ddad8"
+    },
+    {
+      "path": "app/test_ima_course_sync.py",
+      "bytes": 18427,
+      "sha256": "0d34c2b2e0cc6b604e19856fe75b41b3f5326b8634a0e204841280071fd84d4e"
+    },
+    {
+      "path": "app/test_ima_workspace.py",
+      "bytes": 68801,
+      "sha256": "2de8673df5a8124436d136e258f6ebcd8e89dee9097c5c4a75b699b817425ff1"
+    },
+    {
+      "path": "app/test_market_data.py",
+      "bytes": 8069,
+      "sha256": "2052df23538e12d9997b63560d7421b7899dc32d82048c6ece33c7b4b50316a6"
+    },
+    {
+      "path": "app/test_news_interests.py",
+      "bytes": 12861,
+      "sha256": "b652865bfe8ab7de6b881c40dffdbabe039da2dd63551f43cc3bdd6a4e874df7"
+    },
+    {
+      "path": "app/test_weather_data.py",
+      "bytes": 2848,
+      "sha256": "caba32962dd428f057fcd24e73db5b76fc5cd71f6d7fafac9f7987a3f2250bc9"
+    },
+    {
+      "path": "app/test_wechat_bridge.py",
+      "bytes": 17543,
+      "sha256": "8a197061835a2127e0fa28246a34c423414ca3add0b51173e73741580d211452"
+    },
+    {
+      "path": "app/test_workbuddy_analysis.py",
+      "bytes": 18054,
+      "sha256": "fa7935dde5bc8762d79c1121db833752cdaf62132d8e7981674afcac387d4e24"
+    },
+    {
+      "path": "app/test_workbuddy_preferences.py",
+      "bytes": 3603,
+      "sha256": "238a573584ffd1b41c11b698c965e1c3f1ec1b704139e36825ffb9d0b4bfe668"
+    },
+    {
+      "path": "app/test_workbuddy_summary.py",
+      "bytes": 8494,
+      "sha256": "ceb5772963e223c59c34922ea8dc000941504a4ffed3c4a8b2d4a0637574f4e5"
+    },
+    {
+      "path": "app/tools/test-analysis-report.cjs",
+      "bytes": 3157,
+      "sha256": "d47bed92d38cd8a7a82e4f5a6e1713553e3b2dc481f23d58ff3cbb741a986e0f"
+    },
+    {
+      "path": "app/tools/test-calendar-dates.cjs",
+      "bytes": 7263,
+      "sha256": "9131e14703ac73d01137e5c24cff09c75588e99e90b0b9609e912c9d15fddc8e"
+    },
+    {
+      "path": "app/tools/test-calendar-filters.cjs",
+      "bytes": 6949,
+      "sha256": "9482830b16c48cce4fbe50a26532c550c9392882c466db7208c14a8fbcdf6860"
+    },
+    {
+      "path": "app/tools/test-gmail-reconnect.cjs",
+      "bytes": 14093,
+      "sha256": "1f3cb688283e7b75e34c549d7e501f2f9db0aaa0ca42f3cab11a1b29afe74423"
+    },
+    {
+      "path": "app/tools/test-reset-monitor.cjs",
+      "bytes": 6094,
+      "sha256": "5317a46cbb2fe4b0399b36c3d2e2c2c187470a3bd589835e686c71f989fec28f"
+    },
+    {
+      "path": "app/tools/test-study-file-types.cjs",
+      "bytes": 2367,
+      "sha256": "cb1c960f8fec8d5fda7acdb4a5ee520d177ea8d40b388120f2b3d76b038fb9ef"
+    },
+    {
+      "path": "app/tools/test-study-ima.cjs",
+      "bytes": 75251,
+      "sha256": "84335e6cafef2c79641cea99343d125d3bc9a1656e2e2b1243018d321fae3cc0"
+    },
+    {
+      "path": "app/tools/test-study-material-dates.cjs",
+      "bytes": 27334,
+      "sha256": "169c5ad3d6aceb8309e7538a2b2c538f21f86e29938f580e1e639c035d179d7f"
+    },
+    {
+      "path": "app/tools/test-study-offline.cjs",
+      "bytes": 6405,
+      "sha256": "4198c525981769226aa5fb3db161b72a165aadac619d39fcfa3dccb10682a513"
+    },
+    {
+      "path": "app/tools/test-weather-alerts.cjs",
+      "bytes": 3383,
+      "sha256": "ac3b66225ae4c4df1f214ea3ff5623c14e5bf1aab7e6406dfe40386260159538"
+    },
+    {
+      "path": "app/tools/test-wechat-markdown.cjs",
+      "bytes": 1065,
+      "sha256": "7505f387de30c4dc8553294c20c92e7b8111f0a220874dd1ebe405d5559be50b"
+    },
+    {
+      "path": "app/tools/test-wechat-sources.cjs",
+      "bytes": 5092,
+      "sha256": "72d57af9ae3fd66cf1f3b004d50ca41d722b96409efe9dbbc5889d3d91dbbbd0"
+    },
+    {
+      "path": "app/weather_data.py",
+      "bytes": 1544,
+      "sha256": "97ea6d22aa32136e1fcecaa4bf55ad928de2c0227c35310669fbdd716d948557"
+    },
+    {
+      "path": "app/wechat_bridge.py",
+      "bytes": 29309,
+      "sha256": "0c3152f77427f9ccb7578c0379169305d3224b4848d060c2774685f1a0b7f5c2"
+    },
+    {
+      "path": "app/workbench_config.py",
+      "bytes": 280,
+      "sha256": "c35b2f3d077f25531ed0a0aef49533de43e06c3ea29d461d2f61c14f5cba1260"
+    },
+    {
+      "path": "app/workbuddy_analysis.py",
+      "bytes": 30789,
+      "sha256": "06b207215500ade898a70d5e05db3f6f32ff8af467278aff235fc698a926d35b"
+    },
+    {
+      "path": "app/workbuddy_preferences.py",
+      "bytes": 5965,
+      "sha256": "32120b35ecaaaeb3ffa792c49817da3fbb6fe1cd6368c15d6924091bf07f5875"
+    },
+    {
+      "path": "app/workbuddy_summary.py",
+      "bytes": 5920,
+      "sha256": "7fd01d8dfb1c89685c05dc0de53aaf317d19a84325a679b6ff4bba0283670c13"
+    },
+    {
+      "path": "app/youtube_bridge.py",
+      "bytes": 17868,
+      "sha256": "25630a9c63ab1d70f56b39876909d37bc26ef918fa6aa71b587da54a3e2fcafc"
+    },
+    {
+      "path": "config/workbuddy-mcp.example.json",
+      "bytes": 166,
+      "sha256": "26dda36001fe24da2ceddf28b68ac291e1104f4ce4d2b71d01de4dc5a70bc524"
+    },
+    {
+      "path": "config/workbuddy-preferences.example.json",
+      "bytes": 65,
+      "sha256": "3f96b716bd69009eab3057104e0d80794916abba92225af72d5a172f215ec039"
+    },
+    {
+      "path": "docs/CASE-STUDIES.md",
+      "bytes": 3751,
+      "sha256": "f0b7695987baadd812827de3647d66df42b649f36cc675062b58f7cd83c890e2"
+    },
+    {
+      "path": "docs/MEDIA.md",
+      "bytes": 2397,
+      "sha256": "40f4875485e0bbef5cfe1bdb50b0533a76c5ae18baf9c7abe7604f70620bcabb"
+    },
+    {
+      "path": "docs/RUNNING.md",
+      "bytes": 6062,
+      "sha256": "26f537e79797e92f92718b0b2a05ce70db47441f40b17d078ff620e22e0bff1a"
+    },
+    {
+      "path": "docs/SOURCE.md",
+      "bytes": 2168,
+      "sha256": "8b08e10ac0e57c31a33cfea72eddcaddf20936f73da07a989bca34594fc287cc"
+    },
+    {
+      "path": "docs/VERIFICATION.md",
+      "bytes": 2340,
+      "sha256": "94f34c41933b5f570db213d47c368c8dc0e84031de777bc9986c2f90dbab6f3e"
+    },
+    {
+      "path": "docs/media-manifest.json",
+      "bytes": 1225,
+      "sha256": "ba3dcc3593422b8dd531cf1841923000f1a3d00175de02f8e407c5edac16cadb"
+    },
+    {
+      "path": "docs/public-files.json",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "path": "docs/source-manifest.json",
+      "bytes": 42065,
+      "sha256": "657be5fb5bdd0aa0d2f526ee5afe980deb47acb55ce81d36716bef025d9a600a"
+    },
+    {
+      "path": "docs/verification-summary.json",
+      "bytes": 1000,
+      "sha256": "3fefd3060db74523d36040e6a6053c55ea80b312b3bff420e90c07eebb81583d"
+    },
+    {
+      "path": "media/gmail-demo.png",
+      "bytes": 385615,
+      "sha256": "618cbbfc376d254ef903889300e3d2fce019e8dfdf05c14beaa3f4e4da638a84"
+    },
+    {
+      "path": "media/home.png",
+      "bytes": 674827,
+      "sha256": "ee79da616ff214ea29775ba424ae574e64be7771a65963e94b953d34003ba741"
+    },
+    {
+      "path": "media/report-history.png",
+      "bytes": 501779,
+      "sha256": "9554330c6b7d7c68f6da6da95fbd2bf2cbc24decbaebe5208aa52024c667a515"
+    },
+    {
+      "path": "media/summary-history.png",
+      "bytes": 635938,
+      "sha256": "1f0a5cb1b852ddb4bb8812cbd6543f5623236d915ad01600905bf0458d20a670"
+    },
+    {
+      "path": "media/wechat.png",
+      "bytes": 408630,
+      "sha256": "d3214153219eff04956934b28fc802548ba7739f959d6caff43672a515ba1faf"
+    },
+    {
+      "path": "media/workbench-intro.mp4",
+      "bytes": 3403764,
+      "sha256": "76967856557f4794d92b0a97ba6ca46d573dcd7cbd7251ce5641e807fff5bfc6"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 19560,
+      "sha256": "887b9827a986d4c31401773fa6e89dcbfd92518a46c4681cb6aecee7708b3c39"
+    },
+    {
+      "path": "package.json",
+      "bytes": 316,
+      "sha256": "38fe00589a93a9dd6b13a33ab7ff0346b6b193a2b43d437f45a50e88af57be8d"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 142,
+      "sha256": "87440843f317f8495f10d3f22ac5deabd76f8936aa822a73e295b5e02b5ec968"
+    },
+    {
+      "path": "run.py",
+      "bytes": 4379,
+      "sha256": "588ff085e030f5160437e81901d0868c7d8c2e8a6f8df373a594b208d0205791"
+    },
+    {
+      "path": "tools/check_http.py",
+      "bytes": 2666,
+      "sha256": "8f8df13f9f51237c53c16ac3671cbc2247d2b4463907b71f4257e9c592c9427b"
+    },
+    {
+      "path": "tools/check_public.py",
+      "bytes": 3318,
+      "sha256": "bd243040ca31633f8c37e4375d4a596a774ba97afcdd8bd3b98afdd9c001296e"
+    },
+    {
+      "path": "tools/install_glance.py",
+      "bytes": 1335,
+      "sha256": "6d9b9902374eb950acfa5626fd4af87fafa354a3404bfe58912b56af03c3fb64"
+    },
+    {
+      "path": "tools/verify.py",
+      "bytes": 5114,
+      "sha256": "c8674797bcf4d2a0939279651a79f50e5b3476191fc481d2460123d3e4e7d4b5"
+    }
+  ]
+}

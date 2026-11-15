@@ -1,0 +1,365 @@
+/* Common button anatomy. Every gallery card uses identical size and resting colors. */
+/* Existing-DOM mode keeps host typography, dimensions, colour and business state. */
+button.fx-attached { position: relative; isolation: isolate; transition: transform var(--fx-press-duration,150ms) ease-out; }
+button.fx-attached:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+button.fx-attached[data-press-effect="soft"].fx-pressed { transform: scale(var(--fx-scale,.96)); }
+button.fx-attached .fx-ripple { background: currentColor; }
+button.fx-attached[data-click-effect="ripple"].fx-playing .fx-ripple { animation: fx-ripple var(--fx-duration) ease-out; }
+button.fx-attached .fx-spinner { width: .85em; height: .85em; margin-inline-start: .45em; border-color: currentColor; border-top-color: transparent; }
+button.fx-attached.fx-loading .fx-spinner { display: inline-block; animation: fx-spin var(--fx-spin) linear infinite, fx-wait-enter var(--fx-loading-duration) ease-out; }
+button.fx-attached[data-motion="reduced"] { transition: none; }
+button.fx-attached[data-motion="reduced"] .fx-ripple { animation: none !important; }
+button.fx-attached[data-motion="reduced"].fx-pressed { transform: none; outline: 2px solid currentColor; }
+button.fx-attached[data-motion="reduced"].fx-loading .fx-spinner { animation: none; }
+@media (prefers-reduced-motion: reduce) {
+  button.fx-attached, button.fx-attached .fx-spinner, button.fx-attached .fx-ripple { animation: none !important; transition: none !important; }
+  button.fx-attached.fx-pressed { transform: none; outline: 2px solid currentColor; }
+}
+button.fx-button {
+  --fx-press-duration: 150ms;
+  --fx-duration: 400ms;
+  --fx-result-duration: 220ms;
+  --fx-depth: 4px;
+  --fx-scale: 0.96;
+  --fx-bounce: 1.04;
+  --fx-spread: 8px;
+  --fx-glow-alpha: 0.35;
+  --fx-distance: 6px;
+  --fx-error-distance: 3px;
+  --fx-spin: 800ms;
+  position: relative;
+  isolation: isolate;
+  width: var(--fx-width, 152px);
+  height: var(--fx-height, 48px);
+  border: 1px solid var(--fx-color, #315537);
+  border-radius: var(--fx-radius, 8px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 18px;
+  background: var(--fx-color, #315537);
+  color: var(--fx-text, #fff);
+  font:
+    500 14px/1.2 "Segoe UI",
+    "Microsoft YaHei",
+    sans-serif;
+  cursor: pointer;
+  overflow: visible;
+  box-shadow: none;
+  transform: none;
+  transition:
+    transform var(--fx-press-duration) ease,
+    box-shadow var(--fx-press-duration) ease,
+    border-color 120ms ease;
+  flex-shrink: 0;
+  touch-action: manipulation;
+  user-select: none;
+  vertical-align: middle;
+}
+button.fx-button:hover {
+  background: var(--fx-color, #315537);
+  border-color: #96b775;
+  transform: none;
+}
+button.fx-button:active {
+  transform: none;
+}
+button.fx-button:focus-visible {
+  outline: 3px solid #83a957;
+  outline-offset: 5px;
+}
+button.fx-button .fx-label {
+  position: relative;
+  z-index: 2;
+  white-space: nowrap;
+  pointer-events: none;
+}
+button.fx-button .fx-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+button.fx-button .fx-check,
+button.fx-button .fx-error-mark {
+  display: none;
+}
+.fx-clip {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+}
+.fx-fill {
+  position: absolute;
+  inset: 0;
+  background: #d6e8aa;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.fx-ripple {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  background: #edf7d8;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  pointer-events: none;
+}
+button.fx-button::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border: 1px solid #5d8541;
+  border-radius: inherit;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(1);
+}
+button.fx-button[data-press-effect="soft"].fx-pressed {
+  transform: scale(var(--fx-scale));
+}
+button.fx-button[data-press-effect="spring"].fx-pressed {
+  transform: scale(0.95);
+}
+button.fx-button[data-press-effect="spring"].fx-releasing {
+  animation: fx-spring var(--fx-press-duration) ease-out;
+}
+button.fx-button[data-press-effect="solid"] {
+  box-shadow: 0 6px 0 #1c3620;
+}
+button.fx-button[data-press-effect="solid"].fx-pressed {
+  transform: translateY(var(--fx-depth));
+  box-shadow: 0 calc(6px - var(--fx-depth)) 0 #1c3620;
+}
+button.fx-button[data-click-effect="ripple"].fx-playing .fx-ripple {
+  animation: fx-ripple var(--fx-duration) ease-out;
+}
+button.fx-button[data-click-effect="pulse"].fx-playing::after {
+  animation: fx-pulse var(--fx-duration) ease-out;
+}
+button.fx-button[data-click-effect="glow"].fx-playing {
+  animation: fx-glow var(--fx-duration) ease-out;
+}
+button.fx-button[data-click-effect="fill"].fx-playing .fx-fill {
+  animation: fx-fill var(--fx-duration) ease-in-out;
+}
+.fx-spinner {
+  display: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ffffff55;
+  border-top-color: var(--fx-text, #fff);
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+button.fx-button.fx-loading .fx-spinner {
+  display: block;
+  animation: fx-spin var(--fx-spin) linear infinite;
+}
+button.fx-button.fx-loading .fx-icon {
+  display: none;
+}
+button.fx-button.fx-loading {
+  cursor: wait;
+}
+button.fx-button.fx-success {
+  background: #24583b;
+  border-color: #24583b;
+}
+button.fx-button.fx-success .fx-arrow,
+button.fx-button.fx-error .fx-arrow {
+  display: none;
+}
+button.fx-button.fx-success .fx-check {
+  display: block;
+}
+button.fx-button.fx-error .fx-error-mark {
+  display: block;
+}
+button.fx-button.fx-error {
+  background: #833c32;
+  border-color: #833c32;
+}
+button.fx-button.fx-success.fx-completing .fx-check {
+  stroke-dasharray: 26;
+  animation: fx-check var(--fx-result-duration) ease-out;
+}
+button.fx-button.fx-success.fx-completing .fx-label {
+  animation: fx-success-text var(--fx-result-duration) ease-out;
+}
+button.fx-button.fx-error.fx-completing {
+  animation: fx-error var(--fx-result-duration) ease-out;
+}
+button.fx-button[data-motion="reduced"] {
+  transition: none;
+  animation: none !important;
+}
+button.fx-button[data-motion="reduced"] * {
+  animation: none !important;
+  transition: none !important;
+}
+button.fx-button[data-motion="reduced"].fx-pressed {
+  transform: none;
+  outline: 2px solid #8cae64;
+  outline-offset: 2px;
+}
+button.fx-button[data-motion="reduced"][data-phase="clicked"] {
+  border-color: #b9d68d;
+  box-shadow: 0 0 0 3px #6c8e3c44;
+}
+button.fx-button[data-motion="reduced"].fx-loading .fx-spinner {
+  border-color: #cfe4bb;
+  border-top-color: #cfe4bb;
+}
+@keyframes fx-spring {
+  0% {
+    transform: scale(0.95);
+  }
+  48% {
+    transform: scale(var(--fx-bounce));
+  }
+  76% {
+    transform: scale(0.995);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes fx-ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0.02);
+    opacity: 0.55;
+  }
+  72% {
+    opacity: 0.22;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+@keyframes fx-pulse {
+  0% {
+    inset: -1px;
+    opacity: 0.8;
+  }
+  100% {
+    inset: calc(-1 * var(--fx-spread));
+    opacity: 0;
+  }
+}
+@keyframes fx-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgb(111 153 57 / 0);
+  }
+  35% {
+    box-shadow: 0 0 24px 7px rgb(111 153 57 / var(--fx-glow-alpha));
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgb(111 153 57 / 0);
+  }
+}
+@keyframes fx-fill {
+  0% {
+    transform: translateX(calc(-1 * var(--fx-direction)));
+    opacity: 0.4;
+  }
+  70% {
+    transform: translateX(0);
+    opacity: 0.32;
+  }
+  100% {
+    transform: translateX(var(--fx-direction));
+    opacity: 0;
+  }
+}
+@keyframes fx-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fx-wait-enter {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+button.fx-button.fx-loading .fx-spinner {
+  animation:
+    fx-spin var(--fx-spin) linear infinite,
+    fx-wait-enter var(--fx-loading-duration, 180ms) ease-out;
+}
+button.fx-button.fx-loading .fx-label {
+  animation: fx-wait-enter var(--fx-loading-duration, 180ms) ease-out;
+}
+button.fx-button[data-waiting-effect="basic"].fx-loading .fx-spinner {
+  animation: none;
+  border-color: #cfe4bb;
+}
+button.fx-button[data-waiting-effect="basic"].fx-loading .fx-label {
+  animation: none;
+}
+@keyframes fx-check {
+  from {
+    stroke-dashoffset: 26;
+    opacity: 0.2;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+@keyframes fx-success-text {
+  from {
+    opacity: 0.2;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fx-error {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(calc(-1 * var(--fx-error-distance)));
+  }
+  60% {
+    transform: translateX(var(--fx-error-distance));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  button.fx-button,
+  button.fx-button * {
+    animation: none !important;
+    transition: none !important;
+  }
+  button.fx-button.fx-pressed {
+    transform: none;
+    outline: 2px solid #8cae64;
+    outline-offset: 2px;
+  }
+  button.fx-button.fx-loading .fx-spinner {
+    border-color: #cfe4bb;
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "上财连接器 · 个人工作台",
+  "version": "0.11.0",
+  "description": "将当前 Edge 的教务与 Canvas 会话连接到本机个人工作台。密码与验证由你完成。",
+  "minimum_chrome_version": "120",
+  "permissions": [
+    "cookies",
+    "scripting",
+    "storage",
+    "nativeMessaging",
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://eams.sufe.edu.cn/*",
+    "https://canvas.shufe.edu.cn/*",
+    "https://canvas.sufe.edu.cn/*",
+    "https://jiaoxue.shufe.edu.cn/*",
+    "https://login.sufe.edu.cn/*"
+  ],
+  "background": {
+    "service_worker": "worker.mjs",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://127.0.0.1:8180/study",
+        "http://127.0.0.1:8180/study/",
+        "http://localhost:8180/study",
+        "http://localhost:8180/study/",
+        "http://127.0.0.1:8180/academic",
+        "http://127.0.0.1:8180/academic/",
+        "http://localhost:8180/academic",
+        "http://localhost:8180/academic/"
+      ],
+      "js": [
+        "content.js",
+        "desktop-relay.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false,
+      "match_about_blank": false
+    }
+  ],
+  "action": {
+    "default_title": "上财连接器",
+    "default_popup": "panel.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'"
+  }
+}

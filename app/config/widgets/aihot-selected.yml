@@ -1,0 +1,29 @@
+- type: custom-api
+  title: AIHOT · 我的关注
+  title-url: https://aihot.news/
+  css-class: aihot-selected
+  cache: 5s
+  url: http://127.0.0.1:8182/api/news
+  template: |
+    <section id="aihot-feed" aria-label="AIHOT 关注资讯">
+      <div class="aihot-feed-toolbar">
+        <div><span class="aihot-feed-kicker">为你筛选</span><p class="aihot-source">日报与关注动态合并 · 已排除论文</p></div>
+        <span id="aihot-feed-count" class="aihot-feed-count">{{ len (.JSON.Array "items") }} 条可读</span>
+      </div>
+      <div class="aihot-feed-activity"><span id="aihot-feed-dot" class="aihot-feed-dot{{ if .JSON.Bool "running" }} is-updating{{ end }}"></span><span id="aihot-feed-status" role="status">{{ if .JSON.Bool "running" }}已有内容可以先看，正在继续补充…{{ else if .JSON.Bool "partial" }}部分来源暂未更新，先看已获取内容{{ else }}关注资讯已更新{{ end }}</span></div>
+      <div id="aihot-feed-progress" class="aihot-feed-progress" role="progressbar" aria-label="关注资讯更新进度" aria-valuemin="0" aria-valuemax="100" hidden><span></span></div>
+      <div class="aihot-feed-update-slot"><button id="aihot-feed-updates" type="button" class="aihot-feed-updates" hidden>有新内容 · 点击更新</button></div>
+      <div id="aihot-feed-list" class="aihot-feed-list">
+      {{ range .JSON.Array "items" }}
+        <article class="aihot-article" data-news-key="{{ .String "key" }}" data-news-source="{{ .String "source" }}" data-news-time-label="{{ .String "timeLabel" }}" data-news-timeline="{{ .Float "timeline" }}">
+          <a class="aihot-title" href="{{ .String "url" }}" target="_blank" rel="noreferrer">{{ .String "title" }}</a>
+          <p class="aihot-interest-label">{{ .String "matchedLabel" }}{{ if .Bool "inDaily" }} · 日报收录{{ else if .Bool "selected" }} · 精选{{ else }} · 公开动态（未进入精选）{{ end }}</p>
+          {{ if .String "summary" }}<p class="aihot-summary">{{ .String "summary" }}</p>{{ end }}
+          <p class="aihot-source">{{ .String "source" }} · {{ .String "timeLabel" }}（北京时间）</p>
+          {{ if .String "reason" }}<details class="aihot-reason"><summary>精选理由</summary><p>{{ .String "reason" }}</p></details>{{ end }}
+        </article>
+      {{ else }}<div class="aihot-feed-empty"><span class="aihot-feed-skeleton"></span><span class="aihot-feed-skeleton"></span><p>正在准备你关注的资讯，匹配后会自动出现在这里。</p></div>{{ end }}
+      </div>
+      <p id="aihot-feed-footnote" class="aihot-source"></p>
+      <p class="aihot-feed-links"><a id="aihot-feed-daily" href="{{ .JSON.String "dailyUrl" }}" target="_blank" rel="noreferrer"{{ if not (.JSON.String "dailyUrl") }} hidden{{ end }}>{{ .JSON.String "dailyDate" }} 完整日报 ↗</a><a href="https://aihot.news/" target="_blank" rel="noreferrer">前往 AIHOT ↗</a></p>
+    </section>

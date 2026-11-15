@@ -1,0 +1,345 @@
+server:
+  host: 127.0.0.1
+  port: 8180
+  assets-path: ./assets
+
+branding:
+  logo-text: 个人工作台
+  app-name: 个人工作台
+
+document:
+  head: |
+    <script defer src="/assets/chinese-clock.js?v=20261107-1"></script>
+    <link rel="stylesheet" href="/assets/home-calendar.css?v=20261107-spacing-1">
+    <script defer src="/assets/calendar-dates.js?v=20261106-5"></script>
+    <script defer src="/assets/calendar-filters.js?v=20261107-filters-1"></script>
+    <script defer src="/assets/home-calendar.js?v=20261107-spacing-1"></script>
+    <link rel="stylesheet" href="/assets/study.css?v=20261114-info-remove1">
+    <link rel="stylesheet" href="/assets/school-connector.css?v=20261109-scope">
+    <script defer src="/assets/study-offline.js?v=20261106-6"></script>
+    <script defer src="/assets/study-material-dates.js?v=20261111-record-dates1"></script>
+    <script defer src="/assets/study-file-types.js?v=20261111-types1"></script>
+    <link rel="stylesheet" href="/assets/study-ima.css?v=20261114-directory1">
+    <script defer src="/assets/study-ima-model.js?v=20261114-directory1"></script>
+    <script defer src="/assets/study-ima.js?v=20261114-info-remove1"></script>
+    <script defer src="/assets/study.js?v=20261114-info-remove1"></script>
+    <link rel="stylesheet" href="/assets/academic.css?v=20261108-a2">
+    <script type="module" src="/assets/academic.js?v=20261109-scope"></script>
+    <script type="module" src="/assets/school-connector.js?v=20261109-desktop-preview1"></script>
+    <script defer src="/assets/live-finance.js?v=20261106-weather"></script>
+    <script defer src="/assets/reset-monitor.js?v=20261112-unread-1"></script>
+    <link rel="stylesheet" href="/assets/weather-alerts.css?v=20261107-observed-3">
+    <script defer src="/assets/weather-alerts.js?v=20261107-observed-3"></script>
+    <script defer src="/assets/aihot-feed.js?v=20261107-relative-time-2"></script>
+    <script defer src="/assets/desktop-actions.js"></script>
+    <script defer src="/assets/gmail.js?v=20261114-accounts2"></script>
+    <script defer src="/assets/youtube.js?v=20261106-relative-time"></script>
+    <link rel="stylesheet" href="/assets/wechat.css?v=20261109-integration-1">
+    <script defer src="/assets/wechat-markdown.js?v=20261107-summary-1"></script>
+    <link rel="stylesheet" href="/assets/components/button-core.css?v=20261109-integration-1">
+    <script defer src="/assets/wechat.js?v=20261109-integration-1"></script>
+
+theme:
+  background-color: 240 8 9
+  primary-color: 43 50 70
+  contrast-multiplier: 1.1
+  custom-css-file: /assets/custom.css?v=20261114-gmail-accounts2
+
+pages:
+  - name: 今日
+    slug: today
+    columns:
+      - size: small
+        widgets:
+          - type: html
+            title: 此刻
+            source: |
+              <div id="home-zh-clock" class="flex justify-between items-center" aria-label="北京时间" translate="no">
+                <div><div class="color-highlight size-h1" data-zh-date>—月—日</div><div data-zh-year>—年</div></div>
+                <div class="text-right"><div class="color-highlight size-h1" data-zh-time>--:--</div><div data-zh-weekday>星期—</div></div>
+              </div>
+          - type: html
+            css-class: home-calendar-widget
+            source: |
+              <section id="home-calendar" aria-label="校历与个人事件" translate="no">
+                <div class="home-cal-heading"><h2>日历与事件</h2><button id="home-cal-add" class="home-cal-add" type="button" aria-label="添加个人事件" disabled>＋ 添加</button></div>
+                <div class="home-cal-toolbar"><label class="visually-hidden" for="home-cal-month">查看月份</label><input id="home-cal-month" type="month" min="1900-01" max="2199-12" aria-label="查看月份"><button id="home-cal-prev" type="button" aria-label="上个月">‹</button><button id="home-cal-today" type="button">今天</button><button id="home-cal-next" type="button" aria-label="下个月">›</button></div>
+                <div class="home-cal-weekdays" aria-hidden="true"><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span></div>
+                <div id="home-cal-grid" class="home-cal-grid" role="group" aria-label="日期"></div>
+                <div class="home-cal-legend"><span><i class="official"></i>上财校历</span><span><i class="personal"></i>个人事件</span></div>
+                <details id="home-cal-filter" class="home-cal-filter"><summary><span>筛选校历事件</span><span id="home-cal-filter-count">读取中…</span></summary><div class="home-cal-filter-panel"><p>按分类、子类或单条事件选择。箭头仅展开，个人事件始终显示。</p><div id="home-cal-filter-options" role="group" aria-label="官方校历细分筛选"></div><div class="home-cal-filter-actions"><button id="home-cal-filter-all" type="button">全选</button><button id="home-cal-filter-none" type="button">清空</button></div><p id="home-cal-filter-storage-note" role="status"></p></div></details>
+                <div class="home-cal-details-heading"><h3 id="home-cal-selected-date"></h3><span id="home-cal-selected-count"></span></div>
+                <div id="home-cal-events"></div>
+                <p id="home-cal-status" class="home-cal-status" role="status" aria-live="polite">正在连接本机日历…</p>
+                <footer class="home-cal-source-footer"><p id="home-cal-source-message" class="home-cal-source-message"></p><details><summary>校历来源与设置</summary><p id="home-cal-academic-year">正在读取校历</p><div class="home-cal-verification"><span id="home-cal-verified">尚未核验</span><button id="home-cal-verify" type="button">核验原图</button></div><p>色带表示连续事件，圆点表示单日事件。实心圆为今天，圆环为选中日期。</p><div id="home-cal-source-details"></div></details></footer>
+                <div id="home-cal-tooltip" role="tooltip" hidden></div>
+                <dialog id="home-cal-dialog" aria-labelledby="home-cal-editor-title">
+                  <form id="home-cal-form" class="home-cal-form" novalidate>
+                    <h3 id="home-cal-editor-title">添加个人事件</h3>
+                    <label>事件标题<input id="home-cal-title" type="text" maxlength="100" autocomplete="off" required></label>
+                    <label>事件类型<select id="home-cal-type"><option value="personal">个人安排</option><option value="anniversary">纪念日</option><option value="competition">比赛</option><option value="exam">考试</option><option value="holiday">假期 / 节日</option><option value="other">其他</option></select></label>
+                    <div class="home-cal-form-dates"><label>开始日期<input id="home-cal-start" type="date" min="1900-01-01" max="2199-12-31" required></label><label>结束日期<input id="home-cal-end" type="date" min="1900-01-01" max="2199-12-31" required></label></div>
+                    <label class="home-cal-repeat"><input id="home-cal-annual" type="checkbox">每年重复（单日纪念日）</label>
+                    <p class="home-cal-repeat-note">起止日期均包含在内，按上海日期记录。2 月 29 日的年度纪念日仅在闰年显示。</p>
+                    <label>简要说明<textarea id="home-cal-description" maxlength="2000" rows="3"></textarea></label>
+                    <p id="home-cal-form-status" role="status" aria-live="polite"></p>
+                    <div class="home-cal-form-actions"><button id="home-cal-cancel" type="button">取消</button><button id="home-cal-save" type="submit">保存事件</button></div>
+                  </form>
+                </dialog>
+              </section>
+      - size: full
+        widgets:
+          - type: search
+            title: 搜索
+            search-engine: bing
+            placeholder: 搜索资料、概念或问题…
+            new-tab: true
+            bangs:
+              - title: 必应学术
+                shortcut: "!paper"
+                url: https://cn.bing.com/academic/search?q={QUERY}
+              - title: GitHub
+                shortcut: "!gh"
+                url: https://github.com/search?q={QUERY}
+          - $include: widgets/aihot-selected.yml
+          - type: to-do
+            title: 今天的重点任务
+            id: daily-priorities
+      - size: small
+        widgets:
+          - type: split-column
+            title: 常用入口
+            css-class: home-links-and-resets
+            max-columns: 2
+            widgets:
+              - type: bookmarks
+                title: 常用入口
+                groups:
+                  - title: AI资讯
+                    links:
+                      - title: AIHOT 精选
+                        url: https://aihot.news/
+                      - title: AIHOT 模型榜
+                        url: https://aihot.news/leaderboard
+                      - title: AIHOT Token 羊毛
+                        url: https://aihot.news/free-tokens
+                  - title: 校园
+                    links:
+                      - title: 学业进度与培养计划
+                        url: /academic
+                      - title: Canvas 教学平台
+                        url: https://jiaoxue.shufe.edu.cn/
+                      - title: 上财官网 · 门户
+                        url: https://portal.sufe.edu.cn/main.html#/Index
+                  - title: 学术与工具
+                    links:
+                      - title: 上财图书馆
+                        url: https://lib.sufe.edu.cn/
+                      - title: 中国知网
+                        url: https://www.cnki.net/
+                      - title: GitHub
+                        url: https://github.com/
+              - $include: widgets/aihot-resets.yml
+              - $include: widgets/home-weather.yml
+          - type: html
+            title: 电脑模式
+            css-class: desktop-actions
+            source: |
+              <div class="desktop-mode-buttons" role="group" aria-label="电脑模式快捷按钮">
+                <button type="button" data-desktop-action="game" disabled title="高性能电源计划、最高刷新率、启用独显">游戏模式</button>
+                <button type="button" data-desktop-action="office" disabled title="平衡电源计划、60Hz，条件允许时禁用独显">办公模式</button>
+                <button type="button" data-desktop-action="status" disabled title="打开当前电源、显卡与刷新率状态窗口">当前状态</button>
+              </div>
+
+              <p class="desktop-action-status" role="status" aria-live="polite">正在连接本机快捷方式…</p>
+              <p class="desktop-action-hint">切换模式时会弹出 Windows 管理员确认，结果见独立窗口。</p>
+          - $include: widgets/focus-markets.yml
+          - $include: widgets/world-markets.yml
+          - type: html
+            title: 使用提示
+            source: |
+              <ul class="list list-gap-10">
+                <li>内置待办保存在当前浏览器，暂不跨设备同步。</li>
+                <li>日历红点为上财校历、金点为个人事件，深色横条表示连续事件，点击日期查看详情。</li>
+                <li>资讯点击进入原文，部分全文需要原站订阅。</li>
+              </ul>
+
+  - name: 课程与资料
+    slug: study
+    columns:
+      - size: full
+        widgets:
+          - type: html
+            css-class: study-workspace
+            source: |
+              <div id="study-workspace" translate="no">
+                <header class="study-topbar">
+                  <div><p class="study-eyebrow">学业工作区</p><div class="study-date-row"><h2 id="study-date">课程与资料</h2><p id="study-teaching-week" class="study-teaching-week">正在读取教学周</p></div><p class="study-intro">今天的课、要交的作业、最近的资料，都在这里。</p></div>
+                  <nav class="study-overview" aria-label="学业概览">
+                    <a href="#study-today-panel"><strong id="study-today-total">—</strong><span>今日课程</span><small>时间与教室</small></a>
+                    <a href="#study-assignment-panel"><strong id="study-pending-total">—</strong><span>待处理作业</span><small>全部 Canvas 课程</small></a>
+                    <a href="#study-material-panel"><strong id="study-material-total">—</strong><span>课程资料</span><small>按名称或课程查找</small></a>
+                  </nav>
+                </header>
+                <p class="academic-actions"><a href="/academic">学业进度与培养计划 →</a></p>
+                <div class="study-filter-bar" aria-label="当前课程筛选范围">
+                  <span class="study-filter-label">正在查看</span><strong id="study-scope">全部 Canvas 课程</strong><span id="study-scope-count">正在读取</span><button id="study-scope-reset" class="study-text-button" type="button" hidden>清除课程筛选</button>
+                  <span class="study-filter-explanation">课程筛选作用于作业与资料 · 今日课表和考试始终显示全部课程</span>
+                </div>
+                <div class="study-layout">
+                  <aside class="study-sidebar" aria-label="课表与课程导航">
+                    <section id="study-today-panel" class="study-panel study-today-panel" aria-labelledby="study-today-heading">
+                      <div class="study-panel-heading"><h2 id="study-today-heading">今日课表</h2><span id="study-today-date"></span></div>
+                      <div id="study-school-status" class="study-source" role="status">正在读取教务课表…</div>
+                      <p id="study-academic-status" class="study-source" role="status">学业进度正在读取…</p>
+                      <div id="study-today"></div>
+                      <a id="study-exam-alert" class="study-exam-alert" href="#study-exam-panel" hidden></a>
+                    </section>
+                    <section class="study-panel study-course-panel" aria-labelledby="study-course-heading">
+                      <div class="study-panel-heading"><h2 id="study-course-heading">课程导航</h2><span id="study-course-count">—</span></div>
+                      <p class="study-course-note">右侧为待办数；红色表示逾期或临近截止。</p>
+                      <label class="study-course-select">筛选 Canvas 课程<select id="study-course-filter"><option value="">全部 Canvas 课程</option></select></label>
+                      <nav id="study-course-navigation" class="study-course-navigation" aria-label="Canvas 课程筛选"></nav>
+                      <a id="study-course-open" href="https://canvas.shufe.edu.cn/" target="_blank" rel="noopener noreferrer" hidden>进入所选 Canvas 课程 ↗</a>
+                      <details id="study-school-course-details" class="study-details"><summary id="study-school-courses-label">本学期教务课程</summary><div id="study-school-courses"></div></details>
+                    </section>
+                    <section class="study-panel study-link-panel" aria-labelledby="study-links-heading">
+                      <div class="study-panel-heading"><h2 id="study-links-heading">学术入口</h2></div>
+                      <nav class="study-quick-links" aria-label="学术资源"><a href="https://lib.sufe.edu.cn/" target="_blank" rel="noopener noreferrer">上财图书馆 ↗</a><a href="https://www.cnki.net/" target="_blank" rel="noopener noreferrer">中国知网 ↗</a><a href="https://www.ncpssd.cn/" target="_blank" rel="noopener noreferrer">社科文献中心 ↗</a><a href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a></nav>
+                    </section>
+                  </aside>
+                  <section id="study-assignment-panel" class="study-panel study-assignment-panel" aria-labelledby="study-assignment-heading">
+                    <div class="study-panel-heading"><h2 id="study-assignment-heading">课程作业</h2><span id="study-assignment-count">—</span></div>
+                    <p id="study-assignment-description" class="study-panel-description">优先查看逾期与近期截止作业，进入 Canvas 完成提交。</p>
+                    <div id="study-canvas-status" class="study-source" role="status">正在读取 Canvas…</div>
+                    <div class="study-compact-toolbar"><a href="https://canvas.shufe.edu.cn/" target="_blank" rel="noopener noreferrer">打开 Canvas ↗</a></div>
+                    <div class="study-assignment-tabs" role="group" aria-label="作业状态筛选">
+                      <button type="button" data-assignment-tab="pending" aria-pressed="true">待处理 <span>—</span></button>
+                      <button type="button" data-assignment-tab="completed" aria-pressed="false">已提交 / 评分 <span>—</span></button>
+                      <button type="button" data-assignment-tab="other" aria-pressed="false">线下 / 其他 <span>—</span></button>
+                      <button type="button" data-assignment-tab="all" aria-pressed="false">全部 <span>—</span></button>
+                    </div>
+                    <div id="study-offline-status-filter" class="study-offline-status-filter" role="group" aria-label="线下文件作业状态" hidden>
+                      <span>线下文件作业</span>
+                      <button type="button" data-offline-status="all" aria-pressed="true">全部 <span>0</span></button>
+                      <button type="button" data-offline-status="overdue" aria-pressed="false">已过期 <span>0</span></button>
+                      <button type="button" data-offline-status="unsubmitted" aria-pressed="false">未提交 <span>0</span></button>
+                      <button type="button" data-offline-status="submitted" aria-pressed="false">已提交 <span>0</span></button>
+                    </div>
+                    <div id="study-assignments"></div>
+                    <button id="study-assignment-more" class="study-more" type="button" hidden>继续查看作业</button>
+                  </section>
+                  <aside class="study-reference" aria-label="考试与资料查阅">
+                    <section id="study-exam-panel" class="study-panel study-exam-panel" aria-labelledby="study-exam-heading">
+                      <p class="study-section-kicker">考试日程</p><div class="study-panel-heading"><h2 id="study-exam-heading">考试安排</h2><span id="study-exam-count">—</span></div>
+                      <div id="study-exam-status" class="study-source" role="status">正在读取教务排考…</div>
+                      <div id="study-next-exam"></div>
+                      <details id="study-other-exam-details" class="study-details"><summary id="study-other-exams-label">其他已公布考试</summary><div id="study-other-exams"></div></details>
+                      <details id="study-unpublished-details" class="study-details"><summary id="study-unpublished-label">待公布安排</summary><div id="study-unpublished-exams"></div></details>
+                    </section>
+                    <section id="study-material-panel" class="study-panel study-material-panel" aria-labelledby="study-material-heading">
+                      <p class="study-section-kicker">查阅资料</p><div class="study-panel-heading"><h2 id="study-material-heading">课程资料</h2><span id="study-files-count">—</span></div>
+                      <div id="study-file-tools" class="study-file-tools">
+                        <input id="study-file-search" type="search" class="study-material-search" aria-label="搜索课程文件" placeholder="搜索文件名或文件夹…" autocomplete="off">
+                        <div class="study-file-options">
+                          <label class="study-search-label">课程<select id="study-file-course" aria-label="筛选课程"><option value="">全部课程</option></select></label>
+                          <label class="study-search-label">类型<select id="study-file-type" aria-label="筛选文件类型"><option value="all">全部</option><option value="pdf">PDF</option><option value="ppt">PPT</option><option value="word">Word</option><option value="excel">Excel</option><option value="other">其他</option></select></label>
+                          <label class="study-search-label">排序<select id="study-file-sort" aria-label="资料排序"><option value="upload">时间排序</option><option value="name">默认排序</option></select></label>
+                          <label class="study-search-label">状态<select id="study-file-state" aria-label="筛选保存状态"><option value="all">全部</option><option value="unsynced">待保存</option><option value="exists">已保存</option><option value="other">其他</option></select></label>
+                        </div>
+                      </div>
+                      <button id="study-search-clear" class="study-text-button" type="button" hidden>清除搜索</button>
+                      <div id="study-files"></div>
+                      <button id="study-files-more" class="study-more" type="button" hidden>继续查看资料</button>
+                    </section>
+                  </aside>
+                </div>
+              </div>
+          - type: split-column
+            css-class: study-secondary
+            max-columns: 2
+            widgets:
+              - type: to-do
+                title: 课程与项目任务
+                id: study-projects
+              - type: rss
+                title: 计量经济学 · arXiv
+                style: detailed-list
+                limit: 10
+                collapse-after: 5
+                cache: 6h
+                feeds:
+                  - url: https://rss.arxiv.org/rss/econ.EM
+                    title: arXiv · Econometrics
+
+  - name: 学业进度
+    slug: academic
+    columns:
+      - size: full
+        widgets:
+          - type: html
+            source: |
+              <main id="academic-workspace" translate="no" aria-label="学业进度与培养计划"></main>
+
+  - name: 公众号
+    slug: wechat
+    columns:
+      - size: full
+        widgets:
+          - type: html
+            css-class: gmail-workspace
+            source: |
+              <div id="wechat-dashboard">
+                <div class="gmail-topbar">
+                  <div><p class="gmail-eyebrow">公众号订阅</p><h2>关注的作者，持续收录</h2><p class="gmail-subtitle">订阅文章按发布时间汇总，本地保存，随时接着读。</p></div>
+                  <div class="wechat-refresh-actions"><div class="gmail-actions"><button id="wechat-refresh" type="button">刷新文章</button></div><span id="wechat-refresh-hint">每 30 分钟自动检查新文章</span></div>
+                </div>
+                <p id="wechat-notice" class="gmail-notice" role="status" aria-live="polite">正在读取本地收录的文章…</p>
+                <div class="gmail-layout">
+                  <aside class="gmail-sidebar wechat-sidebar" tabindex="0" aria-label="公众号订阅来源，可独立滚动"><h3>订阅来源</h3><div id="wechat-sources"></div><p class="gmail-side-note">此区域可独立滚动，查看下方公众号。每个来源的同步状态和上次成功时间分别显示。</p></aside>
+                  <section class="gmail-inbox"><div class="gmail-list-heading"><h3 id="wechat-list-title">全部公众号</h3><span id="wechat-count">读取中…</span></div><div class="wechat-update-slot"><button type="button" id="wechat-updates" hidden>有新文章 · 点击更新</button></div><div id="wechat-articles"><p class="gmail-empty">正在读取缓存，首次获取会按来源逐步显示。</p></div><button type="button" id="wechat-more" hidden>显示更多文章</button></section>
+                </div>
+                <p class="wechat-attribution">RSS 由 BestBlogs 维护。文章与图片版权归原作者。第三方订阅可能存在延迟或中断。<a href="https://github.com/ginobefun/BestBlogs/blob/main/opml/bestblogs_wechat2rss_opml_all.opml" target="_blank" rel="noopener noreferrer">查看订阅清单 ↗</a></p>
+              </div>
+
+  - name: Gmail
+    slug: gmail
+    columns:
+      - size: full
+        widgets:
+          - type: html
+            css-class: gmail-workspace
+            source: |
+              <div id="gmail-dashboard">
+                <div class="gmail-topbar">
+                  <div><p class="gmail-eyebrow">邮件工作区</p><h2>所有邮箱，一个入口</h2><p class="gmail-subtitle">汇总多个 Gmail 收件箱，按账号筛选，点击邮件进入原邮箱。</p></div>
+                  <div class="gmail-actions"><button type="button" id="gmail-add" disabled>＋ 添加 Gmail 账号</button><button type="button" id="gmail-refresh" disabled>刷新</button></div>
+                </div>
+                <p id="gmail-notice" class="gmail-notice" role="status" aria-live="polite">正在检查本机邮箱连接…</p>
+                <div class="gmail-layout">
+                  <aside class="gmail-sidebar"><h3>邮箱账号 <span id="gmail-account-count">0</span></h3><div id="gmail-accounts"></div><p class="gmail-side-note">每个账号独立授权。邮件标题和发件人仅在本机读取，正文在 Gmail 中查看。</p></aside>
+                  <section class="gmail-inbox"><div class="gmail-list-heading"><h3 id="gmail-list-title">全部账号 · 收件箱</h3><label><input type="checkbox" id="gmail-unread"> 仅看未读</label></div><div id="gmail-messages"><p class="gmail-empty">正在读取连接状态…</p></div></section>
+                </div>
+                <details id="gmail-setup" class="gmail-setup"><summary>接入设置与说明</summary><ol><li>先配置用于本机工作台的 Google 登录客户端，再连接各邮箱。</li><li>配置完成后点击“添加 Gmail 账号”，在 Google 页面选择账号并授权。</li><li>连接其他邮箱时重复添加；邮箱会分别列出，也可合并查看。</li></ol><p>邮件权限用于读取标题、发件人、时间和标签。Google 基本资料权限用于显示各账号头像。已有账号可点击“获取 Google 头像”并选择对应邮箱完成授权。</p><p><a href="https://console.cloud.google.com/apis/library/gmail.googleapis.com" target="_blank" rel="noopener noreferrer">Google 接入设置 ↗</a> · <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer">打开 Gmail 网页 ↗</a></p></details>
+              </div>
+
+  - name: YouTube
+    slug: youtube
+    columns:
+      - size: full
+        widgets:
+          - type: html
+            css-class: gmail-workspace youtube-workspace
+            source: |
+              <div id="youtube-dashboard">
+                <div class="gmail-topbar">
+                  <div><p class="gmail-eyebrow">订阅更新</p><h2>关注的频道，按时间看</h2><p class="gmail-subtitle">汇总 YouTube 订阅频道的最新视频，减少在推荐流中来回翻找。</p></div>
+                  <div class="gmail-actions"><button type="button" id="youtube-add" disabled>＋ 连接 YouTube</button><button type="button" id="youtube-refresh" disabled>刷新订阅</button></div>
+                </div>
+                <p id="youtube-notice" class="gmail-notice" role="status" aria-live="polite">正在检查 YouTube 连接…</p>
+                <div class="gmail-layout">
+                  <aside class="gmail-sidebar"><h3>YouTube 账号 <span id="youtube-account-count">0</span></h3><div id="youtube-accounts"></div><p class="gmail-side-note">连接平时看视频的 Google 账号即可，无需创建自己的频道。可连接多个账号，重复视频会合并显示。</p><p class="gmail-side-note"><a id="youtube-community" href="https://www.youtube.com/feed/subscriptions" target="_blank" rel="noopener noreferrer">打开 YouTube 订阅页 ↗</a><br>社区图文动态在 YouTube 网页中查看。</p></aside>
+                  <section class="gmail-inbox"><div class="youtube-filters"><label>频道<select id="youtube-channel"><option value="">全部订阅频道</option></select></label><label>时间<select id="youtube-days"><option value="0">全部已取回视频</option><option value="1">最近 24 小时</option><option value="7">最近 7 天</option><option value="30">最近 30 天</option></select></label><label class="youtube-search">搜索<input id="youtube-search" type="search" placeholder="视频标题或频道名称…"></label><span id="youtube-count"></span></div><div id="youtube-videos"><p class="gmail-empty">正在读取连接状态…</p></div><button type="button" id="youtube-more" hidden>显示更多视频</button></section>
+                </div>
+                <details class="gmail-setup"><summary>接入设置与说明</summary><ol><li>复用工作台已有的 Google 客户端，在同一项目启用 YouTube Data API v3。</li><li>点击“连接 YouTube”，选择平时看视频的账号并授予 YouTube 只读权限。</li><li>要连接的 Google 账号需加入应用测试用户名单；每个账号分别连接。</li></ol><p>通过订阅列表和频道上传列表读取视频标题、发布时间及封面。每频道取最近 5 个，每账号保留最新 200 个；每小时自动同步。社区图文动态目前没有对应的官方读取接口。</p><p><a href="https://console.cloud.google.com/apis/library/youtube.googleapis.com" target="_blank" rel="noopener noreferrer">启用 YouTube Data API v3 ↗</a> · <a href="https://www.youtube.com/feed/subscriptions" target="_blank" rel="noopener noreferrer">打开 YouTube 订阅页 ↗</a></p></details>
+              </div>
