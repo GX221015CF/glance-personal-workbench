@@ -3,83 +3,141 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="个人工作台项目介绍，整合课程与资料、资讯、公众号和邮箱，展示 AI 文章总结与知识整理流程。">
+  <meta name="theme-color" content="#1e40af">
   <meta name="color-scheme" content="light">
-  <title>个人工作台介绍视频</title>
+  <title>个人工作台 · 项目介绍视频</title>
+  <link rel="icon" href="app-icon.png" type="image/png">
   <style>
     :root {
       color-scheme: light;
-      font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
-      background: #f3f5f4;
-      color: #202925;
+      font-family: Inter, "Microsoft YaHei", "PingFang SC", sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
     }
 
     * { box-sizing: border-box; }
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 32px 20px;
-    }
+    body { margin: 0; }
 
-    main { width: min(100%, 1040px); }
+    main {
+      width: min(1120px, calc(100% - 48px));
+      margin: 48px auto;
+    }
 
     header {
       display: flex;
-      align-items: baseline;
-      justify-content: space-between;
+      align-items: center;
       gap: 16px;
-      margin-bottom: 16px;
+      margin-bottom: 24px;
     }
 
-    h1 { margin: 0; font-size: 24px; font-weight: 650; }
+    .brand {
+      width: 64px;
+      height: 64px;
+      flex-shrink: 0;
+      border-radius: 14px;
+    }
 
-    .metadata { color: #52635a; font-size: 14px; white-space: nowrap; }
+    h1 {
+      margin: 0 0 6px;
+      font-size: clamp(20px, 3.5vw, 30px);
+      line-height: 1.35;
+      letter-spacing: -0.03em;
+    }
+
+    p { line-height: 1.7; }
+
+    header p {
+      margin: 0;
+      color: #64748b;
+      font-size: 14px;
+    }
 
     video {
       display: block;
       width: 100%;
       aspect-ratio: 16 / 9;
       object-fit: contain;
-      background: #101513;
-      border-radius: 6px;
+      background: #0f172a;
+      border: 1px solid #dbe3ef;
+      border-radius: 16px;
+      box-shadow: 0 12px 32px rgb(15 23 42 / 8%);
     }
 
-    footer {
+    nav {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 12px;
-      margin-top: 14px;
-      color: #52635a;
+      align-items: center;
+      gap: 12px 24px;
+      margin: 22px 0;
+    }
+
+    a {
+      color: #1e40af;
+      text-underline-offset: 4px;
+    }
+
+    a:hover { text-decoration-thickness: 2px; }
+
+    a:focus-visible {
+      outline: 3px solid #f97316;
+      outline-offset: 5px;
+      border-radius: 2px;
+    }
+
+    .download {
+      padding: 11px 18px;
+      border-radius: 9px;
+      background: #1e40af;
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .context {
+      max-width: 860px;
+      color: #475569;
       font-size: 14px;
     }
 
-    a { color: #176b55; text-underline-offset: 3px; }
+    .context p { margin: 8px 0; }
 
-    @media (max-width: 560px) {
-      body { padding: 20px 12px; }
-      header { align-items: flex-start; flex-direction: column; gap: 6px; }
-      h1 { font-size: 21px; }
-      footer { flex-direction: column; }
+    @media (max-width: 600px) {
+      main {
+        width: calc(100% - 24px);
+        margin: 24px auto;
+      }
+
+      header { gap: 12px; }
+      .brand { width: 48px; height: 48px; border-radius: 10px; }
+      video { border-radius: 10px; }
+      nav { gap: 14px 20px; font-size: 14px; }
     }
   </style>
 </head>
 <body>
   <main>
     <header>
-      <h1>个人工作台</h1>
-      <span class="metadata">介绍视频 · 68 秒 · 静音</span>
+      <img class="brand" src="app-icon.png" width="64" height="64" alt="个人工作台图标">
+      <div>
+        <h1>个人工作台 · 学习与信息管理</h1>
+        <p>完整项目介绍 · 68 秒 · 1080p / 30fps · 静音</p>
+      </div>
     </header>
     <video controls playsinline preload="metadata" poster="../media/home.png" aria-label="个人工作台介绍视频">
       <source src="../media/workbench-intro.mp4" type="video/mp4">
       您的浏览器暂不支持 HTML5 视频播放。<a href="../media/workbench-intro.mp4">下载 MP4 文件</a>。
     </video>
-    <footer>
-      <span>1920 × 1080 · H.264 · 无音轨</span>
-      <span><a href="../media/workbench-intro.mp4">下载原始 MP4</a> · <a href="https://github.com/GX221015CF/glance-personal-workbench">返回仓库 README</a></span>
-    </footer>
+    <nav aria-label="项目与视频链接">
+      <a class="download" href="../media/workbench-intro.mp4" download="personal-workbench-intro.mp4">下载介绍视频 MP4</a>
+      <a href="https://github.com/GX221015CF/glance-personal-workbench">查看 GitHub 项目与运行指南</a>
+      <a href="https://github.com/GX221015CF/glance-personal-workbench/blob/main/docs/CASE-STUDIES.md">核心流程与实现案例</a>
+    </nav>
+    <section class="context" aria-label="项目与演示说明">
+      <p>将课程与资料、关注资讯、公众号阅读和多账号邮箱整合到同一个日常入口，支持 AI 文章总结、HTML 解读与课程资料保存到 ima。基于开源 Glance 搭建，本人负责需求设计、系统集成与使用验收，采用 AI 辅助开发。</p>
+      <p>视频中的 Gmail 和 YouTube 邮箱使用演示信息，课程与学业画面来自录制时的实际使用。AI 总结与 HTML 解读使用已标注的历史功能截图。<a href="https://github.com/GX221015CF/glance-personal-workbench/blob/main/docs/MEDIA.md">查看媒体来源与处理说明</a>。</p>
+    </section>
   </main>
 </body>
 </html>

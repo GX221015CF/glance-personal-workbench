@@ -9,8 +9,8 @@
     },
     {
       "path": ".github/workflows/pages.yml",
-      "bytes": 1124,
-      "sha256": "89eab9838f14e208db8cd54729652b0154ac89d51aae1e9f8c84f58ffab6450f"
+      "bytes": 1181,
+      "sha256": "f450f18c96c260c4269c4660759b69d789fffed1fcf31902fd69ecca64eae4a8"
     },
     {
       "path": ".gitignore",
@@ -29,8 +29,8 @@
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "bytes": 2360,
-      "sha256": "2b7ed075e6eb3f4fbcbcb96d4f69baae3a1a8d14e898e186e4edf561dbdf4538"
+      "bytes": 2520,
+      "sha256": "565324b038ee68fd8af0bfaa69bd6d6f33af99dcd8c9fc7e67fa30e18c1f289b"
     },
     {
       "path": "app/academic_bridge.py",
@@ -679,8 +679,8 @@
     },
     {
       "path": "docs/MEDIA.md",
-      "bytes": 2804,
-      "sha256": "49cac6644a5557fd4d07a40fdc0404dfce21c02cbcfa198c497fcec77cf5bd0f"
+      "bytes": 3060,
+      "sha256": "81dbcd031109101c06f5d193716f916651c8b7fcfeb634a8d047944dc913c3b5"
     },
     {
       "path": "docs/RUNNING.md",
@@ -694,8 +694,8 @@
     },
     {
       "path": "docs/VERIFICATION.md",
-      "bytes": 4012,
-      "sha256": "23b4894a273b6a4aa6c5c4c690eae30eea92567cc7033c1f50e8a0b866967722"
+      "bytes": 4915,
+      "sha256": "e3ae7719c8c91da8f5d31eafca7f7a679b3e33c057939d37ad2c8e4e69188f2c"
     },
     {
       "path": "docs/media-manifest.json",
@@ -774,8 +774,8 @@
     },
     {
       "path": "tools/check_public.py",
-      "bytes": 3374,
-      "sha256": "f527341ec545651b64b5c582871b819ed8f178eea38d940adf7cebf8f4611157"
+      "bytes": 3396,
+      "sha256": "59a6ee9a9c41ef56f332e0580de911a5d87cdd28e6efd2c98341916be99d70fe"
     },
     {
       "path": "tools/install_glance.py",
@@ -788,9 +788,14 @@
       "sha256": "c8674797bcf4d2a0939279651a79f50e5b3476191fc481d2460123d3e4e7d4b5"
     },
     {
+      "path": "watch/app-icon.png",
+      "bytes": 63885,
+      "sha256": "503abba885056a3b5df436b14e10f77a6d696e2fdf14369d2832414b639ee7c2"
+    },
+    {
       "path": "watch/index.html",
-      "bytes": 2279,
-      "sha256": "42312beb625a5f2ce56f221944257b9589e5e364d4ea12e47f8dd411819555dd"
+      "bytes": 4308,
+      "sha256": "e8d2525f2fd5f74e5a925bab893937baa8aad11700b9876e02915d8f151b310f"
     }
   ]
 }

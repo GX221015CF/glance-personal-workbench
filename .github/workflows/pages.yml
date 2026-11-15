@@ -34,6 +34,7 @@ jobs:
         run: |
           mkdir -p _site/watch _site/media
           cp watch/index.html _site/watch/index.html
+          cp watch/app-icon.png _site/watch/app-icon.png
           cp media/home.png _site/media/home.png
           cp media/workbench-intro.mp4 _site/media/workbench-intro.mp4
       - name: Upload Pages artifact
