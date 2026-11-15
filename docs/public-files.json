@@ -694,8 +694,8 @@
     },
     {
       "path": "docs/VERIFICATION.md",
-      "bytes": 3980,
-      "sha256": "840a2b1b9ba3df0a97e611f54ba809751d792b884b80cb3905d5db763f985a20"
+      "bytes": 4012,
+      "sha256": "23b4894a273b6a4aa6c5c4c690eae30eea92567cc7033c1f50e8a0b866967722"
     },
     {
       "path": "docs/media-manifest.json",
