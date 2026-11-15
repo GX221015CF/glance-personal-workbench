@@ -16,6 +16,7 @@ EXTRA_FILES = [
     'docs/RUNNING.md', 'docs/CASE-STUDIES.md', 'docs/SOURCE.md', 'docs/MEDIA.md',
     'docs/VERIFICATION.md', 'docs/verification-summary.json',
     'docs/source-manifest.json', 'docs/media-manifest.json', 'docs/public-files.json',
+    '.github/workflows/pages.yml', 'watch/index.html',
     'THIRD_PARTY_LICENSES/Glance-AGPL-3.0.txt',
 ]
 SECRET = re.compile(

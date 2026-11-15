@@ -8,14 +8,19 @@
       "sha256": "c7993863590f5a64e997bae1da7a66bf5f4a30190f898afdf0417ff5bc62c7c3"
     },
     {
+      "path": ".github/workflows/pages.yml",
+      "bytes": 1124,
+      "sha256": "89eab9838f14e208db8cd54729652b0154ac89d51aae1e9f8c84f58ffab6450f"
+    },
+    {
       "path": ".gitignore",
       "bytes": 228,
       "sha256": "5f8a675acab8291d47a7101b01a2ca0bd6718ffba27f5885069cb5046607c642"
     },
     {
       "path": "README.md",
-      "bytes": 8205,
-      "sha256": "3206dc1d7472a9c789fcba46db1978924143fd164ef37c8d1715b87db113e269"
+      "bytes": 8114,
+      "sha256": "6a3f148d628e2f68be88061567c8dda4129582dddcb0f59236ea14f5d198e87b"
     },
     {
       "path": "THIRD_PARTY_LICENSES/Glance-AGPL-3.0.txt",
@@ -674,8 +679,8 @@
     },
     {
       "path": "docs/MEDIA.md",
-      "bytes": 2674,
-      "sha256": "9579275577bdf1202e28073132efd84c32b968029c62355ac1d1915457ff68cc"
+      "bytes": 2804,
+      "sha256": "49cac6644a5557fd4d07a40fdc0404dfce21c02cbcfa198c497fcec77cf5bd0f"
     },
     {
       "path": "docs/RUNNING.md",
@@ -689,8 +694,8 @@
     },
     {
       "path": "docs/VERIFICATION.md",
-      "bytes": 3277,
-      "sha256": "335d85192cb166532c8c65041608290327295bdd1bf9ada97f4606d9e30f7924"
+      "bytes": 3464,
+      "sha256": "76da1ac3c41834333aaa234fd6e57c2a1edf3f76b78fd8d9f31e04d007195064"
     },
     {
       "path": "docs/media-manifest.json",
@@ -769,8 +774,8 @@
     },
     {
       "path": "tools/check_public.py",
-      "bytes": 3319,
-      "sha256": "0b71ae184eec03e363ad1d2d6cd0ebb0bc1a9845558b73e289f12bc5655a4349"
+      "bytes": 3374,
+      "sha256": "f527341ec545651b64b5c582871b819ed8f178eea38d940adf7cebf8f4611157"
     },
     {
       "path": "tools/install_glance.py",
@@ -781,6 +786,11 @@
       "path": "tools/verify.py",
       "bytes": 5114,
       "sha256": "c8674797bcf4d2a0939279651a79f50e5b3476191fc481d2460123d3e4e7d4b5"
+    },
+    {
+      "path": "watch/index.html",
+      "bytes": 2279,
+      "sha256": "42312beb625a5f2ce56f221944257b9589e5e364d4ea12e47f8dd411819555dd"
     }
   ]
 }
