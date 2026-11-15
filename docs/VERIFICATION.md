@@ -40,4 +40,4 @@ HTTP 检查通过实际 Glance 官方程序和本地桥接，读取六页外壳�
 
 匿名HTTP取得仓库首页的实际README渲染HTML，核对标题、代表图片链接和Mermaid架构图代码。源码归档中的156个文件逐项与Git内容指纹匹配，五张PNG和68秒MP4另通过公开原文件链接读取，内容与本地一致。
 
-前序发布时，README 封面直接下载 MP4，GitHub 原始文件以附件内容返回。当前版本新增 GitHub Pages HTML5 播放页，README 主入口进入播放器，原始 MP4 下载链接作为次要入口保留。Pages 发布结果、页面响应、内联视频响应、字节范围请求和媒体指纹将在本次发布后记录。HTTP可访问和浏览器能够取得媒体不代表已观察完整播放，连续播放体验仍由用户实际观看确认。
+2026年11月15日发布验收：README封面和“在线播放”入口指向[GitHub Pages播放器](https://gx221015cf.github.io/glance-personal-workbench/watch/)，匿名HTTP返回200和text/html，实际HTML包含HTML5 video controls、现有首页封面和MP4来源。页面媒体地址返回200、video/mp4，完整3,403,764字节下载后的SHA-256为76967856557f4794d92b0a97ba6ca46d573dcd7cbd7251ce5641e807fff5bfc6，与本地审阅版本一致；Range请求返回206及bytes 0-1023/3403764。原始下载链接继续返回200和3,403,764字节，内容类型为application/octet-stream。Pages部署工作流运行43727519171全部步骤成功，首个自动触发因站点尚未启用而在配置步骤失败，启用workflow来源后重新触发成功。仓库main为本次修复提交3ba34acd1e81e0949df60e10fc8073205035527b，与本地一致。以上为GitHub API、Git、静态页面和HTTP证据，未使用真实浏览器连续观看，播放体验仍待用户实际观察。
