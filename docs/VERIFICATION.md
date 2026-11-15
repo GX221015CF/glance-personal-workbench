@@ -33,3 +33,11 @@ Python 检查覆盖公众号解析与正文、AI 总结和解读、HTML 封装�
 HTTP 检查通过实际 Glance 官方程序和本地桥接，读取六页外壳及异步正文、页面资源、未配置账号与学校接口。该检查同时核对缺少令牌时邮件接口返回403，运行结束后停止本次启动的服务。
 
 媒体通过 ffprobe 元数据、全片解码和代表帧人工审查。新实例的真实 Google OAuth、学校扩展安装、WorkBuddy 实际生成和 ima 云端写入留待使用者配置后验证。Agent 验证使用文件、CLI、受控测试与 HTTP，真实浏览器与桌面交互仍属独立验证范围。项目作者于2026年11月15日确认初稿内容审阅通过，并授权公开发布。
+
+## 公开访问验收
+
+公开仓库为 [GX221015CF/glance-personal-workbench](https://github.com/GX221015CF/glance-personal-workbench)，默认分支为 `main`。GitHub API 用于核对归属、public状态、默认分支和完整文件树，Git远程引用用于核对提交。
+
+匿名HTTP取得仓库首页的实际README渲染HTML，核对标题、代表图片链接和Mermaid架构图代码。源码归档中的156个文件逐项与Git内容指纹匹配，五张PNG和68秒MP4另通过公开原文件链接读取，内容与本地一致。
+
+GitHub视频文件页返回原文件入口，MP4原文件以下载内容返回。README提供可点击封面、明确下载链接和本机播放说明。这里的验收范围为API、Git与HTTP获取结果，实际浏览器连续播放和Mermaid客户端绘制属于独立观察范围。

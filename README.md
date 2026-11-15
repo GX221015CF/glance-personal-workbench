@@ -2,11 +2,11 @@
 
 把课程任务、关注资讯、订阅文章与多个邮箱放进同一个日常入口，并用 AI 辅助完成文章总结和知识整理。
 
-[![工作台首页，点击查看介绍视频](media/home.png)](https://github.com/GX221015CF/glance-personal-workbench/blob/main/media/workbench-intro.mp4)
+[![工作台首页，点击下载介绍视频](media/home.png)](https://raw.githubusercontent.com/GX221015CF/glance-personal-workbench/main/media/workbench-intro.mp4)
 
-**[观看 68 秒介绍视频](https://github.com/GX221015CF/glance-personal-workbench/blob/main/media/workbench-intro.mp4)** · [下载 MP4](https://raw.githubusercontent.com/GX221015CF/glance-personal-workbench/main/media/workbench-intro.mp4) · [运行说明](docs/RUNNING.md) · [核心案例](docs/CASE-STUDIES.md) · [验证记录](docs/VERIFICATION.md)
+**[下载 68 秒介绍视频](https://raw.githubusercontent.com/GX221015CF/glance-personal-workbench/main/media/workbench-intro.mp4)** · [GitHub 视频文件页](https://github.com/GX221015CF/glance-personal-workbench/blob/main/media/workbench-intro.mp4) · [运行说明](docs/RUNNING.md) · [核心案例](docs/CASE-STUDIES.md) · [验证记录](docs/VERIFICATION.md)
 
-视频为 1920×1080、30fps、H.264，无音轨。点击封面进入 GitHub 视频文件页，也可下载 MP4 在本机播放。画面中的资讯、行情、课程和连接状态对应录制时点，Gmail 与 YouTube 邮箱使用演示信息。AI 总结和 HTML 解读镜头已标注为历史功能截图。[媒体来源与处理记录](docs/MEDIA.md)
+视频为 1920×1080、30fps、H.264，无音轨。点击封面或下载链接保存 MP4，下载后用系统播放器打开。GitHub 文件页保留原文件入口。画面中的资讯、行情、课程和连接状态对应录制时点，Gmail 与 YouTube 邮箱使用演示信息。AI 总结和 HTML 解读镜头已标注为历史功能截图。[媒体来源与处理记录](docs/MEDIA.md)
 
 ## 为什么做这个工作台
 

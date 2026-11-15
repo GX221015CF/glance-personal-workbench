@@ -14,8 +14,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8146,
-      "sha256": "028ea8f12e54bdd54e0866bc9be1b4ada49fb116369bec0f1e8fc4e776457ce8"
+      "bytes": 8205,
+      "sha256": "3206dc1d7472a9c789fcba46db1978924143fd164ef37c8d1715b87db113e269"
     },
     {
       "path": "THIRD_PARTY_LICENSES/Glance-AGPL-3.0.txt",
@@ -674,8 +674,8 @@
     },
     {
       "path": "docs/MEDIA.md",
-      "bytes": 2465,
-      "sha256": "4bc40beb01c226d7996577bd6b6c9ef43f2352f666bcc9a561280ffd80d7ec01"
+      "bytes": 2674,
+      "sha256": "9579275577bdf1202e28073132efd84c32b968029c62355ac1d1915457ff68cc"
     },
     {
       "path": "docs/RUNNING.md",
@@ -689,8 +689,8 @@
     },
     {
       "path": "docs/VERIFICATION.md",
-      "bytes": 2443,
-      "sha256": "db592d22508847ab9aa5bdf4d04a3c04fc000b8de42bdad6e3e375455035b43b"
+      "bytes": 3277,
+      "sha256": "335d85192cb166532c8c65041608290327295bdd1bf9ada97f4606d9e30f7924"
     },
     {
       "path": "docs/media-manifest.json",
