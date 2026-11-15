@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "scope": "local-showcase-v0.1.0",
+  "scope": "public-showcase-v0.1.0",
   "files": [
     {
       "path": ".gitattributes",
@@ -14,8 +14,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7753,
-      "sha256": "5109c426961ad2c79825eebb4fd603f7a3ff99e4e10e66317e4ebb11df9d22b7"
+      "bytes": 8146,
+      "sha256": "028ea8f12e54bdd54e0866bc9be1b4ada49fb116369bec0f1e8fc4e776457ce8"
     },
     {
       "path": "THIRD_PARTY_LICENSES/Glance-AGPL-3.0.txt",
@@ -24,8 +24,8 @@
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "bytes": 2285,
-      "sha256": "5031a321a3dc95b136cca06c44f0af5808ca2b26d7f338fcd7ed1df37d03ee61"
+      "bytes": 2360,
+      "sha256": "2b7ed075e6eb3f4fbcbcb96d4f69baae3a1a8d14e898e186e4edf561dbdf4538"
     },
     {
       "path": "app/academic_bridge.py",
@@ -669,28 +669,28 @@
     },
     {
       "path": "docs/CASE-STUDIES.md",
-      "bytes": 3751,
-      "sha256": "f0b7695987baadd812827de3647d66df42b649f36cc675062b58f7cd83c890e2"
+      "bytes": 3754,
+      "sha256": "8ec6d4b96ec9716c6976d6a9da5125f128353172af960c836275600f8475d8bd"
     },
     {
       "path": "docs/MEDIA.md",
-      "bytes": 2397,
-      "sha256": "40f4875485e0bbef5cfe1bdb50b0533a76c5ae18baf9c7abe7604f70620bcabb"
+      "bytes": 2465,
+      "sha256": "4bc40beb01c226d7996577bd6b6c9ef43f2352f666bcc9a561280ffd80d7ec01"
     },
     {
       "path": "docs/RUNNING.md",
-      "bytes": 6062,
-      "sha256": "26f537e79797e92f92718b0b2a05ce70db47441f40b17d078ff620e22e0bff1a"
+      "bytes": 6080,
+      "sha256": "52c12ffadcf36f9079b526d0f65e60b2a8b088ccab0d06a954dd49d6f61a861c"
     },
     {
       "path": "docs/SOURCE.md",
-      "bytes": 2168,
-      "sha256": "8b08e10ac0e57c31a33cfea72eddcaddf20936f73da07a989bca34594fc287cc"
+      "bytes": 2336,
+      "sha256": "b6db481444ae62cf7b6fa5f837398ed55d816bf391940e76165e333bfa0bf461"
     },
     {
       "path": "docs/VERIFICATION.md",
-      "bytes": 2340,
-      "sha256": "94f34c41933b5f570db213d47c368c8dc0e84031de777bc9986c2f90dbab6f3e"
+      "bytes": 2443,
+      "sha256": "db592d22508847ab9aa5bdf4d04a3c04fc000b8de42bdad6e3e375455035b43b"
     },
     {
       "path": "docs/media-manifest.json",
@@ -769,8 +769,8 @@
     },
     {
       "path": "tools/check_public.py",
-      "bytes": 3318,
-      "sha256": "bd243040ca31633f8c37e4375d4a596a774ba97afcdd8bd3b98afdd9c001296e"
+      "bytes": 3319,
+      "sha256": "0b71ae184eec03e363ad1d2d6cd0ebb0bc1a9845558b73e289f12bc5655a4349"
     },
     {
       "path": "tools/install_glance.py",

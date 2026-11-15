@@ -2,11 +2,11 @@
 
 把课程任务、关注资讯、订阅文章与多个邮箱放进同一个日常入口，并用 AI 辅助完成文章总结和知识整理。
 
-![工作台首页，来自2026年11月15日介绍视频](media/home.png)
+[![工作台首页，点击查看介绍视频](media/home.png)](https://github.com/GX221015CF/glance-personal-workbench/blob/main/media/workbench-intro.mp4)
 
-**[观看 68 秒介绍视频](media/workbench-intro.mp4)** · [运行说明](docs/RUNNING.md) · [核心案例](docs/CASE-STUDIES.md) · [验证记录](docs/VERIFICATION.md)
+**[观看 68 秒介绍视频](https://github.com/GX221015CF/glance-personal-workbench/blob/main/media/workbench-intro.mp4)** · [下载 MP4](https://raw.githubusercontent.com/GX221015CF/glance-personal-workbench/main/media/workbench-intro.mp4) · [运行说明](docs/RUNNING.md) · [核心案例](docs/CASE-STUDIES.md) · [验证记录](docs/VERIFICATION.md)
 
-视频为 1920×1080、30fps、H.264，无音轨。README 使用封面与 MP4 文件链接，视频可下载播放。画面中的资讯、行情、课程和连接状态对应录制时点，Gmail 与 YouTube 邮箱使用演示信息。AI 总结和 HTML 解读镜头已标注为历史功能截图。[媒体来源与处理记录](docs/MEDIA.md)
+视频为 1920×1080、30fps、H.264，无音轨。点击封面进入 GitHub 视频文件页，也可下载 MP4 在本机播放。画面中的资讯、行情、课程和连接状态对应录制时点，Gmail 与 YouTube 邮箱使用演示信息。AI 总结和 HTML 解读镜头已标注为历史功能截图。[媒体来源与处理记录](docs/MEDIA.md)
 
 ## 为什么做这个工作台
 
@@ -45,7 +45,7 @@
 
 课程页将学校来源的文件按课程组织，用户选择知识库和目录、检查批量保存预览，再发起保存。同步过程使用文件指纹和稳定 ID 记录关联，识别重复内容，并在中断或结果不确定时回读核对。
 
-维护版本已有真实小批保存和跨进程恢复记录。2026 年 11 月 12 日的一份课程作业保存记录完成了目标目录回读。这份本地初稿通过合成夹具验证同步规则和异常路径，个人课程、云端文件和授权由使用者单独接入。[完成范围与证据口径](docs/CASE-STUDIES.md)
+维护版本已有真实小批保存和跨进程恢复记录。2026 年 11 月 12 日的一份课程作业保存记录完成了目标目录回读。展示版本通过合成夹具验证同步规则和异常路径，个人课程、云端文件和授权由使用者单独接入。[完成范围与证据口径](docs/CASE-STUDIES.md)
 
 ## 实现与个人贡献
 
@@ -84,7 +84,7 @@ flowchart TD
 
 ## 在本地运行
 
-首稿面向 **Windows 10/11 x64、Python 3.12**。在仓库根目录执行以下命令。
+展示版本面向 **Windows 10/11 x64、Python 3.12**。在仓库根目录执行以下命令。
 
 ```powershell
 python -m venv .venv
@@ -111,6 +111,6 @@ npm ci --ignore-scripts
 
 Node.js 24 用于前端离线回归。验证入口合批执行选定的 Python 与 Node 测试，同时检查配置、相对链接和公开文件清单。页面与 API 的隔离 HTTP 检查使用独立数据目录。[本批实际结果](docs/VERIFICATION.md)
 
-本地展示初稿整理于 **2026 年 11 月 15 日**。来源清单记录每个收录文件对应的维护源码及 SHA-256，适配集中在独立存储、8180／8182 端口和启动入口。[源码来源与收录范围](docs/SOURCE.md) · [来源清单](docs/source-manifest.json)
+展示版本整理于 **2026 年 11 月 15 日**，代码、文档、截图和介绍视频已经项目作者审阅通过。来源清单记录每个收录文件对应的维护源码及 SHA-256，适配集中在独立存储、8180／8182 端口和启动入口。[源码来源与收录范围](docs/SOURCE.md) · [来源清单](docs/source-manifest.json)
 
-源码的统一许可证仍待项目作者选择，第三方组件按各自许可保留归属。媒体中的文章、封面、商标和公开信息保留其原有权利归属。[许可与素材说明](THIRD_PARTY_NOTICES.md)
+自定义代码按现有权利说明公开展示，统一许可证由项目作者另行选择。第三方组件按各自许可保留归属，媒体中的文章、封面、商标和公开信息保留其原有权利归属。[许可与素材说明](THIRD_PARTY_NOTICES.md)

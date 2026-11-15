@@ -53,7 +53,7 @@ def check_public(write=False):
             if not path.name.startswith('test_') and not path.name.startswith('test-'):
                 assert not PERSONAL.search(content), f'Review possible private identifier in {name}'
         rows.append({'path': name, 'bytes': len(raw), 'sha256': hashlib.sha256(raw).hexdigest()})
-    value = {'date': '2026-11-15', 'scope': 'local-showcase-v0.1.0', 'files': rows}
+    value = {'date': '2026-11-15', 'scope': 'public-showcase-v0.1.0', 'files': rows}
     if write:
         MANIFEST.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf8', newline='\n')
     else:
